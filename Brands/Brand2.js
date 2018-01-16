@@ -10,7 +10,7 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _RectangleImage = require('../../Images/RectangleImage');
+var _RectangleImage = require('../Images/RectangleImage');
 
 var _RectangleImage2 = _interopRequireDefault(_RectangleImage);
 

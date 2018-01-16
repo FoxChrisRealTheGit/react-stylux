@@ -1,13 +1,13 @@
 {
   "name": "react-stylux",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A small library of pre-styled components for react",
   "main": "index.js",
   "scripts": {
     "build": "babel lib -d ./",
-    "prepublish": "npm run build"
+    "prepare": "npm run build"
   },
-  "repository":{
+  "repository": {
     "type": "git",
     "url": "https://github.com/FoxChrisRealTheGit/react-stylux"
   },
