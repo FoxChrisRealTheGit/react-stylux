@@ -13,7 +13,7 @@ These instructions will get you a copy of the project up and running on your loc
 Once you have run create-react-app, then you can use stylux, just:
 
 ```
-npm install react-stylux
+npm install --save react-stylux
 ```
 ## How To Use Stylux
 
@@ -154,7 +154,8 @@ this will be updated with proper license
 
 ## Acknowledgments
 
-* A Giant Thank you to Dev Mountain for teaching me to code good
+* A Giant Thank you to [Dev Mountain](https://devmountain.com/) for teaching me to code good
 * A big thank you to Morten Rand-Hendriksen for your videos on flex box and the code that allows the className socialness to work
 
 ## Changelog
+
