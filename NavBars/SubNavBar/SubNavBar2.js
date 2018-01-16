@@ -12,6 +12,10 @@ var _react2 = _interopRequireDefault(_react);
 
 require('./css/SuperStyleSheet.css');
 
+var _Holder = require('../../Holders/Holder1');
+
+var _Holder2 = _interopRequireDefault(_Holder);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -20,43 +24,45 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Navbar1 = function (_Component) {
-    _inherits(Navbar1, _Component);
+var SubNavbar2 = function (_Component) {
+    _inherits(SubNavbar2, _Component);
 
-    function Navbar1(props) {
-        _classCallCheck(this, Navbar1);
+    function SubNavbar2(props) {
+        _classCallCheck(this, SubNavbar2);
 
-        var _this = _possibleConstructorReturn(this, (Navbar1.__proto__ || Object.getPrototypeOf(Navbar1)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (SubNavbar2.__proto__ || Object.getPrototypeOf(SubNavbar2)).call(this, props));
 
         _this.state = {
             fontFamily: props.font || 'serif',
             totalWidth: props.totalWidth || '100%',
-            navBarWidth: props.navbarWidth || '100%',
-            totalHeight: props.height,
+            navBarWidth: props.navbarWidth || '50%',
+            totalHeight: props.height || '30px',
             display: props.display || 'flex',
             direction: props.direction || 'row',
             alignItems: props.align || 'center',
             columnAlign: props.columnAlign || 'center',
-            margin: props.margin || '0',
+            //margin: props.margin || '0',
             padding: props.padding || '0',
-            itemSpaceing: props.itemSpacing || '10px 0',
-            mainBackground: props.mainBackground || 'inherit',
+            itemSpaceing: props.itemSpacing || '0',
+            mainBackground: props.mainBackground || 'gray',
             itemBackground: props.itemBackground || 'inherit',
-            fontSize: props.fontSize || '1em',
+            fontSize: props.fontSize || '0.8em',
             fontWeight: props.fontWeight || '100',
             fontVariant: props.fontVariant || 'none',
             navid: props.navid,
-            itemsid: props.itemsid,
+            leftItemsid: props.leftItemsid,
+            rightItemsid: props.rightItemsid,
             navClassName: props.navClassName,
-            itemsClassName: props.itemsClassName
+            leftItemsClassName: props.leftItemsClassName,
+            rightItemsClassName: props.rightItemsClassName
         };
         return _this;
     }
 
-    _createClass(Navbar1, [{
+    _createClass(SubNavbar2, [{
         key: 'render',
         value: function render() {
-            var NAVBAR = {
+            var SUBNAVBAR = {
                 width: this.state.totalWidth,
                 height: this.state.totalHeight,
                 display: this.state.display,
@@ -64,18 +70,31 @@ var Navbar1 = function (_Component) {
                 alignItems: this.state.alignItems,
                 margin: '0',
                 padding: this.state.padding,
-                background: this.state.mainBackground
+                background: this.state.mainBackground,
+                posistion: 'sticky',
+                top: 0
             };
-            var NAVBAR_NAVBAR = {
+            var SUBNAVBAR_NAVBAR1 = {
                 width: this.state.navBarWidth,
                 height: 'inherit',
                 display: 'flex',
                 flexWrap: 'wrap',
+                flex: 1,
                 alignItems: this.state.columnAlign,
                 fontFamily: this.state.fontFamily,
                 flexDirection: this.state.direction
             };
-            var NAVBAR_NAVBAR_LI = {
+            var SUBNAVBAR_NAVBAR2 = {
+                width: this.state.navBarWidth,
+                height: 'inherit',
+                display: 'flex',
+                flexWrap: 'wrap',
+                flex: 1,
+                alignItems: this.state.columnAlign,
+                fontFamily: this.state.fontFamily,
+                flexDirection: this.state.direction
+            };
+            var SUBNAVBAR_NAVBAR_LI = {
                 display: 'flex',
                 flex: 1,
                 fontSize: this.state.fontSize,
@@ -85,28 +104,52 @@ var Navbar1 = function (_Component) {
                 background: this.state.itemBackground,
                 fontVariant: this.state.fontVariant
             };
-
             var CHILDS = _react2.default.Children.toArray(this.props.children);
-            var NAVBARACTUAL = CHILDS.map(function (x, i) {
+            var NAVBAR = CHILDS.map(function (x, i, arr) {
                 return _react2.default.createElement(
                     'li',
-                    { key: i, style: NAVBAR_NAVBAR_LI },
-                    x
+                    { key: i, style: SUBNAVBAR_NAVBAR_LI },
+                    arr[i + 2]
                 );
             });
             return _react2.default.createElement(
                 'nav',
-                { style: NAVBAR },
+                { style: SUBNAVBAR, className: 'subnavbar2 socialness' },
                 _react2.default.createElement(
-                    'ul',
-                    { style: NAVBAR_NAVBAR, className: 'navbar1-navbar socialness' },
-                    NAVBARACTUAL
+                    _Holder2.default,
+                    null,
+                    _react2.default.createElement(
+                        'ul',
+                        { style: SUBNAVBAR_NAVBAR1, id: this.state.navid, className: 'subnavbar2-navbar1 ' + this.state.navClassName },
+                        CHILDS[0],
+                        CHILDS[1]
+                    ),
+                    _react2.default.createElement(
+                        _Holder2.default,
+                        {
+                            alignBlock1: 'flex-end',
+                            alignBlock2: 'flex-start' },
+                        _react2.default.createElement(
+                            'div',
+                            { id: this.state.leftItemsid, className: 'subnavbar2-globalSearch ' + this.state.leftItemsClassName },
+                            _react2.default.createElement(
+                                'p',
+                                null,
+                                'Search Holder'
+                            )
+                        ),
+                        _react2.default.createElement(
+                            'ul',
+                            { style: SUBNAVBAR_NAVBAR2, id: this.state.rightItemsid, className: 'subnavbar2-navbar2 ' + this.state.rightItemsClassName },
+                            NAVBAR
+                        )
+                    )
                 )
             );
         }
     }]);
 
-    return Navbar1;
+    return SubNavbar2;
 }(_react.Component);
 
-exports.default = Navbar1;
+exports.default = SubNavbar2;
