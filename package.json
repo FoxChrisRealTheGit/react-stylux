@@ -1,0 +1,34 @@
+{
+  "name": "react-stylux",
+  "version": "0.0.1",
+  "description": "A small library of pre-styled components for react",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel lib -d ./",
+    "prepublish": "npm run build"
+  },
+  "author": "FoxChrisRealThe (http://foxchrisrealthe.com)",
+  "license": "ISC",
+  "peerDependency": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "webpack": "^3.10.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-plugin-transform-styles": "0.0.3",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "cross-env": "^5.1.3",
+    "react": "^16.2.0"
+  }
+}
