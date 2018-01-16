@@ -10,7 +10,7 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-require('./css/SuperStyleSheet.css');
+require('../../css/SuperStyleSheet.css');
 
 var _Holder = require('../../Holders/Holder2');
 
@@ -87,7 +87,7 @@ var DropDownNav3 = function (_Component) {
                         'ul',
                         { style: DROPDOWN, id: this.state.itemsid, className: this.state.itemsClassName },
                         _react2.default.createElement(
-                            Holder2,
+                            _Holder2.default,
                             null,
                             CHILDS[1],
                             CHILDS[2],

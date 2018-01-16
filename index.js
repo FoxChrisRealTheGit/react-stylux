@@ -96,23 +96,23 @@ var _MainHeading9 = require('./Headings/MainHeadings/MainHeading5');
 
 var _MainHeading10 = _interopRequireDefault(_MainHeading9);
 
-var _Heading = require('./Headings/Headings/Heading1');
+var _Heading = require('./Headings/H2/Heading1');
 
 var _Heading2 = _interopRequireDefault(_Heading);
 
-var _Heading3 = require('./Headings/Headings/Heading2');
+var _Heading3 = require('./Headings/H2/Heading2');
 
 var _Heading4 = _interopRequireDefault(_Heading3);
 
-var _Heading5 = require('./Headings/Headings/Heading3');
+var _Heading5 = require('./Headings/H2/Heading3');
 
 var _Heading6 = _interopRequireDefault(_Heading5);
 
-var _Heading7 = require('./Headings/Headings/Heading4');
+var _Heading7 = require('./Headings/H2/Heading4');
 
 var _Heading8 = _interopRequireDefault(_Heading7);
 
-var _Heading9 = require('./Headings/Headings/Heading5');
+var _Heading9 = require('./Headings/H2/Heading5');
 
 var _Heading10 = _interopRequireDefault(_Heading9);
 
@@ -358,6 +358,11 @@ module.exports = {
     MainHeading3: _MainHeading6.default,
     MainHeading4: _MainHeading8.default,
     MainHeading5: _MainHeading10.default,
+    Heading1: _Heading2.default,
+    Heading2: _Heading4.default,
+    Heading3: _Heading6.default,
+    Heading4: _Heading8.default,
+    Heading5: _Heading10.default,
     SubHeading1: _SubHeading2.default,
     SubHeading2: _SubHeading4.default,
     SubHeading3: _SubHeading6.default,
