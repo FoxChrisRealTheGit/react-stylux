@@ -276,8 +276,61 @@ var _Brand9 = require('./Brands/Brand5');
 
 var _Brand10 = _interopRequireDefault(_Brand9);
 
+var _Carousel = require('./Carousels/Carousel1');
+
+var _Carousel2 = _interopRequireDefault(_Carousel);
+
+var _Carousel3 = require('./Carousels/Carousel2');
+
+var _Carousel4 = _interopRequireDefault(_Carousel3);
+
+var _Carousel5 = require('./Carousels/Carousel3');
+
+var _Carousel6 = _interopRequireDefault(_Carousel5);
+
+var _Carousel7 = require('./Carousels/Carousel4');
+
+var _Carousel8 = _interopRequireDefault(_Carousel7);
+
+var _Carousel9 = require('./Carousels/Carousel5');
+
+var _Carousel10 = _interopRequireDefault(_Carousel9);
+
+var _Toggler = require('./Togglers/Toggler1');
+
+var _Toggler2 = _interopRequireDefault(_Toggler);
+
+var _Toggler3 = require('./Togglers/Toggler2');
+
+var _Toggler4 = _interopRequireDefault(_Toggler3);
+
+var _Toggler5 = require('./Togglers/Toggler3');
+
+var _Toggler6 = _interopRequireDefault(_Toggler5);
+
+var _BulletList = require('./Lists/Bullet/BulletList1');
+
+var _BulletList2 = _interopRequireDefault(_BulletList);
+
+var _BulletList3 = require('./Lists/Bullet/BulletList2');
+
+var _BulletList4 = _interopRequireDefault(_BulletList3);
+
+var _NumberList = require('./Lists/Number/NumberList1');
+
+var _NumberList2 = _interopRequireDefault(_NumberList);
+
+var _NumberList3 = require('./Lists/Number/NumberList2');
+
+var _NumberList4 = _interopRequireDefault(_NumberList3);
+
+var _NumberList5 = require('./Lists/Number/NumberList3');
+
+var _NumberList6 = _interopRequireDefault(_NumberList5);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+require('./css/reset.css');
 require('./css/SuperStyleSheet.css');
 
 module.exports = {
@@ -344,5 +397,18 @@ module.exports = {
     Brand2: _Brand4.default,
     Brand3: _Brand6.default,
     Brand4: _Brand8.default,
-    Brand5: _Brand10.default
+    Brand5: _Brand10.default,
+    Carousel1: _Carousel2.default,
+    Carousel2: _Carousel4.default,
+    Carousel3: _Carousel6.default,
+    Carousel4: _Carousel8.default,
+    Carousel5: _Carousel10.default,
+    Toggler1: _Toggler2.default,
+    Toggler2: _Toggler4.default,
+    Toggler3: _Toggler6.default,
+    BulletList1: _BulletList2.default,
+    BulletList2: _BulletList4.default,
+    NumberList1: _NumberList2.default,
+    NumberList2: _NumberList4.default,
+    NumberList3: _NumberList6.default
 };

@@ -7,6 +7,10 @@
     "build": "babel lib -d ./",
     "prepublish": "npm run build"
   },
+  "repository":{
+    "type": "git",
+    "url": "https://github.com/FoxChrisRealTheGit/react-stylux"
+  },
   "author": "FoxChrisRealThe (http://foxchrisrealthe.com)",
   "license": "ISC",
   "peerDependency": {
