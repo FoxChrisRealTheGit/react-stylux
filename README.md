@@ -141,45 +141,666 @@ Each elements will then be shown is an example of children accepted.
 
 ### Layout Specific
 
+
 #### Containers (possible name change expected)
 
-* Container1
 
-* Container2
+##### Container1
+```
+<Container1
+    display: 'flex'
+    direction: 'row'
+    alignBlock1: 'center'
+    block1: '1'
+    justifyBlock1: 'center'
+    textColor: 'yellow'
+    background 'white'
+    padding: '0'
+    margin: '0'
+    >
+```
+This accepts one child and renders it
+```
+<Container1>
+    <Holder1>
+    </Holder1>
+</Container1>
+```
 
-* Container3
+##### Container2
+```
+<Container2
+    display: 'flex'
+    direction: 'row'
+    alignBlock1: 'center'
+    block1: '1'
+    justifyBlock1: 'center'
+    alignBlock2: 'center'
+    block2: '1'
+    justifyBlock2: 'center'
+    textColor: 'black'
+    background 'white'
+    padding: '0'
+    margin: '10px 0'
+    >
+```
+This accepts two children and renders them
+```
+<Container2>
+    <Holder1>
+    </Holder1>
+    <Holder1>
+    </Holder1>
+</Container2>
+```
 
-* Container4
+##### Container3
+```
+<Container3
+    display: 'flex'
+    direction: 'row'
+    alignBlock1: 'center'
+    block1: '1'
+    justifyBlock1: 'center'
+    alignBlock2: 'center'
+    block2: '1'
+    justifyBlock2: 'center'
+    alignBlock3: 'center'
+    block3: '1'
+    justifyBlock3: 'center'
+    textColor: 'black'
+    background 'white'
+    padding: '0'
+    margin: '10px 0'
+    >
+```
+This accepts three children and renders them
+```
+<Container3>
+    <Holder1>
+    </Holder1>
+    <Holder1>
+    </Holder1>
+    <Holder1>
+    </Holder1>
+</Container3>
+```
 
-* Container5
+##### Container4
+```
+<Container4
+    display: 'flex'
+    direction: 'row'
+    alignBlock1: 'center'
+    block1: '1'
+    justifyBlock1: 'center'
+    alignBlock2: 'center'
+    block2: '1'
+    justifyBlock2: 'center'
+    alignBlock3: 'center'
+    block3: '1'
+    justifyBlock3: 'center'
+    alignBlock4: 'center'
+    block4: '1'
+    justifyBlock4: 'center'
+    textColor: 'black'
+    background 'white'
+    padding: '0'
+    margin: '10px 0'
+    >
+```
+This accepts four children and renders them
+```
+<Container4>
+    <Holder1>
+    </Holder1>
+    <Holder1>
+    </Holder1>
+    <Holder1>
+    </Holder1>
+    <Holder1>
+    </Holder1>
+</Container4>
+```
+
+##### Container5
+```
+<Container5
+    display: 'flex'
+    direction: 'row'
+    alignBlock1: 'center'
+    block1: '1'
+    justifyBlock1: 'center'
+    alignBlock2: 'center'
+    block2: '1'
+    justifyBlock2: 'center'
+    alignBlock3: 'center'
+    block3: '1'
+    justifyBlock3: 'center'
+    alignBlock4: 'center'
+    block4: '1'
+    justifyBlock4: 'center'
+    alignBlock5: 'center'
+    block5: '1'
+    justifyBlock5: 'center'
+    textColor: 'black'
+    background 'white'
+    padding: '0'
+    margin: '10px 0'
+    >
+```
+This accepts five children and renders them
+```
+<Container5>
+    <Holder1>
+    </Holder1>
+    <Holder1>
+    </Holder1>
+    <Holder1>
+    </Holder1>
+    <Holder1>
+    </Holder1>
+    <Holder1>
+    </Holder1>
+</Container5>
+```
+
 
 #### Holders 
 
-* Holder1
+##### Holder1
+```
+<Holder1
+    display = 'flex'
+    direction = 'row'
+    block1direction = 'row'
+    alignBlock1 = 'center'
+    block1 = '1'
+    justifyBlock1 = 'center'
+    alignBlock2 = 'center'
+    block2 = '1'
+    justifyBlock2 = 'center'
+    textColor = 'yellow'
+    background ='white'
+    padding = '0'
+    margin = '10px 0'
+    >
+```
+This accepts two children and renders them
+```
+<Holder1>
+    <Block2 />
+    <Block2 />
+</Holder1>
+```
 
-* Holder2
+##### Holder2
+```
+<Holder2
+    display = 'flex'
+    direction = 'row'
+    alignBlock1 = 'center'
+    block1 = '1'
+    justifyBlock1 = 'center'
+    alignBlock2 = 'center'
+    block2 = '1'
+    justifyBlock2 = 'center'
+    alignBlock3 = 'center'
+    block3 = '1'
+    justifyBlock3 = 'center'
+    textColor = 'yellow'
+    background ='white'
+    padding = '0'
+    margin = '10px 0'
+    >
+```
+This accepts three children and renders them
+```
+<Holder2>
+    <Block2 />
+    <Block2 />
+    <Block2 />
+</Holder2>
+```
 
-* Holder3
+##### Holder3
+```
+<Holder3
+    display = 'flex'
+    direction = 'row'
+    alignBlock1 = 'center'
+    block1 = '1'
+    justifyBlock1 = 'center'
+    alignBlock2 = 'center'
+    block2 = '1'
+    justifyBlock2 = 'center'
+    alignBlock3 = 'center'
+    block3 = '1'
+    justifyBlock3 = 'center'
+    alignBlock4 = 'center'
+    block4 = '1'
+    justifyBlock4 = 'center'
+    textColor = 'yellow'
+    background ='white'
+    padding = '0'
+    margin = '10px 0'
+    >
+```
+This accepts four children and renders them
+```
+<Holder3>
+    <Block2 />
+    <Block2 />
+    <Block2 />
+    <Block2 />
+</Holder3>
+```
 
-* Holder4
+##### Holder4
+```
+<Holder4
+    display = 'flex'
+    direction = 'row'
+    alignBlock1 = 'center'
+    block1 = '1'
+    justifyBlock1 = 'center'
+    alignBlock2 = 'center'
+    block2 = '1'
+    justifyBlock2 = 'center'
+    alignBlock3 = 'center'
+    block3 = '1'
+    justifyBlock3 = 'center'
+    alignBlock4 = 'center'
+    block4 = '1'
+    justifyBlock4 = 'center'
+    alignBlock5 = 'center'
+    block5 = '1'
+    justifyBlock5 = 'center'
+    textColor = 'yellow'
+    background ='white'
+    padding = '0'
+    margin = '10px 0'
+    >
+```
+This accepts five children and renders them
+```
+<Holder4>
+    <Block2 />
+    <Block2 />
+    <Block2 />
+    <Block2 />
+    <Block2 />
+</Holder4>
+```
 
-* Holder5
+##### Holder5
+```
+<Holder5
+    display = 'flex'
+    direction = 'column'
+    alignBlock1 = 'center'
+    block1 = '1'
+    justifyBlock1 = 'center'
+    alignBlock2 = 'center'
+    block2 = '1'
+    justifyBlock2 = 'center'
+    textColor = 'yellow'
+    background ='white'
+    padding = '0'
+    margin = '10px 0'
+    >
+```
+This accepts two children and renders them
+```
+<Holder5>
+    <Block2 />
+    <Block2 />
+</Holder5>
+```
 
-* Holder6
+##### Holder6
+```
+<Holder6
+    display = 'flex'
+    direction = 'column'
+    alignBlock1 = 'center'
+    block1 = '1'
+    justifyBlock1 = 'center'
+    alignBlock2 = 'center'
+    block2 = '1'
+    justifyBlock2 = 'center'
+    alignBlock3 = 'center'
+    block3 = '1'
+    justifyBlock3 = 'center'
+    textColor = 'yellow'
+    background ='white'
+    padding = '0'
+    margin = '10px 0'
+    >
+```
+This accepts three children and renders them
+```
+<Holder6>
+    <Block2 />
+    <Block2 />
+    <Block2 />
+</Holder6>
+```
 
-* Holder7
+##### Holder7
+```
+<Holder7
+    display = 'flex'
+    direction = 'column'
+    alignBlock1 = 'center'
+    block1 = '1'
+    justifyBlock1 = 'center'
+    alignBlock2 = 'center'
+    block2 = '1'
+    justifyBlock2 = 'center'
+    alignBlock3 = 'center'
+    block3 = '1'
+    justifyBlock3 = 'center'
+    alignBlock4 = 'center'
+    block4 = '1'
+    justifyBlock4 = 'center'
+    textColor = 'yellow'
+    background ='white'
+    padding = '0'
+    margin = '10px 0'
+    >
+```
+This accepts four children and renders them
+```
+<Holder7>
+    <Block2 />
+    <Block2 />
+    <Block2 />
+    <Block2 />
+</Holder7>
+```
 
-* Holder8
+##### Holder8
+```
+<Holder8
+    display = 'flex'
+    direction = 'column'
+    alignBlock1 = 'center'
+    block1 = '1'
+    justifyBlock1 = 'center'
+    alignBlock2 = 'center'
+    block2 = '1'
+    justifyBlock2 = 'center'
+    alignBlock3 = 'center'
+    block3 = '1'
+    justifyBlock3 = 'center'
+    alignBlock4 = 'center'
+    block4 = '1'
+    justifyBlock4 = 'center'
+    alignBlock5 = 'center'
+    block5 = '1'
+    justifyBlock5 = 'center'
+    textColor = 'yellow'
+    background ='white'
+    padding = '0'
+    margin = '10px 0'
+    >
+```
+This accepts five children and renders them
+```
+<Holder8>
+    <Block2 />
+    <Block2 />
+    <Block2 />
+    <Block2 />
+    <Block2 />
+</Holder8>
+```
 
-* Holder9
+##### Holder9
+```
+<Holder9
+    display = 'flex'
+    direction = 'column'
+    alignBlock1 = 'center'
+    block1 = '1'
+    justifyBlock1 = 'center'
+    alignBlock2 = 'center'
+    block2 = '1'
+    justifyBlock2 = 'center'
+    alignBlock3 = 'center'
+    block3 = '1'
+    justifyBlock3 = 'center'
+    alignBlock4 = 'center'
+    block4 = '1'
+    justifyBlock4 = 'center'
+    alignBlock5 = 'center'
+    block5 = '1'
+    justifyBlock5 = 'center'
+    alignBlock6 = 'center'
+    block6 = '1'
+    justifyBlock6 = 'center'
+    textColor = 'yellow'
+    background ='white'
+    padding = '0'
+    margin = '10px 0'
+    >
+```
+This accepts six children and renders them
+```
+<Holder9>
+    <Block2 />
+    <Block2 />
+    <Block2 />
+    <Block2 />
+    <Block2 />
+    <Block2 />
+</Holder9>
+```
 
-* Holder10
+##### Holder10
+```
+<Holder10
+    display = 'flex'
+    direction = 'column'
+    alignBlock1 = 'center'
+    block1 = '1'
+    justifyBlock1 = 'center'
+    alignBlock2 = 'center'
+    block2 = '1'
+    justifyBlock2 = 'center'
+    alignBlock3 = 'center'
+    block3 = '1'
+    justifyBlock3 = 'center'
+    alignBlock4 = 'center'
+    block4 = '1'
+    justifyBlock4 = 'center'
+    alignBlock5 = 'center'
+    block5 = '1'
+    justifyBlock5 = 'center'
+    alignBlock6 = 'center'
+    block6 = '1'
+    justifyBlock6 = 'center'
+    alignBlock7 = 'center'
+    block7 = '1'
+    justifyBlock7 = 'center'
+    textColor = 'yellow'
+    background ='white'
+    padding = '0'
+    margin = '10px 0'
+    >
+```
+This accepts seven children and renders them
+```
+<Holder10>
+    <Block2 />
+    <Block2 />
+    <Block2 />
+    <Block2 />
+    <Block2 />
+    <Block2 />
+    <Block2 />
+</Holder10>
+```
 
-* Holder11
+##### Holder11
+```
+<Holder11
+    display = 'flex'
+    direction = 'column'
+    alignBlock1 = 'center'
+    block1 = '1'
+    justifyBlock1 = 'center'
+    alignBlock2 = 'center'
+    block2 = '1'
+    justifyBlock2 = 'center'
+    alignBlock3 = 'center'
+    block3 = '1'
+    justifyBlock3 = 'center'
+    alignBlock4 = 'center'
+    block4 = '1'
+    justifyBlock4 = 'center'
+    alignBlock5 = 'center'
+    block5 = '1'
+    justifyBlock5 = 'center'
+    alignBlock6 = 'center'
+    block6 = '1'
+    justifyBlock6 = 'center'
+    alignBlock7 = 'center'
+    block7 = '1'
+    justifyBlock7 = 'center'
+    alignBlock8 = 'center'
+    block8 = '1'
+    justifyBlock8 = 'center'
+    textColor = 'yellow'
+    background ='white'
+    padding = '0'
+    margin = '10px 0'
+    >
+```
+This accepts eight children and renders them
+```
+<Holder11>
+    <Block2 />
+    <Block2 />
+    <Block2 />
+    <Block2 />
+    <Block2 />
+    <Block2 />
+    <Block2 />
+    <Block2 />
+</Holder11>
+```
 
-* Holder12
+##### Holder12
+```
+<Holder12
+    display = 'flex'
+    direction = 'column'
+    alignBlock1 = 'center'
+    block1 = '1'
+    justifyBlock1 = 'center'
+    alignBlock2 = 'center'
+    block2 = '1'
+    justifyBlock2 = 'center'
+    alignBlock3 = 'center'
+    block3 = '1'
+    justifyBlock3 = 'center'
+    alignBlock4 = 'center'
+    block4 = '1'
+    justifyBlock4 = 'center'
+    alignBlock5 = 'center'
+    block5 = '1'
+    justifyBlock5 = 'center'
+    alignBlock6 = 'center'
+    block6 = '1'
+    justifyBlock6 = 'center'
+    alignBlock7 = 'center'
+    block7 = '1'
+    justifyBlock7 = 'center'
+    alignBlock8 = 'center'
+    block8 = '1'
+    justifyBlock8 = 'center'
+    alignBlock9 = 'center'
+    block9 = '1'
+    justifyBlock9 = 'center'
+    textColor = 'yellow'
+    background ='white'
+    padding = '0'
+    margin = '10px 0'
+    >
+```
+This accepts nine children and renders them
+```
+<Holder12>
+    <Block2 />
+    <Block2 />
+    <Block2 />
+    <Block2 />
+    <Block2 />
+    <Block2 />
+    <Block2 />
+    <Block2 />
+    <Block2 />
+</Holder12>
+```
 
-* Holder13
+##### Holder13
+```
+<Holder12
+    display = 'flex'
+    direction = 'column'
+    alignBlock1 = 'center'
+    block1 = '1'
+    justifyBlock1 = 'center'
+    alignBlock2 = 'center'
+    block2 = '1'
+    justifyBlock2 = 'center'
+    alignBlock3 = 'center'
+    block3 = '1'
+    justifyBlock3 = 'center'
+    alignBlock4 = 'center'
+    block4 = '1'
+    justifyBlock4 = 'center'
+    alignBlock5 = 'center'
+    block5 = '1'
+    justifyBlock5 = 'center'
+    alignBlock6 = 'center'
+    block6 = '1'
+    justifyBlock6 = 'center'
+    alignBlock7 = 'center'
+    block7 = '1'
+    justifyBlock7 = 'center'
+    alignBlock8 = 'center'
+    block8 = '1'
+    justifyBlock8 = 'center'
+    alignBlock9 = 'center'
+    block9 = '1'
+    justifyBlock9 = 'center'
+    alignBlock10 = 'center'
+    block10 = '1'
+    justifyBlock10 = 'center'
+    textColor = 'yellow'
+    background ='white'
+    padding = '0'
+    margin = '10px 0'
+    >
+```
+This accepts ten children and renders them
+```
+<Holder13>
+    <Block2 />
+    <Block2 />
+    <Block2 />
+    <Block2 />
+    <Block2 />
+    <Block2 />
+    <Block2 />
+    <Block2 />
+    <Block2 />
+    <Block2 />
+</Holder13>
+```
 
 
 ### Text Specific
@@ -195,7 +816,7 @@ Each of these headings follow a specific pattern:
 
 ##### MainHeadings <H1 />
 
-* MainHeading1
+###### MainHeading1
 ```
 <MainHeading1
     color = 'black'
@@ -216,7 +837,7 @@ This accepts and renders one child
 ```
 
 
-* MainHeading2
+###### MainHeading2
 ```
 <MainHeading2
     color = 'black'
@@ -237,7 +858,7 @@ This accepts and renders one child
 ```
 
 
-* MainHeading3
+###### MainHeading3
 ```
 <MainHeading3
     color = 'black'
@@ -258,7 +879,7 @@ This accepts and renders one child
 ```
 
 
-* MainHeading4
+###### MainHeading4
 ```
 <MainHeading4
     color = 'lightgray'
@@ -279,7 +900,7 @@ This accepts and renders one child
 ```
 
 
-* MainHeading5
+###### MainHeading5
 **Not Finished**
 ```
 <MainHeading5
@@ -303,7 +924,7 @@ This accepts and renders one child
 
 ##### Headings <H2 />
 **brokenish**
-* Heading1
+###### Heading1
 ```
 <Heading1
     color = 'black'
@@ -324,7 +945,7 @@ This accepts and renders one child
 ```
 
 
-* Heading2
+###### Heading2
 ```
 <Heading2
     color = 'black'
@@ -345,7 +966,7 @@ This accepts and renders one child
 ```
 
 
-* Heading3
+###### Heading3
 ```
 <Heading3
     color = 'black'
@@ -366,7 +987,7 @@ This accepts and renders one child
 ```
 
 
-* Heading4
+###### Heading4
 ```
 <Heading4
     color = 'lightgray'
@@ -387,7 +1008,7 @@ This accepts and renders one child
 ```
 
 
-* Heading5
+###### Heading5
 **Not Finished**
 ```
 <Heading5
@@ -411,7 +1032,7 @@ This accepts and renders one child
 
 ##### SubHeadings <H3 />
 
-* SubHeading1
+###### SubHeading1
 ```
 <SubHeading1
     color = 'black'
@@ -432,7 +1053,7 @@ This accepts and renders one child
 ```
 
 
-* SubHeading2
+###### SubHeading2
 ```
 <SubHeading2
     color = 'black'
@@ -453,7 +1074,7 @@ This accepts and renders one child
 ```
 
 
-* SubHeading3
+###### SubHeading3
 ```
 <SubHeading3
     color = 'black'
@@ -474,7 +1095,7 @@ This accepts and renders one child
 ```
 
 
-* SubHeading4
+###### SubHeading4
 ```
 <SubHeading4
     color = lightgray'
@@ -495,7 +1116,7 @@ This accepts and renders one child
 ```
 
 
-* SubHeading5
+###### SubHeading5
 **Not Finished**
 ```
 <SubHeading5
@@ -519,7 +1140,7 @@ This accepts and renders one child
 
 ##### SubHeadings <H4 />
 
-* SecondarySubHeading1
+###### SecondarySubHeading1
 ```
 <SecondarySubHeading1
     color = 'black'
@@ -539,7 +1160,7 @@ This accepts and renders one child
 <SecondarySubHeading1>This is a Heading</SecondarySubHeading1>
 ```
 
-* SecondarySubHeading2
+###### SecondarySubHeading2
 ```
 <SecondarySubHeading2
     color = 'black'
@@ -560,7 +1181,7 @@ This accepts and renders one child
 ```
 
 
-* SecondarySubHeading3
+###### SecondarySubHeading3
 ```
 <SecondarySubHeading3
     color = 'black'
@@ -581,7 +1202,7 @@ This accepts and renders one child
 ```
 
 
-* SecondarySubHeading4
+###### SecondarySubHeading4
 ```
 <SecondarySubHeading4
     color = 'lightgray'
@@ -602,7 +1223,7 @@ This accepts and renders one child
 ```
 
 
-* SecondarySubHeading5
+###### SecondarySubHeading5
 **Not Finished**
 ```
 <SecondarySubHeading4
@@ -635,7 +1256,7 @@ Each of these paragraphs follow a specific pattern:
 
 ##### Paragraphs <p />
 
-* Paragraph1
+###### Paragraph1
 ```
 <Paragraph1
     color = 'black'
@@ -657,7 +1278,7 @@ This accepts and renders one child
 ```
 
 
-* Paragraph2
+###### Paragraph2
 ```
 <Paragraph2
     color = 'black'
@@ -679,7 +1300,7 @@ This accepts and renders one child
 ```
 
 
-* Paragraph3
+###### Paragraph3
 ```
 <Paragraph3
     color = 'black'
@@ -701,7 +1322,7 @@ This accepts and renders one child
 ```
 
 
-* Paragraph4
+###### Paragraph4
 ```
 <Paragraph4
     color = 'lightgray'
@@ -723,7 +1344,7 @@ This accepts and renders one child
 ```
 
 
-* Paragraph5
+###### Paragraph5
 **Not Finished**
 ```
 <Paragraph4
@@ -747,9 +1368,9 @@ This accepts and renders one child
 
 ##### Pull Quotes <blockquote />
 **Not Finished**
-* Pullquote1
+###### Pullquote1
 
-* Pullquote2
+###### Pullquote2
 
 
 ### Image Specific
@@ -782,7 +1403,7 @@ Tall Rectangle Image Sizes:
 
 #### Images (all names subject to change)
 
-* CircleImage
+##### CircleImage
 ```
 <CircleImage
     size = 'sm'
@@ -799,7 +1420,7 @@ this is the alt tag
 ```
 
 
-* RoundedImage
+##### RoundedImage
 ```
 <RoundedImage
     size = 'sm'
@@ -816,7 +1437,7 @@ this is the alt tag
 ```
 
 
-* SquareImage
+##### SquareImage
 ```
 <SquareImage
     size = 'sm'
@@ -833,7 +1454,7 @@ this is the alt tag
 ```
 
 
-* OvalImage
+##### OvalImage
 **Not Finished**
 ```
 <OvalImage
@@ -851,7 +1472,7 @@ this is the alt tag
 ```
 
 
-* RectangleImage
+##### RectangleImage
 ```
 <RectangleImage
     size = 'sm'
@@ -868,7 +1489,7 @@ this is the alt tag
 ```
 
 
-* RoundedRectangleImage
+##### RoundedRectangleImage
 ```
 <RoundedRectangleImage
     size = 'sm'
@@ -885,7 +1506,7 @@ this is the alt tag
 ```
 
 
-* TallRectangleImage
+##### TallRectangleImage
 ```
 <TallRectangleImage
     size = 'sm'
@@ -902,7 +1523,7 @@ this is the alt tag
 ```
 
 
-* TallRoundedRectangleImage
+##### TallRoundedRectangleImage
 ```
 <TallRoundedRectangleImage
     size = 'sm'
@@ -919,7 +1540,7 @@ this is the alt tag
 ```
 
 
-* Figure
+##### Figure
 **Not Finished**
 ```
 <Figure
@@ -945,7 +1566,7 @@ This accepts and renders two children: first child and a caption child
 #### Heroes
 These were made to integrate with the Carousels, but can be used where ever.
 
-* Hero1
+##### Hero1
 ```
 <Hero1
     background
@@ -970,7 +1591,7 @@ This accepts three children and a background
 ```
 
 
-* Hero2
+##### Hero2
 **Not Finished**
 ```
 <Hero2
@@ -1000,7 +1621,7 @@ This accepts one child and a background
 ```
 
 
-* Hero3
+##### Hero3
 **Not Finished**
 ```
 <Hero3
@@ -1022,7 +1643,7 @@ This accepts three children and a background
 ```
 
 
-* Hero4
+##### Hero4
 ```
 <Hero4
     background
@@ -1045,7 +1666,7 @@ This accepts three children and a background
 ```
 
 
-* Hero5
+##### Hero5
 ```
 <Hero5
     background
@@ -1076,7 +1697,7 @@ This accepts seven children and a background
 
 #### Navbars
 
-* Navbar1
+##### Navbar1
 ```
 <Navbar1
     font = 'serif'
@@ -1113,16 +1734,16 @@ This accepts unlimited? children and renders them
 
 #### SubNavBars
 
-* SubNavBar1
+##### SubNavBar1
 **will be added soon**
 
-* SubNavBar2
+##### SubNavBar2
 **will be added soon**
 
 
 #### DropDownNavs (There needs to be an accesibility rework)
 
-* DropDownNav1
+##### DropDownNav1
 **Not Finished**
 This uses two mouse events and is not optimized for tablet or mobile use.
 
@@ -1150,11 +1771,11 @@ This accepts unlimited? children and renders them, the first child is the title.
 ```
 
 
-* DropDownNav3
+##### DropDownNav3
 **will be added soon**
 
 
-* DropDownNav5
+##### DropDownNav5
 **Not Finished**
 This uses two mouse events and is not optimized for tablet or mobile use.
 
@@ -1185,22 +1806,22 @@ This accepts unlimited? children and renders them, the first child is the title.
 #### Brand
 **Not Finished**
 
-* Brand1
+##### Brand1
 
-* Brand2
+##### Brand2
 
-* Brand3
+##### Brand3
 
-* Brand4
+##### Brand4
 
-* Brand5
+##### Brand5
 
 
 ### List Specific (possible rework expected)
 
 #### Number List
 
-* NumberList1
+##### NumberList1
 ```
 <NumberList1
     color = 'black'
@@ -1226,7 +1847,7 @@ This accepts unlimited? children split with \
 ```
 
 
-* NumberList2
+##### NumberList2
 **Not Finished**
 ```
 <NumberList1
@@ -1245,7 +1866,7 @@ This accepts unlimited? children split by the listAmount
 ```
 
 
-* NumberList3
+##### NumberList3
 ```
 <NumberList3
     color = 'black'
@@ -1273,7 +1894,7 @@ This accepts unlimited? children split with \
 
 #### Bullet List
 
-* BulletList1
+##### BulletList1
 **Not Finished**
 ```
 <BulletList1
@@ -1303,7 +1924,7 @@ This accepts unlimited? children split with \
 ```
 
 
-* BulletList2
+##### BulletList2
 **Not Finished**
 ```
 <BulletList2
@@ -1338,7 +1959,7 @@ This accepts unlimited? children split with \
 #### Carousels
 
 
-* Carousel1
+##### Carousel1
 ```
 <Carousel1
     arrowColor = 'white'
@@ -1370,7 +1991,7 @@ This accept unlimited? children and render as slides
 ```
 
 
-* Carousel2
+##### Carousel2
 **Not Finished**
 ```
 <Carousel2
@@ -1399,7 +2020,7 @@ This accept unlimited? children and render as slides
 ```
 
 
-* Carousel3
+##### Carousel3
 **Not Finished**
 ```
 <Carousel3
@@ -1432,7 +2053,7 @@ This accept unlimited? children and render as slides
 ```
 
 
-* Carousel4
+##### Carousel4
 **Not Finished**
 ```
 <Carousel4
@@ -1461,7 +2082,7 @@ This accept unlimited? children and render as slides
 ```
 
 
-* Carousel5
+##### Carousel5
 ```
 <Carousel5
     arrowColor = 'white'
@@ -1492,7 +2113,7 @@ This accept unlimited? children and render as slides
 #### Togglers
 
 
-* Toggler1
+##### Toggler1
 ```
 <Toggler1
     position = 'absolute'
@@ -1530,7 +2151,7 @@ This accepts multiple children, a holder can be placed to divide up the space
 ```
 
 
-* Toggler2
+##### Toggler2
 ```
 <Toggler2
     width = '400px'
@@ -1559,7 +2180,7 @@ This accepts multiple children, a holder can be placed to divide up the space
 ```
 
 
-* Toggler3
+##### Toggler3
 **Not Finished**
 ```
 <Toggler3
@@ -1594,7 +2215,7 @@ This accepts multiple children split by \, odd children are rendered as panel na
 ```
 
 
-* Toggler4
+##### Toggler4
 **Not Finished**
 
 #### Moduls
@@ -1652,6 +2273,9 @@ No Contributions will be accepted outside of the project team until the project 
 
 
 ## Changelog
+
+**0.0.12**
+* readme was updated with minor documentation
 
 **0.0.10**
 * baselineish that things are mostly working

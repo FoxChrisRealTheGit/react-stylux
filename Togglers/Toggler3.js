@@ -31,7 +31,7 @@ var Toggler3 = function (_Component) {
             width: props.width || '400px',
             height: props.height,
             background: props.background || 'white',
-            buttonText: props.buttonText || 'toggler2',
+            buttonText: props.buttonText || 'toggler3',
             position: props.position,
 
             textvertical: props.textVertical || 'center',

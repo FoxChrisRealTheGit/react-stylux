@@ -1,6 +1,6 @@
 {
   "name": "react-stylux",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "A small library of pre-styled components for react",
   "main": "index.js",
   "scripts": {
