@@ -184,7 +184,6 @@ Each elements will then be shown is an example of children accepted.
 
 ### Text Specific
 
-
 #### Headings (all names subject to change)
 
 Each of these headings follow a specific pattern:
@@ -216,6 +215,7 @@ This accepts and renders one child
 <MainHeading1>This is a Heading</MainHeading1>
 ```
 
+
 * MainHeading2
 ```
 <MainHeading2
@@ -235,6 +235,7 @@ This accepts and renders one child
 ```
 <MainHeading2>This is a Heading</MainHeading2>
 ```
+
 
 * MainHeading3
 ```
@@ -256,6 +257,7 @@ This accepts and renders one child
 <MainHeading3>This is a Heading</MainHeading3>
 ```
 
+
 * MainHeading4
 ```
 <MainHeading4
@@ -275,6 +277,7 @@ This accepts and renders one child
 ```
 <MainHeading4>This is a Heading</MainHeading4>
 ```
+
 
 * MainHeading5
 **Not Finished**
@@ -296,6 +299,7 @@ This accepts and renders one child
 ```
 <MainHeading5>This is a Heading</MainHeading5>
 ```
+
 
 ##### Headings <H2 />
 **brokenish**
@@ -319,6 +323,7 @@ This accepts and renders one child
 <Heading1>This is a Heading</Heading1>
 ```
 
+
 * Heading2
 ```
 <Heading2
@@ -338,6 +343,7 @@ This accepts and renders one child
 ```
 <Heading2>This is a Heading</Heading2>
 ```
+
 
 * Heading3
 ```
@@ -359,6 +365,7 @@ This accepts and renders one child
 <Heading3>This is a Heading</Heading3>
 ```
 
+
 * Heading4
 ```
 <Heading4
@@ -378,6 +385,7 @@ This accepts and renders one child
 ```
 <Heading4>This is a Heading</Heading4>
 ```
+
 
 * Heading5
 **Not Finished**
@@ -399,6 +407,7 @@ This accepts and renders one child
 ```
 <Heading5>This is a Heading</Heading5>
 ```
+
 
 ##### SubHeadings <H3 />
 
@@ -422,6 +431,7 @@ This accepts and renders one child
 <SubHeading1>This is a Heading</SubHeading1>
 ```
 
+
 * SubHeading2
 ```
 <SubHeading2
@@ -441,6 +451,7 @@ This accepts and renders one child
 ```
 <SubHeading2>This is a Heading</SubHeading2>
 ```
+
 
 * SubHeading3
 ```
@@ -462,6 +473,7 @@ This accepts and renders one child
 <SubHeading3>This is a Heading</SubHeading3>
 ```
 
+
 * SubHeading4
 ```
 <SubHeading4
@@ -481,6 +493,7 @@ This accepts and renders one child
 ```
 <SubHeading4>This is a Heading</SubHeading4>
 ```
+
 
 * SubHeading5
 **Not Finished**
@@ -502,6 +515,7 @@ This accepts and renders one child
 ```
 <SubHeading5>This is a Heading</SubHeading5>
 ```
+
 
 ##### SubHeadings <H4 />
 
@@ -545,6 +559,7 @@ This accepts and renders one child
 <SecondarySubHeading2>This is a Heading</SecondarySubHeading2>
 ```
 
+
 * SecondarySubHeading3
 ```
 <SecondarySubHeading3
@@ -565,6 +580,7 @@ This accepts and renders one child
 <SecondarySubHeading3>This is a Heading</SecondarySubHeading3>
 ```
 
+
 * SecondarySubHeading4
 ```
 <SecondarySubHeading4
@@ -584,6 +600,7 @@ This accepts and renders one child
 ```
 <SecondarySubHeading4>This is a Heading</SecondarySubHeading4>
 ```
+
 
 * SecondarySubHeading5
 **Not Finished**
@@ -639,6 +656,7 @@ This accepts and renders one child
 <Paragraph1>This is a Heading</Paragraph1>
 ```
 
+
 * Paragraph2
 ```
 <Paragraph2
@@ -659,6 +677,7 @@ This accepts and renders one child
 ```
 <Paragraph2>This is a Heading</Paragraph2>
 ```
+
 
 * Paragraph3
 ```
@@ -681,6 +700,7 @@ This accepts and renders one child
 <Paragraph3>This is a Heading</Paragraph3>
 ```
 
+
 * Paragraph4
 ```
 <Paragraph4
@@ -701,6 +721,7 @@ This accepts and renders one child
 ```
 <Paragraph4>This is a Heading</Paragraph4>
 ```
+
 
 * Paragraph5
 **Not Finished**
@@ -758,6 +779,7 @@ Tall Rectangle Image Sizes:
 * lg - 500px X 809px
 * exlg - 700px X 1137px
 
+
 #### Images (all names subject to change)
 
 * CircleImage
@@ -776,6 +798,7 @@ this is the alt tag
 </CircleImage>
 ```
 
+
 * RoundedImage
 ```
 <RoundedImage
@@ -792,6 +815,7 @@ this is the alt tag
 </RoundedImage>
 ```
 
+
 * SquareImage
 ```
 <SquareImage
@@ -807,6 +831,7 @@ This accepts and renders two children: image and alt tag
 this is the alt tag
 </SquareImage>
 ```
+
 
 * OvalImage
 **Not Finished**
@@ -825,6 +850,7 @@ this is the alt tag
 </OvalImage>
 ```
 
+
 * RectangleImage
 ```
 <RectangleImage
@@ -840,6 +866,7 @@ This accepts and renders two children: image and alt tag
 this is the alt tag
 </RectangleImage>
 ```
+
 
 * RoundedRectangleImage
 ```
@@ -857,6 +884,7 @@ this is the alt tag
 </RoundedRectangleImage>
 ```
 
+
 * TallRectangleImage
 ```
 <TallRectangleImage
@@ -873,6 +901,7 @@ this is the alt tag
 </TallRectangleImage>
 ```
 
+
 * TallRoundedRectangleImage
 ```
 <TallRoundedRectangleImage
@@ -888,6 +917,7 @@ This accepts and renders two children: image and alt tag
 this is the alt tag
 </TallRoundedRectangleImage>
 ```
+
 
 * Figure
 **Not Finished**
@@ -910,6 +940,7 @@ This accepts and renders two children: first child and a caption child
 </Figure>
 
 ```
+
 
 #### Heroes
 These were made to integrate with the Carousels, but can be used where ever.
@@ -937,6 +968,7 @@ This accepts three children and a background
     ?
 </Hero1>
 ```
+
 
 * Hero2
 **Not Finished**
@@ -967,6 +999,7 @@ This accepts one child and a background
 </Hero2>
 ```
 
+
 * Hero3
 **Not Finished**
 ```
@@ -987,6 +1020,7 @@ This accepts three children and a background
     ?
 </Hero3>
 ```
+
 
 * Hero4
 ```
@@ -1009,6 +1043,7 @@ This accepts three children and a background
     ?
 </Hero4>
 ```
+
 
 * Hero5
 ```
@@ -1035,6 +1070,7 @@ This accepts seven children and a background
     ?
 </Hero5>
 ```
+
 
 ### Navigation Specific
 
@@ -1074,6 +1110,7 @@ This accepts unlimited? children and renders them
 <navbar1>
 ```
 
+
 #### SubNavBars
 
 * SubNavBar1
@@ -1081,6 +1118,7 @@ This accepts unlimited? children and renders them
 
 * SubNavBar2
 **will be added soon**
+
 
 #### DropDownNavs (There needs to be an accesibility rework)
 
@@ -1111,8 +1149,10 @@ This accepts unlimited? children and renders them, the first child is the title.
 </DropDownNav1>
 ```
 
+
 * DropDownNav3
 **will be added soon**
+
 
 * DropDownNav5
 **Not Finished**
@@ -1140,6 +1180,7 @@ This accepts unlimited? children and renders them, the first child is the title.
     <a href="">product3</a>
 </DropDownNav5>
 ```
+
 
 #### Brand
 **Not Finished**
@@ -1184,6 +1225,7 @@ This accepts unlimited? children split with \
 </NumberList1>
 ```
 
+
 * NumberList2
 **Not Finished**
 ```
@@ -1201,6 +1243,7 @@ This accepts unlimited? children split by the listAmount
     item3
 </NumberList2>
 ```
+
 
 * NumberList3
 ```
@@ -1226,6 +1269,7 @@ This accepts unlimited? children split with \
     item3\
 </NumberList3>
 ```
+
 
 #### Bullet List
 
@@ -1257,6 +1301,7 @@ This accepts unlimited? children split with \
     item3\
 </BulletList1>
 ```
+
 
 * BulletList2
 **Not Finished**
@@ -1292,6 +1337,7 @@ This accepts unlimited? children split with \
 
 #### Carousels
 
+
 * Carousel1
 ```
 <Carousel1
@@ -1323,6 +1369,7 @@ This accept unlimited? children and render as slides
 </Carousel1>
 ```
 
+
 * Carousel2
 **Not Finished**
 ```
@@ -1350,6 +1397,7 @@ This accept unlimited? children and render as slides
     </Hero1>
 </Carousel2>
 ```
+
 
 * Carousel3
 **Not Finished**
@@ -1383,6 +1431,7 @@ This accept unlimited? children and render as slides
 </Carousel3>
 ```
 
+
 * Carousel4
 **Not Finished**
 ```
@@ -1411,6 +1460,7 @@ This accept unlimited? children and render as slides
 </Carousel4>
 ```
 
+
 * Carousel5
 ```
 <Carousel5
@@ -1438,7 +1488,9 @@ This accept unlimited? children and render as slides
 </Carousel5>
 ```
 
+
 #### Togglers
+
 
 * Toggler1
 ```
@@ -1477,6 +1529,7 @@ This accepts multiple children, a holder can be placed to divide up the space
 </Toggler1>
 ```
 
+
 * Toggler2
 ```
 <Toggler2
@@ -1504,6 +1557,7 @@ This accepts multiple children, a holder can be placed to divide up the space
     A Paragraph of info can also be placed in here and render to look well and stuff.
 </Toggler2>
 ```
+
 
 * Toggler3
 **Not Finished**
@@ -1538,6 +1592,7 @@ This accepts multiple children split by \, odd children are rendered as panel na
     most last text
 </Toggler3>
 ```
+
 
 * Toggler4
 **Not Finished**
