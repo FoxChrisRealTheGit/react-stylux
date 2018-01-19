@@ -10,11 +10,10 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-Once you have run create-react-app, then you can use stylux, just:
-
 ```
 npm install --save react-stylux
 ```
+
 ## How To Use Stylux
 
 ### Included in the base version of react-stylux is:
@@ -818,193 +817,219 @@ Each of these headings follow a specific pattern:
 
 ###### MainHeading1
 ```
-<MainHeading1
+<H11
     color = 'black'
     font = 'sans-serif'
     size = '8em'
     weight = '900'
     display = 'flex'
     align = 'center'
+    textAlign = 'center'
     padding = '0 0 15px 0'
     margin = '0'
+    width = 'inherit'
+    height
     id
     className
->
+    >
 ```
 This accepts and renders one child
 ```
-<MainHeading1>This is a Heading</MainHeading1>
+<H11>This is a Heading</H11>
 ```
 
 
 ###### MainHeading2
 ```
-<MainHeading2
+<H12
     color = 'black'
     font = 'sans-serif'
     size = '8em'
     weight = '900'
     display = 'flex'
     align = 'center'
+    textAlign = 'center'
     padding = '0 0 15px 0'
     margin = '0'
+    width = 'inherit'
+    height
     id
     className
 >
 ```
 This accepts and renders one child
 ```
-<MainHeading2>This is a Heading</MainHeading2>
+<H12>This is a Heading</H12>
 ```
 
 
 ###### MainHeading3
 ```
-<MainHeading3
+<H13
     color = 'black'
     font = 'sans-serif'
     size = '9em'
     weight = '900'
     display = 'flex'
     align = 'center'
+    textAlign = 'center'
     padding = '0 0 15px 0'
     margin = '0'
+    width = 'inherit'
+    height
     id
     className
->
+    >
 ```
 This accepts and renders one child
 ```
-<MainHeading3>This is a Heading</MainHeading3>
+<H13>This is a Heading</H13>
 ```
 
 
 ###### MainHeading4
 ```
-<MainHeading4
+<H14
     color = 'lightgray'
     font = 'sans-serif'
     size = '8em'
     weight = '900'
     display = 'flex'
     align = 'center'
+    textAlign = 'center'
     padding = '0 0 15px 0'
     margin = '0'
+    width = 'inherit'
+    height
     id
     className
->
+    >
 ```
 This accepts and renders one child
 ```
-<MainHeading4>This is a Heading</MainHeading4>
+<H14>This is a Heading</H14>
 ```
 
 
 ###### MainHeading5
 **Not Finished**
 ```
-<MainHeading5
+<H15
     color = 'black'
     font = 'sans-serif'
     size = '8em'
     weight = '900'
     display = 'flex'
     align = 'center'
+    textAlign = 'center'
     padding = '0 0 15px 0'
     margin = '0'
+    width = 'inherit'
+    height
     id
     className
->
+    >
 ```
 This accepts and renders one child
 ```
-<MainHeading5>This is a Heading</MainHeading5>
+<H15>This is a Heading</H15>
 ```
 
 
 ##### Headings <H2 />
-**brokenish**
 ###### Heading1
 ```
-<Heading1
+<H21
     color = 'black'
     font = 'sans-serif'
     size = '5.646em'
     weight = '600'
     display = 'flex'
     align = 'center'
+    textAlign = 'center'
     padding = '0 0 5px 0'
     margin = '0'
+    width = 'inherit'
+    height
     id
     className
->
+    >
 ```
 This accepts and renders one child
 ```
-<Heading1>This is a Heading</Heading1>
+<H21>This is a Heading</H21>
 ```
 
 
 ###### Heading2
 ```
-<Heading2
+<H22
     color = 'black'
     font = 'sans-serif'
     size = '4.705em'
     weight = '600'
     display = 'flex'
     align = 'center'
+    textAlign = 'center'
     padding = '0 0 5px 0'
     margin = '0'
+    width = 'inherit'
+    height
     id
     className
 >
 ```
 This accepts and renders one child
 ```
-<Heading2>This is a Heading</Heading2>
+<H22>This is a Heading</H22>
 ```
 
 
 ###### Heading3
 ```
-<Heading3
+<H23
     color = 'black'
     font = 'sans-serif'
     size = '6.775em'
     weight = '600'
     display = 'flex'
     align = 'center'
+    textAlign = 'center'
     padding = '0 0 5px 0'
     margin = '0'
+    width = 'inherit'
+    height
     id
     className
 >
 ```
 This accepts and renders one child
 ```
-<Heading3>This is a Heading</Heading3>
+<H23>This is a Heading</H23>
 ```
 
 
 ###### Heading4
 ```
-<Heading4
+<H24
     color = 'lightgray'
     font = 'sans-serif'
     size = '5.646em'
     weight = '600'
     display = 'flex'
     align = 'center'
+    textAlign = 'center'
     padding = '0 0 5px 0'
     margin = '0'
+    width = 'inherit'
+    height
     id
     className
 >
 ```
 This accepts and renders one child
 ```
-<Heading4>This is a Heading</Heading4>
+<H24>This is a Heading</H24>
 ```
 
 
@@ -1018,15 +1043,18 @@ This accepts and renders one child
     weight = '600'
     display = 'flex'
     align = 'center'
+    textAlign = 'center'
     padding = '0 0 5px 0'
     margin = '0'
+    width = 'inherit'
+    height
     id
     className
->
+    >
 ```
 This accepts and renders one child
 ```
-<Heading5>This is a Heading</Heading5>
+<H25>This is a Heading</H25>
 ```
 
 
@@ -1034,107 +1062,122 @@ This accepts and renders one child
 
 ###### SubHeading1
 ```
-<SubHeading1
+<H31
     color = 'black'
     font = 'sans-serif'
     size = '3.489em'
     weight = '400'
     display = 'flex'
     align = 'center'
+    textAlign = 'center'
     padding = '0 0 5px 0'
     margin = '0'
+    width = 'inherit'
+    height
     id
     className
->
+    >
 ```
 This accepts and renders one child
 ```
-<SubHeading1>This is a Heading</SubHeading1>
+<H31>This is a Heading</H31>
 ```
 
 
 ###### SubHeading2
 ```
-<SubHeading2
+<H32
     color = 'black'
     font = 'sans-serif'
     size = '2.9075em'
     weight = '400'
     display = 'flex'
     align = 'center'
+    textAlign = 'center'
     padding = '0 0 5px 0'
     margin = '0'
+    width = 'inherit'
+    height
     id
     className
->
+    >
 ```
 This accepts and renders one child
 ```
-<SubHeading2>This is a Heading</SubHeading2>
+<H32>This is a Heading</H32>
 ```
 
 
 ###### SubHeading3
 ```
-<SubHeading3
+<H33
     color = 'black'
     font = 'sans-serif'
     size = '4.187em'
     weight = '400'
     display = 'flex'
     align = 'center'
+    textAlign = 'center'
     padding = '0 0 5px 0'
     margin = '0'
+    width = 'inherit'
+    height
     id
     className
->
+    >
 ```
 This accepts and renders one child
 ```
-<SubHeading3>This is a Heading</SubHeading3>
+<H33>This is a Heading</H33>
 ```
 
 
 ###### SubHeading4
 ```
-<SubHeading4
+<H34
     color = lightgray'
     font = 'sans-serif'
     size = '3.489em'
     weight = '400'
     display = 'flex'
     align = 'center'
+    textAlign = 'center'
     padding = '0 0 5px 0'
     margin = '0'
+    width = 'inherit'
+    height
     id
     className
 >
 ```
 This accepts and renders one child
 ```
-<SubHeading4>This is a Heading</SubHeading4>
+<H34>This is a Heading</H34>
 ```
 
 
 ###### SubHeading5
 **Not Finished**
 ```
-<SubHeading5
+<H35
     color = 'black'
     font = 'sans-serif'
     size = '3.489em'
     weight = '400'
     display = 'flex'
     align = 'center'
+    textAlign = 'center'
     padding = '0 0 5px 0'
     margin = '0'
+    width = 'inherit'
+    height
     id
     className
 >
 ```
 This accepts and renders one child
 ```
-<SubHeading5>This is a Heading</SubHeading5>
+<H35>This is a Heading</H35>
 ```
 
 
@@ -1142,22 +1185,25 @@ This accepts and renders one child
 
 ###### SecondarySubHeading1
 ```
-<SecondarySubHeading1
+<H41
     color = 'black'
     font = 'sans-serif'
     size = '2.157em'
     weight = '200'
     display = 'flex'
     align = 'center'
+    textAlign = 'center'
     padding = '0 0 3px 0'
     margin = '0'
+    width = 'inherit'
+    height
     id
     className
 >
 ```
 This accepts and renders one child
 ```
-<SecondarySubHeading1>This is a Heading</SecondarySubHeading1>
+<H41>This is a Heading</H41>
 ```
 
 ###### SecondarySubHeading2
@@ -1169,57 +1215,66 @@ This accepts and renders one child
     weight = '200'
     display = 'flex'
     align = 'center'
+    textAlign = 'center'
     padding = '0 0 3px 0'
     margin = '0'
+    width = 'inherit'
+    height
     id
     className
 >
 ```
 This accepts and renders one child
 ```
-<SecondarySubHeading2>This is a Heading</SecondarySubHeading2>
+<H42>This is a Heading</H42>
 ```
 
 
 ###### SecondarySubHeading3
 ```
-<SecondarySubHeading3
+<H43
     color = 'black'
     font = 'sans-serif'
     size = '2.588em'
     weight = '200'
     display = 'flex'
     align = 'center'
+    textAlign = 'center'
     padding = '0 0 3px 0'
     margin = '0'
+    width = 'inherit'
+    height
     id
     className
 >
 ```
 This accepts and renders one child
 ```
-<SecondarySubHeading3>This is a Heading</SecondarySubHeading3>
+<H43>This is a Heading</H43>
 ```
 
 
 ###### SecondarySubHeading4
 ```
-<SecondarySubHeading4
+<H44
     color = 'lightgray'
     font = 'sans-serif'
     size = '2.157em'
     weight = '200'
     display = 'flex'
     align = 'center'
+    textAlign = 'center'
     padding = '0 0 3px 0'
     margin = '0'
+    width = 'inherit'
+    height
     id
     className
 >
 ```
 This accepts and renders one child
 ```
-<SecondarySubHeading4>This is a Heading</SecondarySubHeading4>
+<H44>This is a Heading</H44>
 ```
 
 
@@ -1233,15 +1288,18 @@ This accepts and renders one child
     weight = '200'
     display = 'flex'
     align = 'center'
+    textAlign = 'center'
     padding = '0 0 3px 0'
     margin = '0'
+    width = 'inherit'
+    height
     id
     className
 >
 ```
 This accepts and renders one child
 ```
-<SecondarySubHeading5>This is a Heading</SecondarySubHeading5>
+<H45>This is a Heading</H45>
 ```
 
 
@@ -1258,7 +1316,7 @@ Each of these paragraphs follow a specific pattern:
 
 ###### Paragraph1
 ```
-<Paragraph1
+<P1
     color = 'black'
     font = 'serif'
     size = '1.333em'
@@ -1266,21 +1324,24 @@ Each of these paragraphs follow a specific pattern:
     weight = '400'
     display = 'flex'
     align = 'center'
+    textAlign = 'center'
     padding = '10px 10%'
     margin = '0'
+    width = 'inherit'
+    height
     id
     className
 >
 ```
 This accepts and renders one child
 ```
-<Paragraph1>This is a Heading</Paragraph1>
+<P1>This is a Heading</P1>
 ```
 
 
 ###### Paragraph2
 ```
-<Paragraph2
+<P2
     color = 'black'
     font = 'serif'
     size = '0.9em'
@@ -1288,21 +1349,24 @@ This accepts and renders one child
     weight = '400'
     display = 'flex'
     align = 'center'
+    textAlign = 'center'
     padding = '10px 10%'
     margin = '0'
+    width = 'inherit'
+    height
     id
     className
 >
 ```
 This accepts and renders one child
 ```
-<Paragraph2>This is a Heading</Paragraph2>
+<P2>This is a Heading</P2>
 ```
 
 
 ###### Paragraph3
 ```
-<Paragraph3
+<P3
     color = 'black'
     font = 'serif'
     size = '1.6em'
@@ -1310,21 +1374,24 @@ This accepts and renders one child
     weight = '400'
     display = 'flex'
     align = 'center'
+    textAlign = 'center'
     padding = '10px 10%'
     margin = '0'
+    width = 'inherit'
+    height
     id
     className
 >
 ```
 This accepts and renders one child
 ```
-<Paragraph3>This is a Heading</Paragraph3>
+<P3>This is a Heading</P3>
 ```
 
 
 ###### Paragraph4
 ```
-<Paragraph4
+<P4
     color = 'lightgray'
     font = 'serif'
     size = '1.6em'
@@ -1332,22 +1399,25 @@ This accepts and renders one child
     weight = '400'
     display = 'flex'
     align = 'center'
+    textAlign = 'center'
     padding = '10px 10%'
     margin = '0'
+    width = 'inherit'
+    height
     id
     className
 >
 ```
 This accepts and renders one child
 ```
-<Paragraph4>This is a Heading</Paragraph4>
+<P4>This is a Heading</P4>
 ```
 
 
 ###### Paragraph5
 **Not Finished**
 ```
-<Paragraph4
+<P5
     color = 'black'
     font = 'serif'
     size = '1.333em'
@@ -1355,15 +1425,18 @@ This accepts and renders one child
     weight = '400'
     display = 'flex'
     align = 'center'
+    textAlign = 'center'
     padding = '10px 10%'
     margin = '0'
+    width = 'inherit'
+    height
     id
     className
 >
 ```
 This accepts and renders one child
 ```
-<Paragraph5>This is a Heading</Paragraph5>
+<P5>This is a Heading</P5>
 ```
 
 ##### Pull Quotes <blockquote />
@@ -2250,6 +2323,15 @@ No Contributions will be accepted outside of the project team until the project 
 
 
 ## Versioning
+for a more detailed list of changes, please refer to the changelog
+
+**0.1.0**
+* major name changes will break all prior versions
+* Heading/Paragraph blocks have text align, height and width props available
+* css reset hooked up to every block
+
+**0.0.12**
+* documentation added to readme
 
 **0.0.10** works
 * this is the furthest back that is mostly working
@@ -2270,9 +2352,28 @@ No Contributions will be accepted outside of the project team until the project 
 
 * A Giant Thank you to [Dev Mountain](https://devmountain.com/) for teaching us to code good
 * A big thank you to Morten Rand-Hendriksen for your videos on flex box and the code that allows the className socialness to work
+* Credit to http://meyerweb.com/eric/tools/css/reset/  for use of a reset file
 
 
 ## Changelog
+
+**0.1.0**
+* text align added to heading and paragraph blocks
+* Width and Height now available for heading and paragraph blocks
+
+* mainHeading name changed to H1 + num
+* Heading name changed to H2 + num
+* SubHeading name changed to H3 + num
+* SecondarySubHeading name changed to H4 + num
+* Paragraph name changed to P + num
+* PullQuote name changed to PLQ + num
+
+* z Index of 1000 added to the DropDownNav1
+* z Index of 200 added to the SubNavBAr1, this fixes a stacking issue
+
+* css reset hooked up to every block
+
+* readme updated to reflect changes
 
 **0.0.12**
 * readme was updated with minor documentation
