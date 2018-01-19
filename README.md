@@ -2375,6 +2375,8 @@ for a more detailed list of changes, please refer to the changelog
 
 * readme updated to reflect changes
 
+* fixed Holder4 block 3-5 styles
+
 **0.0.12**
 * readme was updated with minor documentation
 
