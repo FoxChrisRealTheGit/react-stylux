@@ -10,6 +10,8 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+require('../css/reset.css');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -18,13 +20,13 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Paragraph3 = function (_Component) {
-    _inherits(Paragraph3, _Component);
+var P3 = function (_Component) {
+    _inherits(P3, _Component);
 
-    function Paragraph3(props) {
-        _classCallCheck(this, Paragraph3);
+    function P3(props) {
+        _classCallCheck(this, P3);
 
-        var _this = _possibleConstructorReturn(this, (Paragraph3.__proto__ || Object.getPrototypeOf(Paragraph3)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (P3.__proto__ || Object.getPrototypeOf(P3)).call(this, props));
 
         _this.state = {
             color: props.color || 'black',
@@ -34,19 +36,23 @@ var Paragraph3 = function (_Component) {
             fontWeight: props.weight || '400',
             display: props.display || 'flex',
             align: props.align || 'center',
+            textAlign: props.textAlign || 'center',
             padding: props.padding || '10px 10%',
             margin: props.margin || '0',
+            width: props.width || 'inherit',
+            height: props.height,
             id: props.id,
             className: props.className
         };
         return _this;
     }
 
-    _createClass(Paragraph3, [{
+    _createClass(P3, [{
         key: 'render',
         value: function render() {
             var PARAGRAPH = {
-                width: 'inherit',
+                width: this.state.width,
+                height: this.state.height,
                 color: this.state.color,
                 fontFamily: this.state.fontFamily,
                 fontSize: this.state.fontSize,
@@ -55,6 +61,7 @@ var Paragraph3 = function (_Component) {
                 display: this.state.display,
                 flexDirection: 'column',
                 alignItems: this.state.align,
+                textAlign: this.state.textAlign,
                 padding: this.state.padding,
                 margin: this.state.margin
             };
@@ -67,7 +74,7 @@ var Paragraph3 = function (_Component) {
         }
     }]);
 
-    return Paragraph3;
+    return P3;
 }(_react.Component);
 
-exports.default = Paragraph3;
+exports.default = P3;

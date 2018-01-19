@@ -20,13 +20,13 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var PullQuote2 = function (_Component) {
-    _inherits(PullQuote2, _Component);
+var PLQ2 = function (_Component) {
+    _inherits(PLQ2, _Component);
 
-    function PullQuote2(props) {
-        _classCallCheck(this, PullQuote2);
+    function PLQ2(props) {
+        _classCallCheck(this, PLQ2);
 
-        var _this = _possibleConstructorReturn(this, (PullQuote2.__proto__ || Object.getPrototypeOf(PullQuote2)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (PLQ2.__proto__ || Object.getPrototypeOf(PLQ2)).call(this, props));
 
         _this.state = {
 
@@ -40,7 +40,7 @@ var PullQuote2 = function (_Component) {
         return _this;
     }
 
-    _createClass(PullQuote2, [{
+    _createClass(PLQ2, [{
         key: 'render',
         value: function render() {
             var CHILDS = _react2.default.Children.toArray(this.props.children.split('\\'));
@@ -61,7 +61,7 @@ var PullQuote2 = function (_Component) {
         }
     }]);
 
-    return PullQuote2;
+    return PLQ2;
 }(_react.Component);
 
-exports.default = PullQuote2;
+exports.default = PLQ2;

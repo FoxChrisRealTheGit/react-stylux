@@ -10,6 +10,8 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+require('../../css/reset.css');
+
 var _Holder = require('../../Holders/Holder7');
 
 var _Holder2 = _interopRequireDefault(_Holder);

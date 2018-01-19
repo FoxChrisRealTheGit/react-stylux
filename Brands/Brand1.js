@@ -10,6 +10,8 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+require('../css/reset.css');
+
 var _SquareImage = require('../Images/SquareImage');
 
 var _SquareImage2 = _interopRequireDefault(_SquareImage);

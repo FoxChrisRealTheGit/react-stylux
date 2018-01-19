@@ -10,6 +10,8 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+require('../../css/reset.css');
+
 require('../../css/SuperStyleSheet.css');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -29,6 +31,7 @@ var SubNavbar1 = function (_Component) {
         var _this = _possibleConstructorReturn(this, (SubNavbar1.__proto__ || Object.getPrototypeOf(SubNavbar1)).call(this, props));
 
         _this.state = {
+            zIndex: "200",
             fontFamily: props.font || 'serif',
             totalWidth: props.totalWidth || '100%',
             navBarWidth: props.navbarWidth || '50%',
@@ -70,7 +73,8 @@ var SubNavbar1 = function (_Component) {
                 padding: this.state.padding,
                 background: this.state.mainBackground,
                 position: 'sticky',
-                top: '-1px'
+                top: '-1px',
+                zIndex: this.state.zIndex
             };
             var SUBNAVBAR_NAVBAR = {
                 width: this.state.navBarWidth,

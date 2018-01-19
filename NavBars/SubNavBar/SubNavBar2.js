@@ -10,6 +10,8 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+require('../../css/reset.css');
+
 require('../../css/SuperStyleSheet.css');
 
 var _Holder = require('../../Holders/Holder1');

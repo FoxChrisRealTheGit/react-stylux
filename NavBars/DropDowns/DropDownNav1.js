@@ -10,6 +10,8 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+require('../../css/reset.css');
+
 require('../../css/SuperStyleSheet.css');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -41,7 +43,8 @@ var DropDownNav1 = function (_Component) {
             itemsid: props.itemsid,
             mainClassName: props.mainClassName,
             titleClassName: props.titleClassName,
-            itemsClassName: props.itemsClassName
+            itemsClassName: props.itemsClassName,
+            zIndex: "1000"
             // this.enter = this.enter.bind(this);
             // this.left = this.left.bind(this);
         };return _this;
@@ -66,7 +69,8 @@ var DropDownNav1 = function (_Component) {
                 padding: '5px',
                 textAlign: 'center',
                 flex: 1,
-                background: this.state.background
+                background: this.state.background,
+                zIndex: this.state.zIndex
             };
             var DropDown_NavBar_Li = {};
             var HASCHILDS = {
