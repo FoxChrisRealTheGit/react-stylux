@@ -83,7 +83,8 @@ var DropDownNav1 = function (_Component) {
             };
             var HASCHILDS = {
                 fontSize: '1.333em',
-                color: this.state.color
+                color: this.state.color,
+                cursor: 'default'
             };
             var CHILDS = _react2.default.Children.toArray(this.props.children);
             var NAVBAR = CHILDS.map(function (x, i, arr) {
