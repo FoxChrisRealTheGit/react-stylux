@@ -34,8 +34,7 @@ var Brand1 = function (_Component) {
 
         _this.state = {
             display: props.display || 'flex',
-            direction: props.direction || 'row',
-            link: props.link || '/'
+            direction: props.direction || 'row'
         };
         return _this;
     }
@@ -59,24 +58,16 @@ var Brand1 = function (_Component) {
                 'div',
                 { style: BRAND },
                 _react2.default.createElement(
-                    'a',
-                    { href: this.state.link },
-                    _react2.default.createElement(
-                        _SquareImage2.default,
-                        {
-                            size: 'tn' },
-                        CHILDS[0],
-                        'logo'
-                    )
+                    _SquareImage2.default,
+                    {
+                        size: 'tn' },
+                    CHILDS[0],
+                    'logo'
                 ),
                 _react2.default.createElement(
-                    'a',
-                    { href: this.state.link },
-                    _react2.default.createElement(
-                        'p',
-                        { style: BRAND_NAME },
-                        CHILDS[1]
-                    )
+                    'p',
+                    { style: BRAND_NAME },
+                    CHILDS[1]
                 )
             );
         }

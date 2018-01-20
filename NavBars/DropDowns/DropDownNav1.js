@@ -33,8 +33,11 @@ var DropDownNav1 = function (_Component) {
         _this.state = {
             display: 'none',
             background: props.background,
+            boxShadow: props.boxShadow || '1px 2px 2px black',
+            borderRadius: props.borderRadius || '0 0 5px 5px',
             offset: props.offset || '10px',
-            color: 'white',
+            color: props.color || 'black',
+            textAlign: props.textAlign || 'center',
             margin: '',
             padding: '',
             width: props.width,
@@ -64,17 +67,23 @@ var DropDownNav1 = function (_Component) {
             var DROPDOWN = {
                 position: 'absolute',
                 display: this.state.display,
+                borderRadius: this.state.borderRadius,
+                boxShadow: this.state.boxShadow,
                 margin: '0 0 0 ' + this.state.offset,
                 width: this.state.width,
                 padding: '5px',
-                textAlign: 'center',
+                textAlign: this.state.textAlign,
                 flex: 1,
                 background: this.state.background,
-                zIndex: this.state.zIndex
+                zIndex: this.state.zIndex,
+                color: this.state.color
             };
-            var DropDown_NavBar_Li = {};
+            var DropDown_NavBar_Li = {
+                color: this.state.color
+            };
             var HASCHILDS = {
-                fontSize: '1.333em'
+                fontSize: '1.333em',
+                color: this.state.color
             };
             var CHILDS = _react2.default.Children.toArray(this.props.children);
             var NAVBAR = CHILDS.map(function (x, i, arr) {

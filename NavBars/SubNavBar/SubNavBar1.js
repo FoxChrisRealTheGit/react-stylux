@@ -45,6 +45,7 @@ var SubNavbar1 = function (_Component) {
             itemSpaceing: props.itemSpacing || '0',
             mainBackground: props.mainBackground || 'black',
             itemBackground: props.itemBackground || 'inherit',
+            color: props.color || 'whitesmoke',
             fontSize: props.fontSize || '0.8em',
             fontWeight: props.fontWeight || '100',
             fontVariant: props.fontVariant || 'none',
@@ -72,6 +73,7 @@ var SubNavbar1 = function (_Component) {
                 margin: '0',
                 padding: this.state.padding,
                 background: this.state.mainBackground,
+                color: this.state.color,
                 position: 'sticky',
                 top: '-1px',
                 zIndex: this.state.zIndex

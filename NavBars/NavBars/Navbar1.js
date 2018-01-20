@@ -44,6 +44,7 @@ var Navbar1 = function (_Component) {
             itemSpaceing: props.itemSpacing || '10px 0',
             mainBackground: props.mainBackground || 'inherit',
             itemBackground: props.itemBackground || 'inherit',
+            color: props.color || 'black',
             fontSize: props.fontSize || '1em',
             fontWeight: props.fontWeight || '100',
             fontVariant: props.fontVariant || 'none',
@@ -66,7 +67,8 @@ var Navbar1 = function (_Component) {
                 alignItems: this.state.alignItems,
                 margin: '0',
                 padding: this.state.padding,
-                background: this.state.mainBackground
+                background: this.state.mainBackground,
+                color: this.state.color
             };
             var NAVBAR_NAVBAR = {
                 width: this.state.navBarWidth,

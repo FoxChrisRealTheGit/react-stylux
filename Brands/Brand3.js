@@ -33,8 +33,7 @@ var Brand3 = function (_Component) {
         var _this = _possibleConstructorReturn(this, (Brand3.__proto__ || Object.getPrototypeOf(Brand3)).call(this, props));
 
         _this.state = {
-            display: props.display || 'flex',
-            link: props.link || '/'
+            display: props.display || 'flex'
         };
         return _this;
     }
@@ -51,14 +50,10 @@ var Brand3 = function (_Component) {
                 'section',
                 { style: BRAND },
                 _react2.default.createElement(
-                    'a',
-                    { href: this.state.link },
-                    _react2.default.createElement(
-                        _SquareImage2.default,
-                        null,
-                        CHILDS[0],
-                        'logo'
-                    )
+                    _SquareImage2.default,
+                    null,
+                    CHILDS[0],
+                    'logo'
                 )
             );
         }

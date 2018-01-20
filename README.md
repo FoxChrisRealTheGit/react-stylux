@@ -315,9 +315,19 @@ This accepts five children and renders them
     block1direction = 'row'
     alignBlock1 = 'center'
     block1 = '1'
+    block1BorderLeft
+    block1BorderRight
+    block1BorderTop
+    block1BorderBottom
+    block1Border
     justifyBlock1 = 'center'
     alignBlock2 = 'center'
     block2 = '1'
+    block2BorderLeft
+    block2BorderRight
+    block2BorderTop
+    block2BorderBottom
+    block2Border
     justifyBlock2 = 'center'
     textColor = 'yellow'
     background ='white'
@@ -340,12 +350,27 @@ This accepts two children and renders them
     direction = 'row'
     alignBlock1 = 'center'
     block1 = '1'
+    block1BorderLeft
+    block1BorderRight
+    block1BorderTop
+    block1BorderBottom
+    block1Border
     justifyBlock1 = 'center'
     alignBlock2 = 'center'
     block2 = '1'
+    block2BorderLeft
+    block2BorderRight
+    block2BorderTop
+    block2BorderBottom
+    block2Border
     justifyBlock2 = 'center'
     alignBlock3 = 'center'
     block3 = '1'
+    block3BorderLeft
+    block3BorderRight
+    block3BorderTop
+    block3BorderBottom
+    block3Border
     justifyBlock3 = 'center'
     textColor = 'yellow'
     background ='white'
@@ -369,15 +394,35 @@ This accepts three children and renders them
     direction = 'row'
     alignBlock1 = 'center'
     block1 = '1'
+    block1BorderLeft
+    block1BorderRight
+    block1BorderTop
+    block1BorderBottom
+    block1Border
     justifyBlock1 = 'center'
     alignBlock2 = 'center'
     block2 = '1'
+    block2BorderLeft
+    block2BorderRight
+    block2BorderTop
+    block2BorderBottom
+    block2Border
     justifyBlock2 = 'center'
     alignBlock3 = 'center'
     block3 = '1'
+    block3BorderLeft
+    block3BorderRight
+    block3BorderTop
+    block3BorderBottom
+    block3Border
     justifyBlock3 = 'center'
     alignBlock4 = 'center'
     block4 = '1'
+    block4BorderLeft
+    block4BorderRight
+    block4BorderTop
+    block4BorderBottom
+    block4Border
     justifyBlock4 = 'center'
     textColor = 'yellow'
     background ='white'
@@ -402,18 +447,43 @@ This accepts four children and renders them
     direction = 'row'
     alignBlock1 = 'center'
     block1 = '1'
+    block1BorderLeft
+    block1BorderRight
+    block1BorderTop
+    block1BorderBottom
+    block1Border
     justifyBlock1 = 'center'
     alignBlock2 = 'center'
     block2 = '1'
+    block2BorderLeft
+    block2BorderRight
+    block2BorderTop
+    block2BorderBottom
+    block2Border
     justifyBlock2 = 'center'
     alignBlock3 = 'center'
     block3 = '1'
+    block3BorderLeft
+    block3BorderRight
+    block3BorderTop
+    block3BorderBottom
+    block3Border
     justifyBlock3 = 'center'
     alignBlock4 = 'center'
     block4 = '1'
+    block4BorderLeft
+    block4BorderRight
+    block4BorderTop
+    block4BorderBottom
+    block4Border
     justifyBlock4 = 'center'
     alignBlock5 = 'center'
     block5 = '1'
+    block5BorderLeft
+    block5BorderRight
+    block5BorderTop
+    block5BorderBottom
+    block5Border
     justifyBlock5 = 'center'
     textColor = 'yellow'
     background ='white'
@@ -439,9 +509,19 @@ This accepts five children and renders them
     direction = 'column'
     alignBlock1 = 'center'
     block1 = '1'
+    block1BorderLeft
+    block1BorderRight
+    block1BorderTop
+    block1BorderBottom
+    block1Border
     justifyBlock1 = 'center'
     alignBlock2 = 'center'
     block2 = '1'
+    block2BorderLeft
+    block2BorderRight
+    block2BorderTop
+    block2BorderBottom
+    block2Border
     justifyBlock2 = 'center'
     textColor = 'yellow'
     background ='white'
@@ -464,12 +544,27 @@ This accepts two children and renders them
     direction = 'column'
     alignBlock1 = 'center'
     block1 = '1'
+    block1BorderLeft
+    block1BorderRight
+    block1BorderTop
+    block1BorderBottom
+    block1Border
     justifyBlock1 = 'center'
     alignBlock2 = 'center'
     block2 = '1'
+    block2BorderLeft
+    block2BorderRight
+    block2BorderTop
+    block2BorderBottom
+    block2Border
     justifyBlock2 = 'center'
     alignBlock3 = 'center'
     block3 = '1'
+    block3BorderLeft
+    block3BorderRight
+    block3BorderTop
+    block3BorderBottom
+    block3Border
     justifyBlock3 = 'center'
     textColor = 'yellow'
     background ='white'
@@ -493,15 +588,35 @@ This accepts three children and renders them
     direction = 'column'
     alignBlock1 = 'center'
     block1 = '1'
+    block1BorderLeft
+    block1BorderRight
+    block1BorderTop
+    block1BorderBottom
+    block1Border
     justifyBlock1 = 'center'
     alignBlock2 = 'center'
     block2 = '1'
+    block2BorderLeft
+    block2BorderRight
+    block2BorderTop
+    block2BorderBottom
+    block2Border
     justifyBlock2 = 'center'
     alignBlock3 = 'center'
     block3 = '1'
+    block3BorderLeft
+    block3BorderRight
+    block3BorderTop
+    block3BorderBottom
+    block3Border
     justifyBlock3 = 'center'
     alignBlock4 = 'center'
     block4 = '1'
+    block4BorderLeft
+    block4BorderRight
+    block4BorderTop
+    block4BorderBottom
+    block4Border
     justifyBlock4 = 'center'
     textColor = 'yellow'
     background ='white'
@@ -526,18 +641,43 @@ This accepts four children and renders them
     direction = 'column'
     alignBlock1 = 'center'
     block1 = '1'
+    block1BorderLeft
+    block1BorderRight
+    block1BorderTop
+    block1BorderBottom
+    block1Border
     justifyBlock1 = 'center'
     alignBlock2 = 'center'
     block2 = '1'
+    block2BorderLeft
+    block2BorderRight
+    block2BorderTop
+    block2BorderBottom
+    block2Border
     justifyBlock2 = 'center'
     alignBlock3 = 'center'
     block3 = '1'
+    block3BorderLeft
+    block3BorderRight
+    block3BorderTop
+    block3BorderBottom
+    block3Border
     justifyBlock3 = 'center'
     alignBlock4 = 'center'
     block4 = '1'
+    block4BorderLeft
+    block4BorderRight
+    block4BorderTop
+    block4BorderBottom
+    block4Border
     justifyBlock4 = 'center'
     alignBlock5 = 'center'
     block5 = '1'
+    block5BorderLeft
+    block5BorderRight
+    block5BorderTop
+    block5BorderBottom
+    block5Border
     justifyBlock5 = 'center'
     textColor = 'yellow'
     background ='white'
@@ -563,21 +703,51 @@ This accepts five children and renders them
     direction = 'column'
     alignBlock1 = 'center'
     block1 = '1'
+    block1BorderLeft
+    block1BorderRight
+    block1BorderTop
+    block1BorderBottom
+    block1Border
     justifyBlock1 = 'center'
     alignBlock2 = 'center'
     block2 = '1'
+    block2BorderLeft
+    block2BorderRight
+    block2BorderTop
+    block2BorderBottom
+    block2Border
     justifyBlock2 = 'center'
     alignBlock3 = 'center'
     block3 = '1'
+    block3BorderLeft
+    block3BorderRight
+    block3BorderTop
+    block3BorderBottom
+    block3Border
     justifyBlock3 = 'center'
     alignBlock4 = 'center'
     block4 = '1'
+    block4BorderLeft
+    block4BorderRight
+    block4BorderTop
+    block4BorderBottom
+    block4Border
     justifyBlock4 = 'center'
     alignBlock5 = 'center'
     block5 = '1'
+    block5BorderLeft
+    block5BorderRight
+    block5BorderTop
+    block5BorderBottom
+    block5Border
     justifyBlock5 = 'center'
     alignBlock6 = 'center'
     block6 = '1'
+    block6BorderLeft
+    block6BorderRight
+    block6BorderTop
+    block6BorderBottom
+    block6Border
     justifyBlock6 = 'center'
     textColor = 'yellow'
     background ='white'
@@ -604,24 +774,59 @@ This accepts six children and renders them
     direction = 'column'
     alignBlock1 = 'center'
     block1 = '1'
+    block1BorderLeft
+    block1BorderRight
+    block1BorderTop
+    block1BorderBottom
+    block1Border
     justifyBlock1 = 'center'
     alignBlock2 = 'center'
     block2 = '1'
+    block2BorderLeft
+    block2BorderRight
+    block2BorderTop
+    block2BorderBottom
+    block2Border
     justifyBlock2 = 'center'
     alignBlock3 = 'center'
     block3 = '1'
+    block3BorderLeft
+    block3BorderRight
+    block3BorderTop
+    block3BorderBottom
+    block3Border
     justifyBlock3 = 'center'
     alignBlock4 = 'center'
     block4 = '1'
+    block4BorderLeft
+    block4BorderRight
+    block4BorderTop
+    block4BorderBottom
+    block4Border
     justifyBlock4 = 'center'
     alignBlock5 = 'center'
     block5 = '1'
+    block5BorderLeft
+    block5BorderRight
+    block5BorderTop
+    block5BorderBottom
+    block5Border
     justifyBlock5 = 'center'
     alignBlock6 = 'center'
     block6 = '1'
+    block6BorderLeft
+    block6BorderRight
+    block6BorderTop
+    block6BorderBottom
+    block6Border
     justifyBlock6 = 'center'
     alignBlock7 = 'center'
     block7 = '1'
+    block7BorderLeft
+    block7BorderRight
+    block7BorderTop
+    block7BorderBottom
+    block7Border
     justifyBlock7 = 'center'
     textColor = 'yellow'
     background ='white'
@@ -649,27 +854,67 @@ This accepts seven children and renders them
     direction = 'column'
     alignBlock1 = 'center'
     block1 = '1'
+    block1BorderLeft
+    block1BorderRight
+    block1BorderTop
+    block1BorderBottom
+    block1Border
     justifyBlock1 = 'center'
     alignBlock2 = 'center'
     block2 = '1'
+    block2BorderLeft
+    block2BorderRight
+    block2BorderTop
+    block2BorderBottom
+    block2Border
     justifyBlock2 = 'center'
     alignBlock3 = 'center'
     block3 = '1'
+    block3BorderLeft
+    block3BorderRight
+    block3BorderTop
+    block3BorderBottom
+    block3Border
     justifyBlock3 = 'center'
     alignBlock4 = 'center'
     block4 = '1'
+    block4BorderLeft
+    block4BorderRight
+    block4BorderTop
+    block4BorderBottom
+    block4Border
     justifyBlock4 = 'center'
     alignBlock5 = 'center'
     block5 = '1'
+    block5BorderLeft
+    block5BorderRight
+    block5BorderTop
+    block5BorderBottom
+    block5Border
     justifyBlock5 = 'center'
     alignBlock6 = 'center'
     block6 = '1'
+    block6BorderLeft
+    block6BorderRight
+    block6BorderTop
+    block6BorderBottom
+    block6Border
     justifyBlock6 = 'center'
     alignBlock7 = 'center'
     block7 = '1'
+    block7BorderLeft
+    block7BorderRight
+    block7BorderTop
+    block7BorderBottom
+    block7Border
     justifyBlock7 = 'center'
     alignBlock8 = 'center'
     block8 = '1'
+    block8BorderLeft
+    block8BorderRight
+    block8BorderTop
+    block8BorderBottom
+    block8Border
     justifyBlock8 = 'center'
     textColor = 'yellow'
     background ='white'
@@ -698,30 +943,75 @@ This accepts eight children and renders them
     direction = 'column'
     alignBlock1 = 'center'
     block1 = '1'
+    block1BorderLeft
+    block1BorderRight
+    block1BorderTop
+    block1BorderBottom
+    block1Border
     justifyBlock1 = 'center'
     alignBlock2 = 'center'
     block2 = '1'
+    block2BorderLeft
+    block2BorderRight
+    block2BorderTop
+    block2BorderBottom
+    block2Border
     justifyBlock2 = 'center'
     alignBlock3 = 'center'
     block3 = '1'
+    block3BorderLeft
+    block3BorderRight
+    block3BorderTop
+    block3BorderBottom
+    block3Border
     justifyBlock3 = 'center'
     alignBlock4 = 'center'
     block4 = '1'
+    block4BorderLeft
+    block4BorderRight
+    block4BorderTop
+    block4BorderBottom
+    block4Border
     justifyBlock4 = 'center'
     alignBlock5 = 'center'
     block5 = '1'
+    block5BorderLeft
+    block5BorderRight
+    block5BorderTop
+    block5BorderBottom
+    block5Border
     justifyBlock5 = 'center'
     alignBlock6 = 'center'
     block6 = '1'
+    block6BorderLeft
+    block6BorderRight
+    block6BorderTop
+    block6BorderBottom
+    block6Border
     justifyBlock6 = 'center'
     alignBlock7 = 'center'
     block7 = '1'
+    block7BorderLeft
+    block7BorderRight
+    block7BorderTop
+    block7BorderBottom
+    block7Border
     justifyBlock7 = 'center'
     alignBlock8 = 'center'
     block8 = '1'
+    block8BorderLeft
+    block8BorderRight
+    block8BorderTop
+    block8BorderBottom
+    block8Border
     justifyBlock8 = 'center'
     alignBlock9 = 'center'
     block9 = '1'
+    block9BorderLeft
+    block9BorderRight
+    block9BorderTop
+    block9BorderBottom
+    block9Border
     justifyBlock9 = 'center'
     textColor = 'yellow'
     background ='white'
@@ -751,33 +1041,83 @@ This accepts nine children and renders them
     direction = 'column'
     alignBlock1 = 'center'
     block1 = '1'
+    block1BorderLeft
+    block1BorderRight
+    block1BorderTop
+    block1BorderBottom
+    block1Border
     justifyBlock1 = 'center'
     alignBlock2 = 'center'
     block2 = '1'
+    block2BorderLeft
+    block2BorderRight
+    block2BorderTop
+    block2BorderBottom
+    block2Border
     justifyBlock2 = 'center'
     alignBlock3 = 'center'
     block3 = '1'
+    block3BorderLeft
+    block3BorderRight
+    block3BorderTop
+    block3BorderBottom
+    block3Border
     justifyBlock3 = 'center'
     alignBlock4 = 'center'
     block4 = '1'
+    block4BorderLeft
+    block4BorderRight
+    block4BorderTop
+    block4BorderBottom
+    block4Border
     justifyBlock4 = 'center'
     alignBlock5 = 'center'
     block5 = '1'
+    block5BorderLeft
+    block5BorderRight
+    block5BorderTop
+    block5BorderBottom
+    block5Border
     justifyBlock5 = 'center'
     alignBlock6 = 'center'
     block6 = '1'
+    block6BorderLeft
+    block6BorderRight
+    block6BorderTop
+    block6BorderBottom
+    block6Border
     justifyBlock6 = 'center'
     alignBlock7 = 'center'
     block7 = '1'
+    block7BorderLeft
+    block7BorderRight
+    block7BorderTop
+    block7BorderBottom
+    block7Border
     justifyBlock7 = 'center'
     alignBlock8 = 'center'
     block8 = '1'
+    block8BorderLeft
+    block8BorderRight
+    block8BorderTop
+    block8BorderBottom
+    block8Border
     justifyBlock8 = 'center'
     alignBlock9 = 'center'
     block9 = '1'
+    block9BorderLeft
+    block9BorderRight
+    block9BorderTop
+    block9BorderBottom
+    block9Border
     justifyBlock9 = 'center'
     alignBlock10 = 'center'
     block10 = '1'
+    block10BorderLeft
+    block10BorderRight
+    block10BorderTop
+    block10BorderBottom
+    block10Border
     justifyBlock10 = 'center'
     textColor = 'yellow'
     background ='white'
@@ -829,6 +1169,12 @@ Each of these headings follow a specific pattern:
     margin = '0'
     width = 'inherit'
     height
+    textShadow
+    bLeft
+    bRight
+    bTop
+    bBottom
+    border
     id
     className
     >
@@ -853,9 +1199,15 @@ This accepts and renders one child
     margin = '0'
     width = 'inherit'
     height
+    textShadow
+    bLeft
+    bRight
+    bTop
+    bBottom
+    border
     id
     className
->
+    >
 ```
 This accepts and renders one child
 ```
@@ -877,6 +1229,12 @@ This accepts and renders one child
     margin = '0'
     width = 'inherit'
     height
+    textShadow
+    bLeft
+    bRight
+    bTop
+    bBottom
+    border
     id
     className
     >
@@ -901,6 +1259,12 @@ This accepts and renders one child
     margin = '0'
     width = 'inherit'
     height
+    textShadow
+    bLeft
+    bRight
+    bTop
+    bBottom
+    border
     id
     className
     >
@@ -926,6 +1290,12 @@ This accepts and renders one child
     margin = '0'
     width = 'inherit'
     height
+    textShadow
+    bLeft
+    bRight
+    bTop
+    bBottom
+    border
     id
     className
     >
@@ -951,6 +1321,12 @@ This accepts and renders one child
     margin = '0'
     width = 'inherit'
     height
+    textShadow
+    bLeft
+    bRight
+    bTop
+    bBottom
+    border
     id
     className
     >
@@ -975,9 +1351,15 @@ This accepts and renders one child
     margin = '0'
     width = 'inherit'
     height
+    textShadow
+    bLeft
+    bRight
+    bTop
+    bBottom
+    border
     id
     className
->
+    >
 ```
 This accepts and renders one child
 ```
@@ -999,9 +1381,15 @@ This accepts and renders one child
     margin = '0'
     width = 'inherit'
     height
+    textShadow
+    bLeft
+    bRight
+    bTop
+    bBottom
+    border
     id
     className
->
+    >
 ```
 This accepts and renders one child
 ```
@@ -1023,9 +1411,15 @@ This accepts and renders one child
     margin = '0'
     width = 'inherit'
     height
+    textShadow
+    bLeft
+    bRight
+    bTop
+    bBottom
+    border
     id
     className
->
+    >
 ```
 This accepts and renders one child
 ```
@@ -1048,6 +1442,12 @@ This accepts and renders one child
     margin = '0'
     width = 'inherit'
     height
+    textShadow
+    bLeft
+    bRight
+    bTop
+    bBottom
+    border
     id
     className
     >
@@ -1074,6 +1474,12 @@ This accepts and renders one child
     margin = '0'
     width = 'inherit'
     height
+    textShadow
+    bLeft
+    bRight
+    bTop
+    bBottom
+    border
     id
     className
     >
@@ -1098,6 +1504,12 @@ This accepts and renders one child
     margin = '0'
     width = 'inherit'
     height
+    textShadow
+    bLeft
+    bRight
+    bTop
+    bBottom
+    border
     id
     className
     >
@@ -1122,6 +1534,12 @@ This accepts and renders one child
     margin = '0'
     width = 'inherit'
     height
+    textShadow
+    bLeft
+    bRight
+    bTop
+    bBottom
+    border
     id
     className
     >
@@ -1146,9 +1564,15 @@ This accepts and renders one child
     margin = '0'
     width = 'inherit'
     height
+    textShadow
+    bLeft
+    bRight
+    bTop
+    bBottom
+    border
     id
     className
->
+    >
 ```
 This accepts and renders one child
 ```
@@ -1171,9 +1595,15 @@ This accepts and renders one child
     margin = '0'
     width = 'inherit'
     height
+    textShadow
+    bLeft
+    bRight
+    bTop
+    bBottom
+    border
     id
     className
->
+    >
 ```
 This accepts and renders one child
 ```
@@ -1197,9 +1627,15 @@ This accepts and renders one child
     margin = '0'
     width = 'inherit'
     height
+    textShadow
+    bLeft
+    bRight
+    bTop
+    bBottom
+    border
     id
     className
->
+    >
 ```
 This accepts and renders one child
 ```
@@ -1220,9 +1656,15 @@ This accepts and renders one child
     margin = '0'
     width = 'inherit'
     height
+    textShadow
+    bLeft
+    bRight
+    bTop
+    bBottom
+    border
     id
     className
->
+    >
 ```
 This accepts and renders one child
 ```
@@ -1244,9 +1686,15 @@ This accepts and renders one child
     margin = '0'
     width = 'inherit'
     height
+    textShadow
+    bLeft
+    bRight
+    bTop
+    bBottom
+    border
     id
     className
->
+    >
 ```
 This accepts and renders one child
 ```
@@ -1268,9 +1716,15 @@ This accepts and renders one child
     margin = '0'
     width = 'inherit'
     height
+    textShadow
+    bLeft
+    bRight
+    bTop
+    bBottom
+    border
     id
     className
->
+    >
 ```
 This accepts and renders one child
 ```
@@ -1293,9 +1747,15 @@ This accepts and renders one child
     margin = '0'
     width = 'inherit'
     height
+    textShadow
+    bLeft
+    bRight
+    bTop
+    bBottom
+    border
     id
     className
->
+    >
 ```
 This accepts and renders one child
 ```
@@ -1329,9 +1789,15 @@ Each of these paragraphs follow a specific pattern:
     margin = '0'
     width = 'inherit'
     height
+    textShadow
+    bLeft
+    bRight
+    bTop
+    bBottom
+    border
     id
     className
->
+    >
 ```
 This accepts and renders one child
 ```
@@ -1354,9 +1820,15 @@ This accepts and renders one child
     margin = '0'
     width = 'inherit'
     height
+    textShadow
+    bLeft
+    bRight
+    bTop
+    bBottom
+    border
     id
     className
->
+    >
 ```
 This accepts and renders one child
 ```
@@ -1379,9 +1851,15 @@ This accepts and renders one child
     margin = '0'
     width = 'inherit'
     height
+    textShadow
+    bLeft
+    bRight
+    bTop
+    bBottom
+    border
     id
     className
->
+    >
 ```
 This accepts and renders one child
 ```
@@ -1404,9 +1882,15 @@ This accepts and renders one child
     margin = '0'
     width = 'inherit'
     height
+    textShadow
+    bLeft
+    bRight
+    bTop
+    bBottom
+    border
     id
     className
->
+    >
 ```
 This accepts and renders one child
 ```
@@ -1430,9 +1914,15 @@ This accepts and renders one child
     margin = '0'
     width = 'inherit'
     height
+    textShadow
+    bLeft
+    bRight
+    bTop
+    bBottom
+    border
     id
     className
->
+    >
 ```
 This accepts and renders one child
 ```
@@ -1786,6 +2276,7 @@ This accepts seven children and a background
     itemSpacing = '10px 0'
     mainBackground = 'inherit'
     itemBackground = 'inherit'
+    color = 'black'
     fontSize = 1em
     fontWeight = '100'
     fontVariant = 'none'
@@ -1823,7 +2314,13 @@ This uses two mouse events and is not optimized for tablet or mobile use.
 ```
 <DropDownNav1
     background
-    offset = '10px'
+    boxShadow = '1px 2px 2px black'
+    borderRadius = '0 0 5px 5px'
+    offset = '-5px'
+    color = 'black'
+    textAlign = 'center'
+    margin
+    padding
     width
     mainid
     titleid
@@ -2326,7 +2823,7 @@ No Contributions will be accepted outside of the project team until the project 
 for a more detailed list of changes, please refer to the changelog
 
 **0.1.0**
-* major name changes will break all prior versions
+* major name changes will break all prior versions, see changelog
 * Heading/Paragraph blocks have text align, height and width props available
 * css reset hooked up to every block
 
@@ -2340,8 +2837,6 @@ for a more detailed list of changes, please refer to the changelog
 ## Authors
 
 * **Christopher Fox** -
-* **Kaycee Ingram** -
-
 
 ## License
 
@@ -2350,12 +2845,27 @@ for a more detailed list of changes, please refer to the changelog
 
 ## Acknowledgments
 
-* A Giant Thank you to [Dev Mountain](https://devmountain.com/) for teaching us to code good
+* A Giant Thank you to [Dev Mountain](https://devmountain.com/) for teaching me to code good
 * A big thank you to Morten Rand-Hendriksen for your videos on flex box and the code that allows the className socialness to work
 * Credit to http://meyerweb.com/eric/tools/css/reset/  for use of a reset file
 
 
 ## Changelog
+
+**0.1.3**
+
+* Fixed Holders 8-13 block 5 styles
+* got rid of a tags in Brands, will rework Brand Blocks
+* text-shadow added to headings and paragraphs
+* border, border-left, border-right, border-top, border-bottom added to headings, paragraphs, holders, and toggler 1 & 2
+* added box-shadow to dropdownnav1 and toggler1
+* border-radius, text-align, and color added to dropdownnav1
+* color also added to navbar, subnav 1 & 2
+* got rid of default yellow hover highlight will be allow for easier adjusting of this soon
+* toggler 1 now has z-index of 2000
+* color, border, weight, shadow, margin, padding, variant, and background added to the toggler 1 & 2 button
+
+* readme updated to reflect the changes
 
 **0.1.0**
 * text align added to heading and paragraph blocks

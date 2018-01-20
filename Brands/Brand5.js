@@ -29,8 +29,7 @@ var Brand5 = function (_Component) {
         var _this = _possibleConstructorReturn(this, (Brand5.__proto__ || Object.getPrototypeOf(Brand5)).call(this, props));
 
         _this.state = {
-            display: props.display || 'flex',
-            link: props.link || '/'
+            display: props.display || 'flex'
         };
         return _this;
     }
@@ -43,11 +42,7 @@ var Brand5 = function (_Component) {
                 alignItems: 'center'
             };
             var CHILDS = _react2.default.Children.toArray(this.props.children);
-            return _react2.default.createElement(
-                'section',
-                { style: BRAND },
-                _react2.default.createElement('a', { href: this.state.link })
-            );
+            return _react2.default.createElement('section', { style: BRAND });
         }
     }]);
 
