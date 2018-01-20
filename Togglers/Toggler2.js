@@ -52,6 +52,7 @@ var Toggler2 = function (_Component) {
             bBorderTop: props.bBorderTop,
             bBorderBottom: props.bBorderBottom,
             position: props.position,
+            togglePlace: props.togglePlace || 'column',
             padding: props.padding,
             offset: props.offset + '%',
             boxShadow: props.shadow || '1px 2px 2px black',
@@ -76,6 +77,10 @@ var Toggler2 = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
+            var FULLELEMENT = {
+                display: 'flex',
+                flexDirection: this.state.togglePlace
+            };
             var TOGGLERBOX = {
                 display: this.state.show ? 'flex' : 'none',
                 position: this.state.position,
@@ -115,7 +120,7 @@ var Toggler2 = function (_Component) {
             var CHILDS = _react2.default.Children.toArray(this.props.children);
             return _react2.default.createElement(
                 'div',
-                { id: this.state.mainid, className: this.state.mainClassName },
+                { id: this.state.mainid, style: FULLELEMENT, className: this.state.mainClassName },
                 _react2.default.createElement(
                     'div',
                     { style: CLICKBOX, id: this.state.titleid, className: this.state.titleClassName, onClick: this.toggle },

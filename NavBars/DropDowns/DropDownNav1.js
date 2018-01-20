@@ -35,11 +35,11 @@ var DropDownNav1 = function (_Component) {
             background: props.background,
             boxShadow: props.boxShadow || '1px 2px 2px black',
             borderRadius: props.borderRadius || '0 0 5px 5px',
-            offset: props.offset || '10px',
+            offset: props.offset,
             color: props.color || 'black',
             textAlign: props.textAlign || 'center',
-            margin: '',
-            padding: '',
+            margin: props.margin,
+            padding: props.padding,
             width: props.width,
             mainid: props.mainid,
             titleid: props.titleid,
@@ -82,7 +82,7 @@ var DropDownNav1 = function (_Component) {
                 color: this.state.color
             };
             var HASCHILDS = {
-                fontSize: '1.333em',
+                fontSize: '1em',
                 color: this.state.color,
                 cursor: 'default'
             };

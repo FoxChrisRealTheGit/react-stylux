@@ -6,7 +6,7 @@ Utilizing three simple component types, this project simplifies layout and front
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
@@ -2686,12 +2686,33 @@ This accept unlimited? children and render as slides
 ##### Toggler1
 ```
 <Toggler1
-    position = 'absolute'
+    position = 'fixed'
     width = '100px'
     height = '100vh'
     top = '0'
+    boxShadow = '1px 2px 2px black'
     background = 'white'
     buttonText = 'Toggler1'
+    bColor = 'black',
+    bBackground,
+    bFontSize = '1.333em'
+    bFontVariant,
+    bFontWeight,
+    bTextShadow,
+    bMargin,
+    bPadding,
+    bBorderLeft,
+    bBorderRight,
+    bBorderTop,
+    bBorderBottom,
+    bBorder,
+    border,
+    bLeft,
+    bRight,
+    bTop,
+    bRight,
+    bTop,
+    bBotton,
     left
     right
     mainid
@@ -2713,9 +2734,9 @@ This accepts multiple children, a holder can be placed to divide up the space
             <a href="">Item3</a>
             <a href="">Item4</a>
         </Navbar1>
-        <Paragraph1>
+        <P1>
             some neat sentence
-        </Paragraph1>
+        </P1>
     </Holder5>
 </Toggler1>
 ```
@@ -2726,11 +2747,33 @@ This accepts multiple children, a holder can be placed to divide up the space
 <Toggler2
     width = '400px'
     height
+    togglePlace = 'column'
     background = 'white'
     buttonText = 'Toggler2'
+    bColor = 'black',
+    bBackground,
+    bFontSize = '1.333em'
+    bFontVariant,
+    bFontWeight,
+    bTextShadow,
+    bMargin,
+    bPadding,
+    bBorderLeft,
+    bBorderRight,
+    bBorderTop,
+    bBorderBottom,
+    bBorder,
+    border,
+    bLeft,
+    bRight,
+    bTop,
+    bRight,
+    bTop,
+    bBotton,
     position
     padding
     offset (will auto add + '%')
+    boxShadow = '1px 2px 2px black'
     mainid
     toggleid
     titleid
@@ -2790,9 +2833,51 @@ This accepts multiple children split by \, odd children are rendered as panel na
 
 #### Moduls
 **Not Finished**
-* Modul1
 
-* Modul2
+##### Modul1
+```
+<Modul1
+    boxTop = '40%'
+    boxRight = '45%'
+    boxLeft
+    boxBottom
+    boxPosition = 'fixed'
+    boxBackground = 'white'
+    boxHeight = '200px'
+    boxWidth = '200px'
+    boxAlign = 'center'
+    boxJustify = 'center'
+    buttonText = 'Modul 1'
+    boxShadow = '1px 2px 2px black'
+    btnBackground = 'white'
+    bColor = 'black'
+    bBackground
+    bFontSize
+    bFontVariant
+    bFontWeight
+    bTextShadow
+    bMargin
+    bPadding
+    bBorderLeft
+    bBorderRight
+    bBorderTop
+    bBorderBottom
+    boxId
+    titleId
+    backId
+    titleClassName
+    boxClassName
+    backClassName
+    >
+```
+This accepts multiple children, a holder can be placed to divide up the space
+```
+<Modul1
+    buttonText="Click Me!">
+    <P1>This renders in the middle with a X in the upper right corner</P1>
+</Modul1>
+```
+##### Modul2
 
 
 

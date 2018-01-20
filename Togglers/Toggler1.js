@@ -34,7 +34,7 @@ var Toggler1 = function (_Component) {
 
         _this.state = (_this$state = {
             show: false,
-            position: props.position || 'absolute',
+            position: props.position || 'fixed',
             width: props.width || '100px',
             height: props.height || '100vh',
             top: props.top || '0',

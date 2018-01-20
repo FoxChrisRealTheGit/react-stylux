@@ -308,6 +308,10 @@ var _Toggler5 = require('./Togglers/Toggler3');
 
 var _Toggler6 = _interopRequireDefault(_Toggler5);
 
+var _Modul = require('./Togglers/Moduls/Modul1');
+
+var _Modul2 = _interopRequireDefault(_Modul);
+
 var _BulletList = require('./Lists/Bullet/BulletList1');
 
 var _BulletList2 = _interopRequireDefault(_BulletList);
@@ -408,6 +412,7 @@ module.exports = {
     Toggler1: _Toggler2.default,
     Toggler2: _Toggler4.default,
     Toggler3: _Toggler6.default,
+    Modul1: _Modul2.default,
     BulletList1: _BulletList2.default,
     BulletList2: _BulletList4.default,
     NumberList1: _NumberList2.default,
