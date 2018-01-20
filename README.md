@@ -2936,6 +2936,16 @@ for a more detailed list of changes, please refer to the changelog
 
 
 ## Changelog
+**0.1.4**
+
+* fixed dropdownnav1
+* added togglePlace onto toggler2, this uses flexDirection to change toggle place eg 'column-reverse' || 'row' etc...
+* changed toggler1 position to fixed from absolute, still changeable through props.
+* added modul1, popup with an x close in the upper right corner
+* navigation font sizes adjusted (needs more work)
+
+* readme updated for changes
+
 
 **0.1.3**
 

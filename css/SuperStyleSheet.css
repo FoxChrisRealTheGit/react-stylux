@@ -131,18 +131,18 @@
 
 /* Start of social menu stuffs */
 /* Start of other navbar stuff */
-.navbar1-navbar a{
+/* .navbar1-navbar a{
     font-size: 1.333em;
-}
+} */
 .navbar1-navbar a:hover{
     text-shadow: 1px 1px 3px black;
 }
 /* End of navbar styles */
 /* Start of subnavbar Styles */
-
+/* 
 .subnavbar1-navbar a{
     font-size: 1.333em;
-}
+} */
 .subnavbar1-navbar a:hover{
     text-shadow: 1px 1px 3px whitesmoke;
 }
