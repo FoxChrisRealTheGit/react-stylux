@@ -57,18 +57,17 @@ npm install --save react-stylux
 * SubNavBar 5
 * See Saw Ticker 1
 * Toggler 4
-* Modul 1
 * Modul 2
 * Pull Quote 1
 * Pull Quote 2
-* Table 1
 * Table 2
 * Table 3
-* Pie Chart 1
+* Pie Chart 1 (having issue currently)
 
 
 #### Currently almost done:
 * Horizontal Ticker 1
+* Table 1
 * Toggler 1
 * Toggler 2
 * Toggler 3
@@ -77,7 +76,7 @@ npm install --save react-stylux
 * Carousel 4
 * Oval Image
 * NumberList 2
-
+* Modul 1
 
 ### Step by step:
 
