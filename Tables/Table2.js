@@ -33,7 +33,6 @@ var Table2 = function (_Component) {
         _this.state = {
             columns: props.columns || 3,
             rows: props.rows || 3,
-            head: props.head,
             body: props.body,
             tableId: props.tableId,
             mainId: props.mainId,

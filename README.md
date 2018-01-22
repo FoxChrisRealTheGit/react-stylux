@@ -19,12 +19,12 @@ npm install --save react-stylux
 ### Included in the base version of react-stylux is:
 * Containers 1-5
 * Holders 1-13
-* MainHeading (subject to change) 1-5
-* Heading (subject to change) 1-5
-* SubHeading (subject to change) 1-5
-* SecondarySubHeading (subject to change) 1-5
-* Paragraphs (subject to change) 1-5
-* PullQuotes (subject to change) 1-2
+* H1 1-5
+* H2 1-5
+* H3 1-5
+* H4 1-5
+* P (Paragraphs) 1-5
+* PLQ (Pull Quotes) 1-2
 * Navbar 1
 * SubNavbar 1-5
 * Dropdowns 1-5
@@ -60,7 +60,7 @@ npm install --save react-stylux
 * Modul 2
 * Pull Quote 1
 * Pull Quote 2
-* Table 2
+
 * Table 3
 * Pie Chart 1 (having issue currently)
 
@@ -68,6 +68,7 @@ npm install --save react-stylux
 #### Currently almost done:
 * Horizontal Ticker 1
 * Table 1
+* Table 2
 * Toggler 1
 * Toggler 2
 * Toggler 3
@@ -2879,6 +2880,64 @@ This accepts multiple children, a holder can be placed to divide up the space
 ##### Modul2
 
 
+#### Tables
+
+
+##### Table1
+**Not Finished**
+```
+<Table1
+    columns="3"
+    rows= "3"
+    head
+    body
+    tableId
+    mainId
+    mainClassName
+    tableClassName
+    >
+```
+This accepts unlimited? children and renders based on column and row value split by '\'
+```
+<Table1>
+    head1\
+    head2\
+    head3\
+    body1\
+    body2\
+    body3\
+    body4\
+    body5\
+    body6
+</Table1>
+```
+##### Table2
+**Not Finished**
+```
+<Table2
+    columns="3"
+    rows= "3"
+    body
+    tableId
+    mainId
+    mainClassName
+    tableClassName
+    >
+```
+This accepts unlimited? children and renders based on column and row value split by '\'
+```
+<Table2>
+    head1\
+    body1\
+    body2\
+    head2\
+    body3\
+    body4\
+    head3\
+    body5\
+    body6
+</Table2>
+```
 
 ## Known Bugs
 
@@ -2938,6 +2997,9 @@ for a more detailed list of changes, please refer to the changelog
 **0.1.5**
 * added Table1 and Table2
 * fixed horizontal ticker 1
+* added animation path to blocks (feature not fully implemented)
+
+* readme updated for changes
 
 **0.1.4**
 
