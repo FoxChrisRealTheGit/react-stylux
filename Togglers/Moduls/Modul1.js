@@ -62,13 +62,20 @@ var Modul1 = function (_Component) {
             backId: props.backId,
             titleClassName: props.titleClassName,
             boxClassName: props.boxClassName,
-            backClassName: props.backClassName
+            backClassName: props.backClassName,
+            childs: []
         };
         _this.toggle = _this.toggle.bind(_this);
         return _this;
     }
 
     _createClass(Modul1, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var CHILDS = _react2.default.Children.toArray(this.props.children);
+            this.setState({ childs: CHILDS });
+        }
+    }, {
         key: 'toggle',
         value: function toggle() {
             this.setState({
@@ -120,8 +127,6 @@ var Modul1 = function (_Component) {
                 bottom: this.state.boxHeight,
                 background: this.state.btnBackground
             };
-
-            var CHILDS = _react2.default.Children.toArray(this.props.children);
             return _react2.default.createElement(
                 'div',
                 null,
@@ -138,7 +143,7 @@ var Modul1 = function (_Component) {
                         { style: BTNSTYLE, id: this.state.btnId, className: this.state.btnClassName, onClick: this.toggle },
                         'X'
                     ),
-                    CHILDS
+                    this.state.childs
                 )
             );
         }

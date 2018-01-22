@@ -37,27 +37,33 @@ var PLQ2 = function (_Component) {
             citeid: props.citeid,
             blockclassName: props.blockClassName,
             textclassName: props.textClassName,
-            citeclassName: props.citeClassName
+            citeclassName: props.citeClassName,
+            childs: ''
         };
         return _this;
     }
 
     _createClass(PLQ2, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var CHILDS = _react2.default.Children.toArray(this.props.children.split('\\'));
+            this.setState({ childs: CHILDS });
+        }
+    }, {
         key: 'render',
         value: function render() {
-            var CHILDS = _react2.default.Children.toArray(this.props.children.split('\\'));
             return _react2.default.createElement(
                 'blockquote',
                 { id: this.state.blockid, className: 'pullQuote2 ' + this.state.blockClassName },
                 _react2.default.createElement(
                     'p',
                     { id: this.state.textid, className: 'pullQuote2-text ' + this.state.textClassName },
-                    CHILDS[0]
+                    this.state.childs[0]
                 ),
                 _react2.default.createElement(
                     'cite',
                     { id: this.state.citeid, className: this.state.citeClassName },
-                    CHILDS[1]
+                    this.state.childs[1]
                 )
             );
         }

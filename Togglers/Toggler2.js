@@ -63,13 +63,20 @@ var Toggler2 = function (_Component) {
             titleid: props.titleid,
             titleClassName: props.titleClassName,
             mainClassName: props.mainClassName,
-            toggleClassName: props.toggleClassName
+            toggleClassName: props.toggleClassName,
+            childs: []
         };
         _this.toggle = _this.toggle.bind(_this);
         return _this;
     }
 
     _createClass(Toggler2, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var CHILDS = _react2.default.Children.toArray(this.props.children);
+            this.setState({ childs: CHILDS });
+        }
+    }, {
         key: 'toggle',
         value: function toggle() {
             this.setState({
@@ -119,7 +126,6 @@ var Toggler2 = function (_Component) {
                 borderBottom: this.state.bBorderBottom,
                 border: this.state.bBorder
             };
-            var CHILDS = _react2.default.Children.toArray(this.props.children);
             return _react2.default.createElement(
                 'div',
                 { id: this.state.mainid, style: FULLELEMENT, className: this.state.mainClassName },
@@ -131,7 +137,7 @@ var Toggler2 = function (_Component) {
                 _react2.default.createElement(
                     'div',
                     { style: TOGGLERBOX, id: this.state.toggleid, className: this.state.toggleClassName },
-                    CHILDS
+                    this.state.childs
                 )
             );
         }

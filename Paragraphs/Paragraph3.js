@@ -50,12 +50,19 @@ var P3 = function (_Component) {
             bTop: props.bTop,
             bBottom: props.bBottom,
             id: props.id,
-            className: props.className
+            className: props.className,
+            childs: ''
         };
         return _this;
     }
 
     _createClass(P3, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var CHILDS = _react2.default.Children.toArray(this.props.children);
+            this.setState({ childs: CHILDS });
+        }
+    }, {
         key: 'render',
         value: function render() {
             var PARAGRAPH = {
@@ -79,11 +86,10 @@ var P3 = function (_Component) {
                 padding: this.state.padding,
                 margin: this.state.margin
             };
-            var CHILDS = _react2.default.Children.toArray(this.props.children);
             return _react2.default.createElement(
                 'p',
                 { style: PARAGRAPH, id: this.state.id, className: this.state.className },
-                CHILDS[0]
+                this.state.childs[0]
             );
         }
     }]);

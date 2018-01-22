@@ -55,12 +55,18 @@ var Toggler1 = function (_Component) {
             bBorderTop: props.bBorderTop,
             bBorderBottom: props.bBorderBottom,
             border: props.bBorder
-        }, _defineProperty(_this$state, 'border', props.border), _defineProperty(_this$state, 'bLEft', props.bLeft), _defineProperty(_this$state, 'bRight', props.bRight), _defineProperty(_this$state, 'bTop', props.bTop), _defineProperty(_this$state, 'bBottom', props.bBottom), _defineProperty(_this$state, 'left', props.left), _defineProperty(_this$state, 'right', props.right), _defineProperty(_this$state, 'mainid', props.mainid), _defineProperty(_this$state, 'toggleid', props.toggleid), _defineProperty(_this$state, 'titleid', props.titleid), _defineProperty(_this$state, 'titleClassName', props.titleClassName), _defineProperty(_this$state, 'mainClassName', props.mainClassName), _defineProperty(_this$state, 'toggleClassName', props.toggleClassName), _this$state);
+        }, _defineProperty(_this$state, 'border', props.border), _defineProperty(_this$state, 'bLEft', props.bLeft), _defineProperty(_this$state, 'bRight', props.bRight), _defineProperty(_this$state, 'bTop', props.bTop), _defineProperty(_this$state, 'bBottom', props.bBottom), _defineProperty(_this$state, 'left', props.left), _defineProperty(_this$state, 'right', props.right), _defineProperty(_this$state, 'mainid', props.mainid), _defineProperty(_this$state, 'toggleid', props.toggleid), _defineProperty(_this$state, 'titleid', props.titleid), _defineProperty(_this$state, 'titleClassName', props.titleClassName), _defineProperty(_this$state, 'mainClassName', props.mainClassName), _defineProperty(_this$state, 'toggleClassName', props.toggleClassName), _defineProperty(_this$state, 'childs', []), _this$state);
         _this.toggle = _this.toggle.bind(_this);
         return _this;
     }
 
     _createClass(Toggler1, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var CHILDS = _react2.default.Children.toArray(this.props.children);
+            this.setState({ childs: CHILDS });
+        }
+    }, {
         key: 'toggle',
         value: function toggle() {
             this.setState({
@@ -102,7 +108,6 @@ var Toggler1 = function (_Component) {
                 borderBottom: this.state.bBorderBottom,
                 border: this.state.bBorder
             };
-            var CHILDS = _react2.default.Children.toArray(this.props.children);
             return _react2.default.createElement(
                 'div',
                 { id: this.state.mainid, className: this.state.mainClassName },
@@ -114,7 +119,7 @@ var Toggler1 = function (_Component) {
                 _react2.default.createElement(
                     'div',
                     { style: TOGGLERBOX, id: this.state.toggleid, className: this.state.toggleClassName },
-                    CHILDS
+                    this.state.childs
                 )
             );
         }

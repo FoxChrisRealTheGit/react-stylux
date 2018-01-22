@@ -2998,6 +2998,7 @@ for a more detailed list of changes, please refer to the changelog
 * added Table1 and Table2
 * fixed horizontal ticker 1
 * added animation path to blocks (feature not fully implemented)
+* moved most children to array into componentdidmount to set children on state
 
 * readme updated for changes
 

@@ -43,12 +43,19 @@ var Hero4 = function (_Component) {
             width: props.width || '100%',
             height: props.height,
             id: props.id,
-            className: props.className
+            className: props.className,
+            childs: ''
         };
         return _this;
     }
 
     _createClass(Hero4, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var CHILDS = _react2.default.Children.toArray(this.props.children);
+            this.setState({ childs: CHILDS });
+        }
+    }, {
         key: 'render',
         value: function render() {
             var HEROSTYLE = {
@@ -63,15 +70,14 @@ var Hero4 = function (_Component) {
                 alignItems: 'center',
                 justifyContent: 'center'
             };
-            var CHILDS = _react2.default.Children.toArray(this.props.children);
             return _react2.default.createElement(
                 'div',
                 { style: HEROSTYLE, id: this.state.id, className: this.state.className },
                 _react2.default.createElement(
                     _Holder2.default,
                     null,
-                    CHILDS[2],
-                    CHILDS[0]
+                    this.state.childs[2],
+                    this.state.childs[0]
                 )
             );
         }

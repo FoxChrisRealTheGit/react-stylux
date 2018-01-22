@@ -49,12 +49,19 @@ var Hero2 = function (_Component) {
             heroid: props.heroid,
             bottomid: props.bottomid,
             heroClassName: props.heroClassName,
-            bottomClassName: props.bottomClassName
+            bottomClassName: props.bottomClassName,
+            childs: ''
         };
         return _this;
     }
 
     _createClass(Hero2, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var CHILDS = _react2.default.Children.toArray(this.props.children);
+            this.setState({ childs: CHILDS });
+        }
+    }, {
         key: 'render',
         value: function render() {
             var HEROSTYLE = {
@@ -77,7 +84,6 @@ var Hero2 = function (_Component) {
                 overflow: 'hidden'
 
             };
-            var CHILDS = _react2.default.Children.toArray(this.props.children);
             return _react2.default.createElement(
                 'div',
                 { style: HEROSTYLE, id: this.state.heroid, className: this.state.heroClassName },
@@ -87,7 +93,7 @@ var Hero2 = function (_Component) {
                     _react2.default.createElement(
                         _Holder2.default,
                         null,
-                        CHILDS[0]
+                        this.state.childs[0]
                     )
                 )
             );

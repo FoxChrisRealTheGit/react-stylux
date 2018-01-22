@@ -38,12 +38,19 @@ var Figure = function (_Component) {
             figid: props.figid,
             figCapid: props.figCapid,
             figClassName: props.figClassName,
-            figCapClassName: props.figCapClassName
+            figCapClassName: props.figCapClassName,
+            childs: ''
         };
         return _this;
     }
 
     _createClass(Figure, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var CHILDS = _react2.default.Children.toArray(this.props.children);
+            this.setState({ childs: CHILDS });
+        }
+    }, {
         key: 'render',
         value: function render() {
             var CAPTION = {
@@ -51,15 +58,14 @@ var Figure = function (_Component) {
                 color: 'gray',
                 textAlign: 'center'
             };
-            var CHILDS = _react2.default.Children.toArray(this.props.children);
             return _react2.default.createElement(
                 'figure',
                 { id: this.state.figid, className: this.state.figClassName },
-                CHILDS[0],
+                this.state.childs[0],
                 _react2.default.createElement(
                     'figcaption',
                     { style: CAPTION, id: this.state.figCapid, className: this.state.figCapClassName },
-                    CHILDS[1]
+                    this.state.childs[1]
                 )
             );
         }

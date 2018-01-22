@@ -54,16 +54,40 @@ var SubNavbar1 = function (_Component) {
             itemsid: props.itemsid,
             navClassName: props.navClassName,
             listClassName: props.listClassName,
-            itemsClassName: props.itemsClassName
+            itemsClassName: props.itemsClassName,
+            childs: ''
         };
         return _this;
     }
 
     _createClass(SubNavbar1, [{
-        key: 'render',
-        value: function render() {
+        key: 'componentDidMount',
+        value: function componentDidMount() {
             var _this2 = this;
 
+            var SUBNAVBAR_NAVBAR_LI = {
+                display: 'flex',
+                flex: 1,
+                fontSize: this.state.fontSize,
+                fontWeight: this.state.fontWeight,
+                justifyContent: 'center',
+                margin: this.state.itemSpaceing,
+                background: this.state.itemBackground,
+                fontVariant: this.state.fontVariant
+            };
+            var CHILDS = _react2.default.Children.toArray(this.props.children);
+            var NAVBAR = CHILDS.map(function (x, i) {
+                return _react2.default.createElement(
+                    'li',
+                    { key: i, style: SUBNAVBAR_NAVBAR_LI, id: _this2.state.itemsid, className: _this2.state.itemsClassName },
+                    x
+                );
+            });
+            this.setState({ childs: NAVBAR });
+        }
+    }, {
+        key: 'render',
+        value: function render() {
             var SUBNAVBAR = {
                 width: this.state.totalWidth,
                 height: this.state.totalHeight,
@@ -88,31 +112,13 @@ var SubNavbar1 = function (_Component) {
                 fontFamily: this.state.fontFamily,
                 flexDirection: this.state.direction
             };
-            var SUBNAVBAR_NAVBAR_LI = {
-                display: 'flex',
-                flex: 1,
-                fontSize: this.state.fontSize,
-                fontWeight: this.state.fontWeight,
-                justifyContent: 'center',
-                margin: this.state.itemSpaceing,
-                background: this.state.itemBackground,
-                fontVariant: this.state.fontVariant
-            };
-            var CHILDS = _react2.default.Children.toArray(this.props.children);
-            var NAVBAR = CHILDS.map(function (x, i) {
-                return _react2.default.createElement(
-                    'li',
-                    { key: i, style: SUBNAVBAR_NAVBAR_LI, id: _this2.state.itemsid, className: _this2.state.itemsClassName },
-                    x
-                );
-            });
             return _react2.default.createElement(
                 'nav',
                 { style: SUBNAVBAR, id: this.state.navid, className: 'subnavbar1 socialness ' + this.state.navClassName },
                 _react2.default.createElement(
                     'ul',
                     { style: SUBNAVBAR_NAVBAR, id: this.state.listid, className: 'subnavbar1-navbar ' + this.state.listClassName },
-                    NAVBAR
+                    this.state.childs
                 )
             );
         }

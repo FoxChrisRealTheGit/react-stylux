@@ -36,19 +36,25 @@ var OvalImage = function (_Component) {
         _this.state = {
             size: props.size || 'sm',
             id: props.id,
-            className: props.className
+            className: props.className,
+            childs: ''
         };
         return _this;
     }
 
     _createClass(OvalImage, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var CHILDS = _react2.default.Children.toArray(this.props.children);
+            this.setState({ childs: CHILDS });
+        }
+    }, {
         key: 'render',
         value: function render() {
             var OVALIMG = {
                 borderRadius: '30%'
             };
-            var CHILDS = _react2.default.Children.toArray(this.props.children);
-            return _react2.default.createElement('img', { style: OVALIMG, id: this.state.id, className: 'img-' + this.state.size + ' ' + this.state.className, src: CHILDS[0], alt: CHILDS[1] });
+            return _react2.default.createElement('img', { style: OVALIMG, id: this.state.id, className: 'img-' + this.state.size + ' ' + this.state.className, src: this.state.childs[0], alt: this.state.childs[1] });
         }
     }]);
 

@@ -49,12 +49,19 @@ var H12 = function (_Component) {
             bTop: props.bTop,
             bBottom: props.bBottom,
             id: props.id,
-            className: props.className
+            className: props.className,
+            childs: ''
         };
         return _this;
     }
 
     _createClass(H12, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var CHILDS = _react2.default.Children.toArray(this.props.children);
+            this.setState({ childs: CHILDS });
+        }
+    }, {
         key: 'render',
         value: function render() {
             var HEADING = {
@@ -80,11 +87,10 @@ var H12 = function (_Component) {
                 overflowY: 'hidden'
 
             };
-            var childs = _react2.default.Children.toArray(this.props.children);
             return _react2.default.createElement(
                 'h1',
                 { style: HEADING, id: this.state.id, className: this.state.className },
-                childs[0]
+                this.state.childs[0]
             );
         }
     }]);

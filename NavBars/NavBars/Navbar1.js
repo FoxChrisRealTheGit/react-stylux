@@ -51,12 +51,36 @@ var Navbar1 = function (_Component) {
             navid: props.navid,
             itemsid: props.itemsid,
             navClassName: props.navClassName,
-            itemsClassName: props.itemsClassName
+            itemsClassName: props.itemsClassName,
+            childs: ''
         };
         return _this;
     }
 
     _createClass(Navbar1, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var NAVBAR_NAVBAR_LI = {
+                display: 'flex',
+                flex: 1,
+                fontSize: this.state.fontSize,
+                fontWeight: this.state.fontWeight,
+                justifyContent: 'center',
+                margin: this.state.itemSpaceing,
+                background: this.state.itemBackground,
+                fontVariant: this.state.fontVariant
+            };
+            var CHILDS = _react2.default.Children.toArray(this.props.children);
+            var NAVBARACTUAL = CHILDS.map(function (x, i) {
+                return _react2.default.createElement(
+                    'li',
+                    { key: i, style: NAVBAR_NAVBAR_LI },
+                    x
+                );
+            });
+            this.setState({ childs: NAVBARACTUAL });
+        }
+    }, {
         key: 'render',
         value: function render() {
             var NAVBAR = {
@@ -79,32 +103,13 @@ var Navbar1 = function (_Component) {
                 fontFamily: this.state.fontFamily,
                 flexDirection: this.state.direction
             };
-            var NAVBAR_NAVBAR_LI = {
-                display: 'flex',
-                flex: 1,
-                fontSize: this.state.fontSize,
-                fontWeight: this.state.fontWeight,
-                justifyContent: 'center',
-                margin: this.state.itemSpaceing,
-                background: this.state.itemBackground,
-                fontVariant: this.state.fontVariant
-            };
-
-            var CHILDS = _react2.default.Children.toArray(this.props.children);
-            var NAVBARACTUAL = CHILDS.map(function (x, i) {
-                return _react2.default.createElement(
-                    'li',
-                    { key: i, style: NAVBAR_NAVBAR_LI },
-                    x
-                );
-            });
             return _react2.default.createElement(
                 'nav',
-                { style: NAVBAR },
+                { style: NAVBAR, id: this.state.navid, className: this.state.navClassName },
                 _react2.default.createElement(
                     'ul',
-                    { style: NAVBAR_NAVBAR, className: 'navbar1-navbar socialness' },
-                    NAVBARACTUAL
+                    { style: NAVBAR_NAVBAR, id: this.state.itemsid, className: 'navbar1-navbar socialness ' + this.state.itemsClassName },
+                    this.state.childs
                 )
             );
         }

@@ -64,7 +64,7 @@ var DropDownNav5 = function (_Component) {
             };
             var DropDown_NavBar_Li = {};
             var HASCHILDS = {
-                fontSize: '1.333em'
+                fontSize: '1em'
             };
             var CHILDS = _react2.default.Children.toArray(this.props.children);
             var NAVBAR = CHILDS.map(function (x, i, arr) {

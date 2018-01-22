@@ -48,12 +48,19 @@ var Hero5 = exports.Hero5 = function (_Component) {
             width: props.width || '100%',
             height: props.height,
             id: props.id,
-            className: props.className
+            className: props.className,
+            childs: ''
         };
         return _this;
     }
 
     _createClass(Hero5, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var CHILDS = _react2.default.Children.toArray(this.props.children);
+            this.setState({ childs: CHILDS });
+        }
+    }, {
         key: 'render',
         value: function render() {
             var HEROSTYLE = {
@@ -68,27 +75,26 @@ var Hero5 = exports.Hero5 = function (_Component) {
                 alignItems: 'flex-end',
                 justifyContent: 'center'
             };
-            var CHILDS = _react2.default.Children.toArray(this.props.children);
             return _react2.default.createElement(
                 'div',
                 { style: HEROSTYLE, id: this.state.id, className: this.state.className },
                 _react2.default.createElement(
                     _Holder2.default,
                     null,
-                    CHILDS[0],
+                    this.state.childs[0],
                     _react2.default.createElement(
                         _Holder4.default,
                         null,
-                        CHILDS[1],
-                        CHILDS[2],
-                        CHILDS[3]
+                        this.state.childs[1],
+                        this.state.childs[2],
+                        this.state.childs[3]
                     ),
                     _react2.default.createElement(
                         _Holder4.default,
                         null,
-                        CHILDS[4],
-                        CHILDS[5],
-                        CHILDS[6]
+                        this.state.childs[4],
+                        this.state.childs[5],
+                        this.state.childs[6]
                     )
                 )
             );
