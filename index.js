@@ -332,6 +332,14 @@ var _NumberList5 = require('./Lists/Number/NumberList3');
 
 var _NumberList6 = _interopRequireDefault(_NumberList5);
 
+var _Table = require('./Tables/Table1');
+
+var _Table2 = _interopRequireDefault(_Table);
+
+var _Table3 = require('./Tables/Table2');
+
+var _Table4 = _interopRequireDefault(_Table3);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 module.exports = {
@@ -417,5 +425,7 @@ module.exports = {
     BulletList2: _BulletList4.default,
     NumberList1: _NumberList2.default,
     NumberList2: _NumberList4.default,
-    NumberList3: _NumberList6.default
+    NumberList3: _NumberList6.default,
+    Table1: _Table2.default,
+    Table2: _Table4.default
 };

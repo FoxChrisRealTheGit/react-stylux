@@ -12,6 +12,8 @@ var _react2 = _interopRequireDefault(_react);
 
 require('../../css/reset.css');
 
+require('../../css/animations.css');
+
 var _Holder = require('../../Holders/Holder5');
 
 var _Holder2 = _interopRequireDefault(_Holder);

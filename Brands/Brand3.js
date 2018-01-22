@@ -12,6 +12,8 @@ var _react2 = _interopRequireDefault(_react);
 
 require('../css/reset.css');
 
+require('../css/animations.css');
+
 var _SquareImage = require('../Images/SquareImage');
 
 var _SquareImage2 = _interopRequireDefault(_SquareImage);

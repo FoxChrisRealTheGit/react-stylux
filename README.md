@@ -2935,6 +2935,10 @@ for a more detailed list of changes, please refer to the changelog
 
 
 ## Changelog
+**0.1.5**
+* added Table1 and Table2
+* fixed horizontal ticker 1
+
 **0.1.4**
 
 * fixed dropdownnav1

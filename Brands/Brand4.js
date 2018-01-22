@@ -12,6 +12,8 @@ var _react2 = _interopRequireDefault(_react);
 
 require('../css/reset.css');
 
+require('../css/animations.css');
+
 var _RectangleImage = require('../Images/RectangleImage');
 
 var _RectangleImage2 = _interopRequireDefault(_RectangleImage);

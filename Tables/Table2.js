@@ -14,8 +14,6 @@ require('../css/reset.css');
 
 require('../css/animations.css');
 
-require('../css/SuperStyleSheet.css');
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -24,70 +22,83 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var HorizontalTicker = function (_Component) {
-    _inherits(HorizontalTicker, _Component);
+var Table2 = function (_Component) {
+    _inherits(Table2, _Component);
 
-    function HorizontalTicker(props) {
-        _classCallCheck(this, HorizontalTicker);
+    function Table2(props) {
+        _classCallCheck(this, Table2);
 
-        var _this = _possibleConstructorReturn(this, (HorizontalTicker.__proto__ || Object.getPrototypeOf(HorizontalTicker)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (Table2.__proto__ || Object.getPrototypeOf(Table2)).call(this, props));
 
         _this.state = {
-            slide1: []
+            columns: props.columns || 3,
+            rows: props.rows || 3,
+            head: props.head,
+            body: props.body,
+            tableId: props.tableId,
+            mainId: props.mainId,
+            mainClassName: props.mainClassName,
+            tableClassName: props.tableClassName
+
         };
         return _this;
     }
 
-    _createClass(HorizontalTicker, [{
+    _createClass(Table2, [{
         key: 'componentDidMount',
         value: function componentDidMount() {
-            var t_item = [];
-            var CHILDS = _react2.default.Children.toArray(this.props.children);
-            for (var g = 0; g < CHILDS.length; g += 1) {
-                t_item.push(CHILDS[g]);
+            var tempBody = [];
+            var rows = this.state.rows;
+            var HEAD = void 0,
+                BODY = void 0;
+            var BODYROW = [];
+            var CHILDS = _react2.default.Children.count(this.props.children) === 0 ? '' : _react2.default.Children.toArray(this.props.children.split('\\'));
+            if (CHILDS !== '') {
+                tempBody = CHILDS.map(function (x, i, arr) {
+                    return x;
+                });
+
+                while (rows > 0) {
+                    var temperBody = tempBody.splice(0, this.state.columns);
+                    BODY = temperBody.map(function (x, i, arr) {
+                        return _react2.default.createElement(
+                            'td',
+                            { key: i },
+                            x
+                        );
+                    });
+                    BODYROW.push(_react2.default.createElement(
+                        'tr',
+                        { key: rows },
+                        BODY
+                    ));
+
+                    rows -= 1;
+                }
+                this.setState({ body: BODYROW });
             }
-            this.setState({
-                slide1: t_item
-            });
         }
     }, {
         key: 'render',
         value: function render() {
-            var TICKERWRAPPER = {
-                width: '100%',
-                overflow: 'hidden',
-                paddingLeft: '100%',
-                display: 'flex'
-            };
-            var TICKER_ITEM = {
-                display: 'flex',
-                padding: '0 2em'
-
-            };
-            var HORIZONTALTICKER2 = {
-                paddingLeft: '50%'
-            };
-            var CHILDS = _react2.default.Children.toArray(this.props.children);
-            var TICKERITEM = this.state.slide1.map(function (x, i) {
-                return _react2.default.createElement(
-                    'div',
-                    { key: i, style: TICKER_ITEM },
-                    x
-                );
-            });
+            var TABLESTYLE = {};
             return _react2.default.createElement(
                 'div',
-                { style: TICKERWRAPPER },
+                { id: this.state.mainId, className: this.state.mainClassName },
                 _react2.default.createElement(
-                    'div',
-                    { className: 'horizontal-ticker' },
-                    TICKERITEM
+                    'table',
+                    { style: TABLESTYLE, id: this.state.tableId, className: ' ' + this.state.tableClassName },
+                    _react2.default.createElement(
+                        'tbody',
+                        null,
+                        this.state.body
+                    )
                 )
             );
         }
     }]);
 
-    return HorizontalTicker;
+    return Table2;
 }(_react.Component);
 
-exports.default = HorizontalTicker;
+exports.default = Table2;
