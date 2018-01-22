@@ -1177,6 +1177,10 @@ Each of these headings follow a specific pattern:
     border
     id
     className
+    aniCount
+    aniTime
+    aniName
+    aniDur
     >
 ```
 This accepts and renders one child
@@ -1207,6 +1211,10 @@ This accepts and renders one child
     border
     id
     className
+    aniCount
+    aniTime
+    aniName
+    aniDur
     >
 ```
 This accepts and renders one child
@@ -1237,6 +1245,10 @@ This accepts and renders one child
     border
     id
     className
+    aniCount
+    aniTime
+    aniName
+    aniDur
     >
 ```
 This accepts and renders one child
@@ -1267,6 +1279,10 @@ This accepts and renders one child
     border
     id
     className
+    aniCount
+    aniTime
+    aniName
+    aniDur
     >
 ```
 This accepts and renders one child
@@ -1298,6 +1314,10 @@ This accepts and renders one child
     border
     id
     className
+    aniCount
+    aniTime
+    aniName
+    aniDur
     >
 ```
 This accepts and renders one child
@@ -1329,6 +1349,10 @@ This accepts and renders one child
     border
     id
     className
+    aniCount
+    aniTime
+    aniName
+    aniDur
     >
 ```
 This accepts and renders one child
@@ -1359,6 +1383,10 @@ This accepts and renders one child
     border
     id
     className
+    aniCount
+    aniTime
+    aniName
+    aniDur
     >
 ```
 This accepts and renders one child
@@ -1389,6 +1417,10 @@ This accepts and renders one child
     border
     id
     className
+    aniCount
+    aniTime
+    aniName
+    aniDur
     >
 ```
 This accepts and renders one child
@@ -1419,6 +1451,10 @@ This accepts and renders one child
     border
     id
     className
+    aniCount
+    aniTime
+    aniName
+    aniDur
     >
 ```
 This accepts and renders one child
@@ -1450,6 +1486,10 @@ This accepts and renders one child
     border
     id
     className
+    aniCount
+    aniTime
+    aniName
+    aniDur
     >
 ```
 This accepts and renders one child
@@ -1482,6 +1522,10 @@ This accepts and renders one child
     border
     id
     className
+    aniCount
+    aniTime
+    aniName
+    aniDur
     >
 ```
 This accepts and renders one child
@@ -1512,6 +1556,10 @@ This accepts and renders one child
     border
     id
     className
+    aniCount
+    aniTime
+    aniName
+    aniDur
     >
 ```
 This accepts and renders one child
@@ -1542,6 +1590,10 @@ This accepts and renders one child
     border
     id
     className
+    aniCount
+    aniTime
+    aniName
+    aniDur
     >
 ```
 This accepts and renders one child
@@ -1572,6 +1624,10 @@ This accepts and renders one child
     border
     id
     className
+    aniCount
+    aniTime
+    aniName
+    aniDur
     >
 ```
 This accepts and renders one child
@@ -1603,6 +1659,10 @@ This accepts and renders one child
     border
     id
     className
+    aniCount
+    aniTime
+    aniName
+    aniDur
     >
 ```
 This accepts and renders one child
@@ -1635,6 +1695,10 @@ This accepts and renders one child
     border
     id
     className
+    aniCount
+    aniTime
+    aniName
+    aniDur
     >
 ```
 This accepts and renders one child
@@ -1644,7 +1708,7 @@ This accepts and renders one child
 
 ###### SecondarySubHeading2
 ```
-<SecondarySubHeading2
+<H42
     color = 'black'
     font = 'sans-serif'
     size = '1.7975em'
@@ -1664,6 +1728,10 @@ This accepts and renders one child
     border
     id
     className
+    aniCount
+    aniTime
+    aniName
+    aniDur
     >
 ```
 This accepts and renders one child
@@ -1694,6 +1762,10 @@ This accepts and renders one child
     border
     id
     className
+    aniCount
+    aniTime
+    aniName
+    aniDur
     >
 ```
 This accepts and renders one child
@@ -1724,6 +1796,10 @@ This accepts and renders one child
     border
     id
     className
+    aniCount
+    aniTime
+    aniName
+    aniDur
     >
 ```
 This accepts and renders one child
@@ -1735,7 +1811,7 @@ This accepts and renders one child
 ###### SecondarySubHeading5
 **Not Finished**
 ```
-<SecondarySubHeading4
+<H45
     color = 'black'
     font = 'sans-serif'
     size = '2.157em'
@@ -1755,6 +1831,10 @@ This accepts and renders one child
     border
     id
     className
+    aniCount
+    aniTime
+    aniName
+    aniDur
     >
 ```
 This accepts and renders one child
@@ -1797,6 +1877,10 @@ Each of these paragraphs follow a specific pattern:
     border
     id
     className
+    aniCount
+    aniTime
+    aniName
+    aniDur
     >
 ```
 This accepts and renders one child
@@ -1828,6 +1912,10 @@ This accepts and renders one child
     border
     id
     className
+    aniCount
+    aniTime
+    aniName
+    aniDur
     >
 ```
 This accepts and renders one child
@@ -1859,6 +1947,10 @@ This accepts and renders one child
     border
     id
     className
+    aniCount
+    aniTime
+    aniName
+    aniDur
     >
 ```
 This accepts and renders one child
@@ -1890,6 +1982,10 @@ This accepts and renders one child
     border
     id
     className
+    aniCount
+    aniTime
+    aniName
+    aniDur
     >
 ```
 This accepts and renders one child
@@ -1922,6 +2018,10 @@ This accepts and renders one child
     border
     id
     className
+    aniCount
+    aniTime
+    aniName
+    aniDur
     >
 ```
 This accepts and renders one child
@@ -1972,7 +2072,11 @@ Tall Rectangle Image Sizes:
     size = 'sm'
     id
     className
->
+    aniCount
+    aniTime
+    aniName
+    aniDur
+    >
 ```
 This accepts and renders two children: image and alt tag
 ```
@@ -1989,7 +2093,11 @@ this is the alt tag
     size = 'sm'
     id
     className
->
+    aniCount
+    aniTime
+    aniName
+    aniDur
+    >
 ```
 This accepts and renders two children: image and alt tag
 ```
@@ -2006,7 +2114,11 @@ this is the alt tag
     size = 'sm'
     id
     className
->
+    aniCount
+    aniTime
+    aniName
+    aniDur
+    >
 ```
 This accepts and renders two children: image and alt tag
 ```
@@ -2024,7 +2136,11 @@ this is the alt tag
     size = 'sm'
     id
     className
->
+    aniCount
+    aniTime
+    aniName
+    aniDur
+    >
 ```
 This accepts and renders two children: image and alt tag
 ```
@@ -2041,7 +2157,11 @@ this is the alt tag
     size = 'sm'
     id
     className
->
+    aniCount
+    aniTime
+    aniName
+    aniDur
+    >
 ```
 This accepts and renders two children: image and alt tag
 ```
@@ -2058,7 +2178,11 @@ this is the alt tag
     size = 'sm'
     id
     className
->
+    aniCount
+    aniTime
+    aniName
+    aniDur
+    >
 ```
 This accepts and renders two children: image and alt tag
 ```
@@ -2075,7 +2199,11 @@ this is the alt tag
     size = 'sm'
     id
     className
->
+    aniCount
+    aniTime
+    aniName
+    aniDur
+    >
 ```
 This accepts and renders two children: image and alt tag
 ```
@@ -2092,7 +2220,11 @@ this is the alt tag
     size = 'sm'
     id
     className
->
+    aniCount
+    aniTime
+    aniName
+    aniDur
+    >
 ```
 This accepts and renders two children: image and alt tag
 ```
@@ -2111,7 +2243,7 @@ this is the alt tag
     figCapid
     figClassName
     figCapClassName
->
+    >
 ```
 This accepts and renders two children: first child and a caption child
 ```
@@ -2996,10 +3128,12 @@ for a more detailed list of changes, please refer to the changelog
 ## Changelog
 **0.1.5**
 * added Table1 and Table2
-* fixed horizontal ticker 1
 * added animation path to blocks (feature not fully implemented)
+* added the outline for animation integration into basic blocks (feature not fully implemented)
 * moved most children to array into componentdidmount to set children on state
-
+* fixed navbar1 classname & id
+* lowered dropdownnav5 default text size
+* fixed horizontal ticker 1
 * readme updated for changes
 
 **0.1.4**

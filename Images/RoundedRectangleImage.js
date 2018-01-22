@@ -37,7 +37,11 @@ var RoundedRectangleImage = function (_Component) {
             size: props.size || 'sm',
             id: props.id,
             className: props.className,
-            childs: ''
+            childs: '',
+            animationIterationCount: props.aniCount,
+            animationTimingFunction: props.aniTime,
+            animationName: props.aniName,
+            animationDuration: props.aniDur
         };
         return _this;
     }
@@ -52,7 +56,11 @@ var RoundedRectangleImage = function (_Component) {
         key: 'render',
         value: function render() {
             var ROUNDEDRECTANGLEIMG = {
-                borderRadius: "30%"
+                borderRadius: "30%",
+                animationIterationCount: this.state.animationIterationCount,
+                animationTimingFunction: this.state.animationTimingFunction,
+                animationName: this.state.animationName,
+                animationDuration: this.state.animationDuration
             };
             return _react2.default.createElement('img', { style: ROUNDEDRECTANGLEIMG, id: this.state.id, className: 'recimg-' + this.state.size + ' ' + this.state.className, src: this.state.childs[0], alt: this.state.childs[1] });
         }

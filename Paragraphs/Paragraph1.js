@@ -51,7 +51,11 @@ var P1 = function (_Component) {
             bBottom: props.bBottom,
             id: props.id,
             className: props.className,
-            childs: ''
+            childs: '',
+            animationIterationCount: props.aniCount,
+            animationTimingFunction: props.aniTime,
+            animationName: props.aniName,
+            animationDuration: props.aniDur
         };
         return _this;
     }
@@ -84,7 +88,11 @@ var P1 = function (_Component) {
                 alignItems: this.state.align,
                 textAlign: this.state.textAlign,
                 padding: this.state.padding,
-                margin: this.state.margin
+                margin: this.state.margin,
+                animationIterationCount: this.state.animationIterationCount,
+                animationTimingFunction: this.state.animationTimingFunction,
+                animationName: this.state.animationName,
+                animationDuration: this.state.animationDuration
             };
             return _react2.default.createElement(
                 'p',

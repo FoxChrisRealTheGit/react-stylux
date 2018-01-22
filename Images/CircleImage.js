@@ -18,6 +18,8 @@ require('../css/SuperStyleSheet.css');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -36,7 +38,11 @@ var CircleImage = function (_Component) {
             size: props.size || 'sm',
             id: props.id,
             className: props.className,
-            childs: ''
+            childs: '',
+            animationIterationCount: props.aniCount,
+            animationTimingFunction: props.aniTime,
+            animationName: props.aniName,
+            animationDuration: props.aniDur
         };
         return _this;
     }
@@ -50,11 +56,13 @@ var CircleImage = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
-            var CIRCLEIMG = {
+            var _CIRCLEIMG;
+
+            var CIRCLEIMG = (_CIRCLEIMG = {
                 borderRadius: "100%",
                 overflowX: 'hidden',
                 overflowY: 'hidden'
-            };
+            }, _defineProperty(_CIRCLEIMG, 'borderRadius', "100%"), _defineProperty(_CIRCLEIMG, 'animationIterationCount', this.state.animationIterationCount), _defineProperty(_CIRCLEIMG, 'animationTimingFunction', this.state.animationTimingFunction), _defineProperty(_CIRCLEIMG, 'animationName', this.state.animationName), _defineProperty(_CIRCLEIMG, 'animationDuration', this.state.animationDuration), _CIRCLEIMG);
             return _react2.default.createElement('img', { style: CIRCLEIMG, id: this.state.id, className: 'img-' + this.state.size + ' ' + this.state.className, src: this.state.childs[0], alt: this.state.childs[1] });
         }
     }]);

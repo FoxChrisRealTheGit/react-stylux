@@ -36,7 +36,11 @@ var Brand1 = function (_Component) {
 
         _this.state = {
             display: props.display || 'flex',
-            direction: props.direction || 'row'
+            direction: props.direction || 'row',
+            animationIterationCount: props.aniCount,
+            animationTimingFunction: props.aniTime,
+            animationName: props.aniName,
+            animationDuration: props.aniDur
         };
         return _this;
     }
@@ -48,12 +52,19 @@ var Brand1 = function (_Component) {
                 display: this.state.display,
                 flexDirection: this.state.direction,
                 //width: '15%',
-                alignItems: 'center'
+                alignItems: 'center',
+                animationIterationCount: this.state.animationIterationCount,
+                animationTimingFunction: this.state.animationTimingFunction,
+                animationName: this.state.animationName,
+                animationDuration: this.state.animationDuration
             };
             var BRAND_NAME = {
                 display: 'flex',
-                fontWeight: '900'
-
+                fontWeight: '900',
+                animationIterationCount: this.state.animationIterationCount,
+                animationTimingFunction: this.state.animationTimingFunction,
+                animationName: this.state.animationName,
+                animationDuration: this.state.animationDuration
             };
             var CHILDS = _react2.default.Children.toArray(this.props.children);
             return _react2.default.createElement(

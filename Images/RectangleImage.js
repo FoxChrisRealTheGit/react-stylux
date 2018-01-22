@@ -37,7 +37,11 @@ var RectangleImage = function (_Component) {
             size: props.size || 'sm',
             id: props.id,
             className: props.className,
-            childs: ''
+            childs: '',
+            animationIterationCount: props.aniCount,
+            animationTimingFunction: props.aniTime,
+            animationName: props.aniName,
+            animationDuration: props.aniDur
         };
         return _this;
     }
@@ -51,10 +55,14 @@ var RectangleImage = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
-            var image = {
-                margin: '0 auto'
+            var IMAGE = {
+                margin: '0 auto',
+                animationIterationCount: this.state.animationIterationCount,
+                animationTimingFunction: this.state.animationTimingFunction,
+                animationName: this.state.animationName,
+                animationDuration: this.state.animationDuration
             };
-            return _react2.default.createElement('img', { style: image, id: this.state.id, className: 'recimg-' + this.state.size + ' ' + this.state.className, src: this.state.childs[0], alt: this.state.childs[1] });
+            return _react2.default.createElement('img', { style: IMAGE, id: this.state.id, className: 'recimg-' + this.state.size + ' ' + this.state.className, src: this.state.childs[0], alt: this.state.childs[1] });
         }
     }]);
 

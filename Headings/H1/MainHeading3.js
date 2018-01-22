@@ -50,7 +50,11 @@ var H13 = function (_Component) {
             bBottom: props.bBottom,
             id: props.id,
             className: props.className,
-            childs: ''
+            childs: '',
+            animationIterationCount: props.aniCount,
+            animationTimingFunction: props.aniTime,
+            animationName: props.aniName,
+            animationDuration: props.aniDur
         };
         return _this;
     }
@@ -84,7 +88,11 @@ var H13 = function (_Component) {
                 padding: this.state.padding,
                 margin: this.state.margin,
                 overflowX: 'hidden',
-                overflowY: 'hidden'
+                overflowY: 'hidden',
+                animationIterationCount: this.state.animationIterationCount,
+                animationTimingFunction: this.state.animationTimingFunction,
+                animationName: this.state.animationName,
+                animationDuration: this.state.animationDuration
             };
             return _react2.default.createElement(
                 'h1',
