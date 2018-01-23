@@ -62,8 +62,8 @@ var Carousel3 = function (_Component) {
             for (var g = 0; g < CHILDS.length; g += 1) {
                 slides.push(CHILDS[g]);
             }
-            this.setState({ sliderImages: slides });
-            this.timer = setInterval(this.slideRight, this.state.slideTimer);
+            var intervalTime = setInterval(this.slideRight, this.state.slideTimer);
+            this.setState({ sliderImages: slides, intervalTime: intervalTime });
         }
     }, {
         key: 'componentWillReceiveProps',
@@ -73,13 +73,13 @@ var Carousel3 = function (_Component) {
             for (var g = 0; g < CHILDS.length; g += 1) {
                 slides.push(CHILDS[g]);
             }
-            this.setState({ sliderImages: slides });
-            this.timer = setInterval(this.slideRight, this.state.slideTimer);
+            var intervalTime = setInterval(this.slideRight, this.state.slideTimer);
+            this.setState({ sliderImages: slides, intervalTime: intervalTime });
         }
     }, {
         key: 'componentWillUnmount',
         value: function componentWillUnmount() {
-            clearInterval(this.timer);
+            clearInterval(this.state.intervalTime);
         }
     }, {
         key: 'slideLeft',
