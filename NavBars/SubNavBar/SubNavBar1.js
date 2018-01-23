@@ -86,6 +86,31 @@ var SubNavbar1 = function (_Component) {
             this.setState({ childs: NAVBAR });
         }
     }, {
+        key: 'componentWillReceiveProps',
+        value: function componentWillReceiveProps(newProps) {
+            var _this3 = this;
+
+            var SUBNAVBAR_NAVBAR_LI = {
+                display: 'flex',
+                flex: 1,
+                fontSize: this.state.fontSize,
+                fontWeight: this.state.fontWeight,
+                justifyContent: 'center',
+                margin: this.state.itemSpaceing,
+                background: this.state.itemBackground,
+                fontVariant: this.state.fontVariant
+            };
+            var CHILDS = _react2.default.Children.toArray(newProps.children);
+            var NAVBAR = CHILDS.map(function (x, i) {
+                return _react2.default.createElement(
+                    'li',
+                    { key: i, style: SUBNAVBAR_NAVBAR_LI, id: _this3.state.itemsid, className: _this3.state.itemsClassName },
+                    x
+                );
+            });
+            this.setState({ childs: NAVBAR });
+        }
+    }, {
         key: 'render',
         value: function render() {
             var SUBNAVBAR = {

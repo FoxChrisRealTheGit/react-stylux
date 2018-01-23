@@ -54,6 +54,16 @@ var NumberList1 = function (_Component) {
             this.setState({ listItem: listItems });
         }
     }, {
+        key: 'componentWillReceiveProps',
+        value: function componentWillReceiveProps(newProps) {
+            var listItems = [];
+            var CHILDS = _react2.default.Children.toArray(newProps.children.split('\\'));
+            listItems = CHILDS.map(function (x) {
+                return x;
+            });
+            this.setState({ listItem: listItems });
+        }
+    }, {
         key: 'render',
         value: function render() {
             var LISTSTYLE = {

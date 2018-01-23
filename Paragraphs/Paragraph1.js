@@ -67,6 +67,12 @@ var P1 = function (_Component) {
             this.setState({ childs: CHILDS });
         }
     }, {
+        key: 'componentWillReceiveProps',
+        value: function componentWillReceiveProps(newProps) {
+            var CHILDS = _react2.default.Children.toArray(newProps.children);
+            return this.setState({ childs: CHILDS });
+        }
+    }, {
         key: 'render',
         value: function render() {
             var PARAGRAPH = {

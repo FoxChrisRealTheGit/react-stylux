@@ -102,6 +102,64 @@ var Table1 = function (_Component) {
             }
         }
     }, {
+        key: 'componentWillReceiveProps',
+        value: function componentWillReceiveProps(newProps) {
+            var tempHead = [];
+            var tempBody = [];
+            var childs = [];
+            var rows = this.state.rows;
+            var HEADROW = void 0,
+                HEAD = void 0,
+                BODY = void 0;
+            var BODYROW = [];
+            var CHILDS = _react2.default.Children.count(newProps.children) === 0 ? '' : _react2.default.Children.toArray(newProps.children.split('\\'));
+            if (CHILDS !== '') {
+                childs = CHILDS.map(function (x, i, arr) {
+                    return x;
+                });
+                for (var b = 1; b <= this.state.columns; b += 1) {
+                    tempHead.push(childs[b - 1]);
+                }
+                childs.splice(0, this.state.columns);
+                //need to divide by this.state.columns and make rows here
+                tempBody = childs.map(function (x, i, arr) {
+                    return x;
+                });
+                while (rows > 0) {
+                    if (rows === this.state.rows) {
+                        HEAD = tempHead.map(function (x, i, arr) {
+                            return _react2.default.createElement(
+                                'th',
+                                { key: i },
+                                x
+                            );
+                        });
+                        HEADROW = _react2.default.createElement(
+                            'tr',
+                            null,
+                            HEAD
+                        );
+                    } else {
+                        var temperBody = tempBody.splice(0, this.state.columns);
+                        BODY = temperBody.map(function (x, i, arr) {
+                            return _react2.default.createElement(
+                                'td',
+                                { key: i },
+                                x
+                            );
+                        });
+                        BODYROW.push(_react2.default.createElement(
+                            'tr',
+                            { key: rows },
+                            BODY
+                        ));
+                    }
+                    rows -= 1;
+                }
+                this.setState({ head: HEADROW, body: BODYROW });
+            }
+        }
+    }, {
         key: 'render',
         value: function render() {
             var TABLESTYLE = {};

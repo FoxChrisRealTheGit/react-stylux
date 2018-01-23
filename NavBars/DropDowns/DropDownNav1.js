@@ -74,6 +74,25 @@ var DropDownNav1 = function (_Component) {
             var FIRST = CHILDS[0];
             this.setState({ childs: NAVBAR, first: FIRST });
         }
+    }, {
+        key: 'componentWillReceiveProps',
+        value: function componentWillReceiveProps(newProps) {
+            var DropDown_NavBar_Li = {
+                color: this.state.color
+            };
+
+            var CHILDS = _react2.default.Children.toArray(newProps.children);
+
+            var NAVBAR = CHILDS.map(function (x, i, arr) {
+                return _react2.default.createElement(
+                    'li',
+                    { key: i, style: DropDown_NavBar_Li },
+                    arr[i + 1]
+                );
+            });
+            var FIRST = CHILDS[0];
+            this.setState({ childs: NAVBAR, first: FIRST });
+        }
         // enter(){
         //     this.setState =({display: 'block'});
         // }

@@ -50,6 +50,12 @@ var PLQ1 = function (_Component) {
             this.setState({ childs: CHILDS });
         }
     }, {
+        key: 'componentWillReceiveProps',
+        value: function componentWillReceiveProps(newProps) {
+            var CHILDS = _react2.default.Children.toArray(newProps.children.split('\\'));
+            this.setState({ childs: CHILDS });
+        }
+    }, {
         key: 'render',
         value: function render() {
             return _react2.default.createElement(

@@ -59,7 +59,23 @@ var Carousel2 = function (_Component) {
                 slides.push(CHILDS[g]);
             }
             this.setState({ sliderImages: slides });
-            setInterval(this.slideRight, this.state.slideTimer);
+            this.timer = setInterval(this.slideRight, this.state.slideTimer);
+        }
+    }, {
+        key: 'componentWillReceiveProps',
+        value: function componentWillReceiveProps(newProps) {
+            var slides = [];
+            var CHILDS = _react2.default.Children.toArray(newProps.children);
+            for (var g = 0; g < CHILDS.length; g += 1) {
+                slides.push(CHILDS[g]);
+            }
+            this.setState({ sliderImages: slides });
+            this.timer = setInterval(this.slideRight, this.state.slideTimer);
+        }
+    }, {
+        key: 'componentWillUnmount',
+        value: function componentWillUnmount() {
+            clearInterval(this.timer);
         }
     }, {
         key: 'slideLeft',

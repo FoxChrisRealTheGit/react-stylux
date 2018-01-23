@@ -72,6 +72,24 @@ var Toggler3 = function (_Component) {
             });
         }
     }, {
+        key: 'componentWillReceiveProps',
+        value: function componentWillReceiveProps(newProps) {
+            var CHILDS = _react2.default.Children.toArray(newProps.children.split('\\'));
+            var labels = [];
+            var text = [];
+            for (var i = 0; i < CHILDS.length; i += 1) {
+                if ((i + 1) % 2 === 0) {
+                    text.push(CHILDS[i]);
+                } else {
+                    labels.push(CHILDS[i]);
+                }
+            }
+            this.setState({
+                labels: labels,
+                text: text
+            });
+        }
+    }, {
         key: 'render',
         value: function render() {
             var _this2 = this;

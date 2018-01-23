@@ -58,6 +58,25 @@ var NumberList2 = function (_Component) {
             this.setState({ listItem: listItems });
         }
     }, {
+        key: 'componentWillReceiveProps',
+        value: function componentWillReceiveProps(newProps) {
+            var listItems = [];
+            var nestedItems = [];
+            var CHILDS = _react2.default.Children.toArray(newProps.children);
+            var tempItems = CHILDS.map(function (x) {
+                return x;
+            });
+            for (var q = 0; q < CHILDS.length; q += +this.state.listAmount) {
+                for (var w = 0; w < +this.state.listAmount; w += 1) {
+                    nestedItems.push(tempItems[w]);
+                }
+                listItems.push(nestedItems);
+                nestedItems = [];
+                tempItems.splice(0, this.state.listAmount);
+            }
+            this.setState({ listItem: listItems });
+        }
+    }, {
         key: 'render',
         value: function render() {
             var LISTSTYLE = {

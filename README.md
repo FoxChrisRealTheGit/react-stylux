@@ -3126,6 +3126,10 @@ for a more detailed list of changes, please refer to the changelog
 
 
 ## Changelog
+**0.1.6**
+* added lifecycle componentWillUnmount to carousels to stop interval
+* added lifecycle componentWillRecieveProps to most blocks to allow for render updates
+
 **0.1.5**
 * added Table1 and Table2
 * added animation path to blocks (feature not fully implemented)

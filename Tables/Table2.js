@@ -78,6 +78,40 @@ var Table2 = function (_Component) {
             }
         }
     }, {
+        key: 'componentWillReceiveProps',
+        value: function componentWillReceiveProps(newProps) {
+            var tempBody = [];
+            var rows = this.state.rows;
+            var HEAD = void 0,
+                BODY = void 0;
+            var BODYROW = [];
+            var CHILDS = _react2.default.Children.count(newProps.children) === 0 ? '' : _react2.default.Children.toArray(newProps.children.split('\\'));
+            if (CHILDS !== '') {
+                tempBody = CHILDS.map(function (x, i, arr) {
+                    return x;
+                });
+
+                while (rows > 0) {
+                    var temperBody = tempBody.splice(0, this.state.columns);
+                    BODY = temperBody.map(function (x, i, arr) {
+                        return _react2.default.createElement(
+                            'td',
+                            { key: i },
+                            x
+                        );
+                    });
+                    BODYROW.push(_react2.default.createElement(
+                        'tr',
+                        { key: rows },
+                        BODY
+                    ));
+
+                    rows -= 1;
+                }
+                this.setState({ body: BODYROW });
+            }
+        }
+    }, {
         key: 'render',
         value: function render() {
             var TABLESTYLE = {};
