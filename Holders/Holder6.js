@@ -92,7 +92,7 @@ var Holder6 = function (_Component) {
                         flexDirection: 'column'
                     }
                 },
-                '@media screen and (min-width: 482px) and (max-width: 1200px)': {
+                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
                     holderstyles: {
                         display: this.state.mddis,
                         flexDirection: 'column'
@@ -114,12 +114,12 @@ var Holder6 = function (_Component) {
                     margin: this.state.margin,
                     justifyContent: this.state.justifyBlock1
                 },
-                '@media screen and (max-width: 481px)': {
+                '@media screen and (max-width: 440px)': {
                     block1styles: {
                         display: this.state.block1smdis
                     }
                 },
-                '@media screen and (min-width: 482px) and (max-width: 1200px)': {
+                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
                     block1styles: {
                         display: this.state.block1mddis
                     }
@@ -141,12 +141,12 @@ var Holder6 = function (_Component) {
                     margin: this.state.margin,
                     justifyContent: this.state.justifyBlock2
                 },
-                '@media screen and (max-width: 481px)': {
+                '@media screen and (max-width: 440px)': {
                     block2styles: {
                         display: this.state.block2smdis
                     }
                 },
-                '@media screen and (min-width: 482px) and (max-width: 1200px)': {
+                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
                     block2styles: {
                         display: this.state.block2mddis
                     }
@@ -168,12 +168,12 @@ var Holder6 = function (_Component) {
                     margin: this.state.margin,
                     justifyContent: this.state.justifyBlock3
                 },
-                '@media screen and (max-width: 481px)': {
+                '@media screen and (max-width: 440px)': {
                     block3styles: {
                         display: this.state.block3smdis
                     }
                 },
-                '@media screen and (min-width: 482px) and (max-width: 1200px)': {
+                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
                     block3styles: {
                         display: this.state.block3mddis
                     }

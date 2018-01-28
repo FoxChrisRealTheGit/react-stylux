@@ -164,7 +164,7 @@ var Holder13 = function (_Component) {
                         flexDirection: 'column'
                     }
                 },
-                '@media screen and (min-width: 482px) and (max-width: 1200px)': {
+                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
                     holderstyles: {
                         display: this.state.mddis,
                         flexDirection: 'column'
@@ -186,12 +186,12 @@ var Holder13 = function (_Component) {
                     margin: this.state.margin,
                     justifyContent: this.state.justifyBlock1
                 },
-                '@media screen and (max-width: 481px)': {
+                '@media screen and (max-width: 440px)': {
                     block1styles: {
                         display: this.state.block1smdis
                     }
                 },
-                '@media screen and (min-width: 482px) and (max-width: 1200px)': {
+                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
                     block1styles: {
                         display: this.state.block1mddis
                     }
@@ -213,12 +213,12 @@ var Holder13 = function (_Component) {
                     margin: this.state.margin,
                     justifyContent: this.state.justifyBlock2
                 },
-                '@media screen and (max-width: 481px)': {
+                '@media screen and (max-width: 440px)': {
                     block2styles: {
                         display: this.state.block2smdis
                     }
                 },
-                '@media screen and (min-width: 482px) and (max-width: 1200px)': {
+                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
                     block2styles: {
                         display: this.state.block2mddis
                     }
@@ -240,12 +240,12 @@ var Holder13 = function (_Component) {
                     margin: this.state.margin,
                     justifyContent: this.state.justifyBlock3
                 },
-                '@media screen and (max-width: 481px)': {
+                '@media screen and (max-width: 440px)': {
                     block3styles: {
                         display: this.state.block3smdis
                     }
                 },
-                '@media screen and (min-width: 482px) and (max-width: 1200px)': {
+                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
                     block3styles: {
                         display: this.state.block3mddis
                     }
@@ -267,12 +267,12 @@ var Holder13 = function (_Component) {
                     margin: this.state.margin,
                     justifyContent: this.state.justifyBlock4
                 },
-                '@media screen and (max-width: 481px)': {
+                '@media screen and (max-width: 440px)': {
                     block4styles: {
                         display: this.state.block4smdis
                     }
                 },
-                '@media screen and (min-width: 482px) and (max-width: 1200px)': {
+                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
                     block4styles: {
                         display: this.state.block4mddis
                     }
@@ -294,12 +294,12 @@ var Holder13 = function (_Component) {
                     margin: this.state.margin,
                     justifyContent: this.state.justifyBlock5
                 },
-                '@media screen and (max-width: 481px)': {
+                '@media screen and (max-width: 440px)': {
                     block5styles: {
                         display: this.state.block5smdis
                     }
                 },
-                '@media screen and (min-width: 482px) and (max-width: 1200px)': {
+                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
                     block5styles: {
                         display: this.state.block5mddis
                     }
@@ -321,12 +321,12 @@ var Holder13 = function (_Component) {
                     margin: this.state.margin,
                     justifyContent: this.state.justifyBlock6
                 },
-                '@media screen and (max-width: 481px)': {
+                '@media screen and (max-width: 440px)': {
                     block6styles: {
                         display: this.state.block6smdis
                     }
                 },
-                '@media screen and (min-width: 482px) and (max-width: 1200px)': {
+                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
                     block6styles: {
                         display: this.state.block6mddis
                     }
@@ -348,12 +348,12 @@ var Holder13 = function (_Component) {
                     margin: this.state.margin,
                     justifyContent: this.state.justifyBlock7
                 },
-                '@media screen and (max-width: 481px)': {
+                '@media screen and (max-width: 440px)': {
                     block7styles: {
                         display: this.state.block7smdis
                     }
                 },
-                '@media screen and (min-width: 482px) and (max-width: 1200px)': {
+                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
                     block7styles: {
                         display: this.state.block7mddis
                     }
@@ -375,12 +375,12 @@ var Holder13 = function (_Component) {
                     margin: this.state.margin,
                     justifyContent: this.state.justifyBlock8
                 },
-                '@media screen and (max-width: 481px)': {
+                '@media screen and (max-width: 440px)': {
                     block8styles: {
                         display: this.state.block8smdis
                     }
                 },
-                '@media screen and (min-width: 482px) and (max-width: 1200px)': {
+                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
                     block8styles: {
                         display: this.state.block8mddis
                     }
@@ -402,12 +402,12 @@ var Holder13 = function (_Component) {
                     margin: this.state.margin,
                     justifyContent: this.state.justifyBlock9
                 },
-                '@media screen and (max-width: 481px)': {
+                '@media screen and (max-width: 440px)': {
                     block9styles: {
                         display: this.state.block9smdis
                     }
                 },
-                '@media screen and (min-width: 482px) and (max-width: 1200px)': {
+                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
                     block9styles: {
                         display: this.state.block9mddis
                     }
@@ -428,12 +428,12 @@ var Holder13 = function (_Component) {
                     margin: this.state.margin,
                     justifyContent: this.state.justifyBlock10
                 },
-                '@media screen and (max-width: 481px)': {
+                '@media screen and (max-width: 440px)': {
                     block10styles: {
                         display: this.state.block10smdis
                     }
                 },
-                '@media screen and (min-width: 482px) and (max-width: 1200px)': {
+                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
                     block10styles: {
                         display: this.state.block10mddis
                     }

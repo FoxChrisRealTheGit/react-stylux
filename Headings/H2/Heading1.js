@@ -14,6 +14,10 @@ require('../../css/reset.css');
 
 require('../../css/animations.css');
 
+var _nestingstyles = require('nestingstyles');
+
+var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -54,7 +58,9 @@ var H21 = function (_Component) {
             animationIterationCount: props.aniCount,
             animationTimingFunction: props.aniTime,
             animationName: props.aniName,
-            animationDuration: props.aniDur
+            animationDuration: props.aniDur,
+            smdis: props.smDis || 'flex',
+            mddis: props.mdDis || 'flex'
         };
         return _this;
     }
@@ -74,35 +80,51 @@ var H21 = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
-            var HEADING = {
-                width: this.state.width,
-                height: this.state.height,
-                color: this.state.color,
-                textShadow: this.state.textShadow,
-                borderLeft: this.state.bLeft,
-                borderRight: this.state.bRight,
-                borderTop: this.state.bTop,
-                borderBottom: this.state.bBottom,
-                border: this.state.border,
-                fontFamily: this.state.fontFamily,
-                fontSize: this.state.fontSize,
-                fontWeight: this.state.fontWeight,
-                display: this.state.display,
-                flexDirection: 'column',
-                alignItems: this.state.align,
-                textAlign: props.textAlign || 'center',
-                padding: this.state.padding,
-                margin: this.state.margin,
-                overflowX: 'hidden',
-                overflowY: 'hidden',
-                animationIterationCount: this.state.animationIterationCount,
-                animationTimingFunction: this.state.animationTimingFunction,
-                animationName: this.state.animationName,
-                animationDuration: this.state.animationDuration
-            };
+            var HEADING = _nestingstyles2.default.create({
+                heading: {
+                    width: this.state.width,
+                    height: this.state.height,
+                    color: this.state.color,
+                    textShadow: this.state.textShadow,
+                    borderLeft: this.state.bLeft,
+                    borderRight: this.state.bRight,
+                    borderTop: this.state.bTop,
+                    borderBottom: this.state.bBottom,
+                    border: this.state.border,
+                    fontFamily: this.state.fontFamily,
+                    fontSize: this.state.fontSize,
+                    fontWeight: this.state.fontWeight,
+                    display: this.state.display,
+                    flexDirection: 'column',
+                    alignItems: this.state.align,
+                    textAlign: props.textAlign || 'center',
+                    padding: this.state.padding,
+                    margin: this.state.margin,
+                    overflowX: 'hidden',
+                    overflowY: 'hidden',
+                    animationIterationCount: this.state.animationIterationCount,
+                    animationTimingFunction: this.state.animationTimingFunction,
+                    animationName: this.state.animationName,
+                    animationDuration: this.state.animationDuration
+                },
+                '@media screen and (max-width: 440px)': {
+                    heading: {
+                        display: this.state.smDis,
+                        color: this.state.color,
+                        fontSize: '4em'
+                    }
+                },
+                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
+                    heading: {
+                        display: this.state.mdDis,
+                        color: this.state.color,
+                        fontSize: '2em'
+                    }
+                }
+            });
             return _react2.default.createElement(
                 'h2',
-                { style: HEADING, id: this.state.id, className: this.state.className },
+                { style: HEADING.heading, id: this.state.id, className: this.state.className },
                 this.state.childs[0]
             );
         }

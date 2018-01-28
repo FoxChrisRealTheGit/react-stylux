@@ -14,6 +14,10 @@ require('../../css/SuperStyleSheet.css');
 
 require('../../css/animations.css');
 
+var _nestingstyles = require('nestingstyles');
+
+var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -38,7 +42,9 @@ var PLQ2 = function (_Component) {
             blockclassName: props.blockClassName,
             textclassName: props.textClassName,
             citeclassName: props.citeClassName,
-            childs: ''
+            childs: '',
+            smdis: props.smDis || 'flex',
+            mddis: props.mdDis || 'flex'
         };
         return _this;
     }

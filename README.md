@@ -1,6 +1,9 @@
 # react-stylux
 
-This is currently a very alpha stage project, documentation will be lack luster for a few weeks. Please stand by while testing occurs. It should also be noted that no items are responsive, and are only psuedo responsive to the extent that flex-wrap is responsive. 
+
+This is currently a very alpha stage project, documentation will be lack luster for a few weeks.
+
+**responsive testing occuring, no sizes are set as of right now**
 
 Utilizing three simple component types, this project simplifies layout and front-end considerations for react projects. The three component types are: containers (subject to change), holders, and blocks. Containers (subject to change) define the horizonal space and act as a wrapper for all blocks. Holders then go inside of the container to define the space for the blocks. Holders can go inside of Holders to further define space. Each holder has a pre determinded child length and will render children placed into the holder.
 
@@ -138,6 +141,27 @@ This is just a basic example of what can be done with stylux. Basic documentatio
 Each element will be shown with an example of the possible props equal to the default props, if no default is set then the prop will have no equals.
 Each elements will then be shown is an example of children accepted.
 
+### Animation Notes:
+
+**the animation library is not currently built**
+
+### Responsive Notes:
+There are two breakpoints on the follow elements:
+* containers
+* holders
+* headings
+* paragraphs
+* images
+
+#### Small Breakpoint:
+use this through props as: smdis
+the breakpoint for this is currently set at max-width: 440px (subject to change)
+
+#### Medium Breakpoint:
+use this through props as: mddis
+the breakpoint for this is currently set at min-width: 441px and max-width: 1200px (subject to change)
+
+
 ### Layout Specific
 
 
@@ -152,10 +176,14 @@ Each elements will then be shown is an example of children accepted.
     alignBlock1 = 'center'
     block1 = '1'
     justifyBlock1 = 'center'
+    block1smdis
+    block1mddis
     textColor = 'yellow'
     background = 'white'
     padding = '0'
     margin = '0'
+    smdis
+    mddis
     >
 ```
 This accepts one child and renders it
@@ -174,13 +202,19 @@ This accepts one child and renders it
     alignBlock1 = 'center'
     block1 = '1'
     justifyBlock1 = 'center'
+    block1smdis
+    block1mddis
     alignBlock2 ='center'
     block2 ='1'
     justifyBlock2 = 'center'
+    block2smdis
+    block2mddis
     textColor = 'black'
     background = 'white'
     padding = '0'
     margin = '10px 0'
+    smdis
+    mddis
     >
 ```
 This accepts two children and renders them
@@ -201,16 +235,24 @@ This accepts two children and renders them
     alignBlock1 = 'center'
     block1 = '1'
     justifyBlock1 = 'center'
+    block1smdis
+    block1mddis
     alignBlock2 = 'center'
     block2 = '1'
     justifyBlock2 = 'center'
+    block2smdis
+    block2mddis
     alignBlock3 = 'center'
     block3 ='1'
     justifyBlock3 = 'center'
+    block3smdis
+    block3mddis
     textColor = 'black'
     background = 'white'
     padding = '0'
     margin ='10px 0'
+    smdis
+    mddis
     >
 ```
 This accepts three children and renders them
@@ -233,19 +275,29 @@ This accepts three children and renders them
     alignBlock1 = 'center'
     block1 = '1'
     justifyBlock1 = 'center'
+    block1smdis
+    block1mddis
     alignBlock2 = 'center'
     block2 = '1'
     justifyBlock2 = 'center'
+    block2smdis
+    block2mddis
     alignBlock3 = 'center'
     block3 = '1'
     justifyBlock3 = 'center'
+    block3smdis
+    block3mddis
     alignBlock4 = 'center'
     block4 = '1'
     justifyBlock4 = 'center'
+    block4smdis
+    block4mddis
     textColor = 'black'
     background = 'white'
     padding = '0'
     margin = '10px 0'
+    smdis
+    mddis
     >
 ```
 This accepts four children and renders them
@@ -270,22 +322,34 @@ This accepts four children and renders them
     alignBlock1 = 'center'
     block1 = '1'
     justifyBlock1 = 'center'
+    block1smdis
+    block1mddis
     alignBlock2 = 'center'
     block2 = '1'
     justifyBlock2 = 'center'
+    block2smdis
+    block2mddis
     alignBlock3 = 'center'
     block3 = '1'
     justifyBlock3 = 'center'
+    block3smdis
+    block3mddis
     alignBlock4 = 'center'
     block4 = '1'
     justifyBlock4 = 'center'
+    block4smdis
+    block4mddis
     alignBlock5 = 'center'
     block5 = '1'
     justifyBlock5 = 'center'
+    block5smdis
+    block5mddis
     textColor = 'black'
     background = 'white'
     padding = '0'
     margin = '10px 0'
+    smdis
+    mddis
     >
 ```
 This accepts five children and renders them
@@ -321,6 +385,8 @@ This accepts five children and renders them
     block1BorderBottom
     block1Border
     justifyBlock1 = 'center'
+    block1smdis
+    block1mddis
     alignBlock2 = 'center'
     block2 = '1'
     block2BorderLeft
@@ -329,10 +395,14 @@ This accepts five children and renders them
     block2BorderBottom
     block2Border
     justifyBlock2 = 'center'
+    block2smdis
+    block2mddis
     textColor = 'yellow'
     background ='white'
     padding = '0'
     margin = '10px 0'
+    smdis
+    mddis
     >
 ```
 This accepts two children and renders them
@@ -356,6 +426,8 @@ This accepts two children and renders them
     block1BorderBottom
     block1Border
     justifyBlock1 = 'center'
+    block1smdis
+    block1mddis
     alignBlock2 = 'center'
     block2 = '1'
     block2BorderLeft
@@ -364,6 +436,8 @@ This accepts two children and renders them
     block2BorderBottom
     block2Border
     justifyBlock2 = 'center'
+    block2smdis
+    block2mddis
     alignBlock3 = 'center'
     block3 = '1'
     block3BorderLeft
@@ -372,10 +446,14 @@ This accepts two children and renders them
     block3BorderBottom
     block3Border
     justifyBlock3 = 'center'
+    block3smdis
+    block3mddis
     textColor = 'yellow'
     background ='white'
     padding = '0'
     margin = '10px 0'
+    smdis
+    mddis
     >
 ```
 This accepts three children and renders them
@@ -400,6 +478,8 @@ This accepts three children and renders them
     block1BorderBottom
     block1Border
     justifyBlock1 = 'center'
+    block1smdis
+    block1mddis
     alignBlock2 = 'center'
     block2 = '1'
     block2BorderLeft
@@ -408,6 +488,8 @@ This accepts three children and renders them
     block2BorderBottom
     block2Border
     justifyBlock2 = 'center'
+    block2smdis
+    block2mddis
     alignBlock3 = 'center'
     block3 = '1'
     block3BorderLeft
@@ -416,6 +498,8 @@ This accepts three children and renders them
     block3BorderBottom
     block3Border
     justifyBlock3 = 'center'
+    block3smdis
+    block3mddis
     alignBlock4 = 'center'
     block4 = '1'
     block4BorderLeft
@@ -424,10 +508,14 @@ This accepts three children and renders them
     block4BorderBottom
     block4Border
     justifyBlock4 = 'center'
+    block4smdis
+    block4mddis
     textColor = 'yellow'
     background ='white'
     padding = '0'
     margin = '10px 0'
+    smdis
+    mddis
     >
 ```
 This accepts four children and renders them
@@ -453,6 +541,8 @@ This accepts four children and renders them
     block1BorderBottom
     block1Border
     justifyBlock1 = 'center'
+    block1smdis
+    block1mddis
     alignBlock2 = 'center'
     block2 = '1'
     block2BorderLeft
@@ -461,6 +551,8 @@ This accepts four children and renders them
     block2BorderBottom
     block2Border
     justifyBlock2 = 'center'
+    block2smdis
+    block2mddis
     alignBlock3 = 'center'
     block3 = '1'
     block3BorderLeft
@@ -469,6 +561,8 @@ This accepts four children and renders them
     block3BorderBottom
     block3Border
     justifyBlock3 = 'center'
+    block3smdis
+    block3mddis
     alignBlock4 = 'center'
     block4 = '1'
     block4BorderLeft
@@ -477,6 +571,8 @@ This accepts four children and renders them
     block4BorderBottom
     block4Border
     justifyBlock4 = 'center'
+    block4smdis
+    block4mddis
     alignBlock5 = 'center'
     block5 = '1'
     block5BorderLeft
@@ -485,10 +581,14 @@ This accepts four children and renders them
     block5BorderBottom
     block5Border
     justifyBlock5 = 'center'
+    block5smdis
+    block5mddis
     textColor = 'yellow'
     background ='white'
     padding = '0'
     margin = '10px 0'
+    smdis
+    mddis
     >
 ```
 This accepts five children and renders them
@@ -515,6 +615,8 @@ This accepts five children and renders them
     block1BorderBottom
     block1Border
     justifyBlock1 = 'center'
+    block1smdis
+    block1mddis
     alignBlock2 = 'center'
     block2 = '1'
     block2BorderLeft
@@ -523,10 +625,14 @@ This accepts five children and renders them
     block2BorderBottom
     block2Border
     justifyBlock2 = 'center'
+    block2smdis
+    block2mddis
     textColor = 'yellow'
     background ='white'
     padding = '0'
     margin = '10px 0'
+    smdis
+    mddis
     >
 ```
 This accepts two children and renders them
@@ -550,6 +656,8 @@ This accepts two children and renders them
     block1BorderBottom
     block1Border
     justifyBlock1 = 'center'
+    block1smdis
+    block1mddis
     alignBlock2 = 'center'
     block2 = '1'
     block2BorderLeft
@@ -558,6 +666,8 @@ This accepts two children and renders them
     block2BorderBottom
     block2Border
     justifyBlock2 = 'center'
+    block2smdis
+    block2mddis
     alignBlock3 = 'center'
     block3 = '1'
     block3BorderLeft
@@ -566,10 +676,14 @@ This accepts two children and renders them
     block3BorderBottom
     block3Border
     justifyBlock3 = 'center'
+    block3smdis
+    block3mddis
     textColor = 'yellow'
     background ='white'
     padding = '0'
     margin = '10px 0'
+    smdis
+    mddis
     >
 ```
 This accepts three children and renders them
@@ -594,6 +708,8 @@ This accepts three children and renders them
     block1BorderBottom
     block1Border
     justifyBlock1 = 'center'
+    block1smdis
+    block1mddis
     alignBlock2 = 'center'
     block2 = '1'
     block2BorderLeft
@@ -602,6 +718,8 @@ This accepts three children and renders them
     block2BorderBottom
     block2Border
     justifyBlock2 = 'center'
+    block2smdis
+    block2mddis
     alignBlock3 = 'center'
     block3 = '1'
     block3BorderLeft
@@ -610,6 +728,8 @@ This accepts three children and renders them
     block3BorderBottom
     block3Border
     justifyBlock3 = 'center'
+    block3smdis
+    block3mddis
     alignBlock4 = 'center'
     block4 = '1'
     block4BorderLeft
@@ -618,10 +738,14 @@ This accepts three children and renders them
     block4BorderBottom
     block4Border
     justifyBlock4 = 'center'
+    block4smdis
+    block4mddis
     textColor = 'yellow'
     background ='white'
     padding = '0'
     margin = '10px 0'
+    smdis
+    mddis
     >
 ```
 This accepts four children and renders them
@@ -647,6 +771,8 @@ This accepts four children and renders them
     block1BorderBottom
     block1Border
     justifyBlock1 = 'center'
+    block1smdis
+    block1mddis
     alignBlock2 = 'center'
     block2 = '1'
     block2BorderLeft
@@ -655,6 +781,8 @@ This accepts four children and renders them
     block2BorderBottom
     block2Border
     justifyBlock2 = 'center'
+    block2smdis
+    block2mddis
     alignBlock3 = 'center'
     block3 = '1'
     block3BorderLeft
@@ -663,6 +791,8 @@ This accepts four children and renders them
     block3BorderBottom
     block3Border
     justifyBlock3 = 'center'
+    block3smdis
+    block3mddis
     alignBlock4 = 'center'
     block4 = '1'
     block4BorderLeft
@@ -671,6 +801,8 @@ This accepts four children and renders them
     block4BorderBottom
     block4Border
     justifyBlock4 = 'center'
+    block4smdis
+    block4mddis
     alignBlock5 = 'center'
     block5 = '1'
     block5BorderLeft
@@ -679,10 +811,14 @@ This accepts four children and renders them
     block5BorderBottom
     block5Border
     justifyBlock5 = 'center'
+    block5smdis
+    block5mddis
     textColor = 'yellow'
     background ='white'
     padding = '0'
     margin = '10px 0'
+    smdis
+    mddis
     >
 ```
 This accepts five children and renders them
@@ -709,6 +845,8 @@ This accepts five children and renders them
     block1BorderBottom
     block1Border
     justifyBlock1 = 'center'
+    block1smdis
+    block1mddis
     alignBlock2 = 'center'
     block2 = '1'
     block2BorderLeft
@@ -717,6 +855,8 @@ This accepts five children and renders them
     block2BorderBottom
     block2Border
     justifyBlock2 = 'center'
+    block2smdis
+    block2mddis
     alignBlock3 = 'center'
     block3 = '1'
     block3BorderLeft
@@ -725,6 +865,8 @@ This accepts five children and renders them
     block3BorderBottom
     block3Border
     justifyBlock3 = 'center'
+    block3smdis
+    block3mddis
     alignBlock4 = 'center'
     block4 = '1'
     block4BorderLeft
@@ -733,6 +875,8 @@ This accepts five children and renders them
     block4BorderBottom
     block4Border
     justifyBlock4 = 'center'
+    block4smdis
+    block4mddis
     alignBlock5 = 'center'
     block5 = '1'
     block5BorderLeft
@@ -741,6 +885,8 @@ This accepts five children and renders them
     block5BorderBottom
     block5Border
     justifyBlock5 = 'center'
+    block5smdis
+    block5mddis
     alignBlock6 = 'center'
     block6 = '1'
     block6BorderLeft
@@ -749,10 +895,14 @@ This accepts five children and renders them
     block6BorderBottom
     block6Border
     justifyBlock6 = 'center'
+    block6smdis
+    block6mddis
     textColor = 'yellow'
     background ='white'
     padding = '0'
     margin = '10px 0'
+    smdis
+    mddis
     >
 ```
 This accepts six children and renders them
@@ -780,6 +930,8 @@ This accepts six children and renders them
     block1BorderBottom
     block1Border
     justifyBlock1 = 'center'
+    block1smdis
+    block1mddis
     alignBlock2 = 'center'
     block2 = '1'
     block2BorderLeft
@@ -788,6 +940,8 @@ This accepts six children and renders them
     block2BorderBottom
     block2Border
     justifyBlock2 = 'center'
+    block2smdis
+    block2mddis
     alignBlock3 = 'center'
     block3 = '1'
     block3BorderLeft
@@ -796,6 +950,8 @@ This accepts six children and renders them
     block3BorderBottom
     block3Border
     justifyBlock3 = 'center'
+    block3smdis
+    block3mddis
     alignBlock4 = 'center'
     block4 = '1'
     block4BorderLeft
@@ -804,6 +960,8 @@ This accepts six children and renders them
     block4BorderBottom
     block4Border
     justifyBlock4 = 'center'
+    block4smdis
+    block4mddis
     alignBlock5 = 'center'
     block5 = '1'
     block5BorderLeft
@@ -812,6 +970,8 @@ This accepts six children and renders them
     block5BorderBottom
     block5Border
     justifyBlock5 = 'center'
+    block5smdis
+    block5mddis
     alignBlock6 = 'center'
     block6 = '1'
     block6BorderLeft
@@ -820,6 +980,8 @@ This accepts six children and renders them
     block6BorderBottom
     block6Border
     justifyBlock6 = 'center'
+    block6smdis
+    block6mddis
     alignBlock7 = 'center'
     block7 = '1'
     block7BorderLeft
@@ -828,10 +990,14 @@ This accepts six children and renders them
     block7BorderBottom
     block7Border
     justifyBlock7 = 'center'
+    block7smdis
+    block7mddis
     textColor = 'yellow'
     background ='white'
     padding = '0'
     margin = '10px 0'
+    smdis
+    mddis
     >
 ```
 This accepts seven children and renders them
@@ -860,6 +1026,8 @@ This accepts seven children and renders them
     block1BorderBottom
     block1Border
     justifyBlock1 = 'center'
+    block1smdis
+    block1mddis
     alignBlock2 = 'center'
     block2 = '1'
     block2BorderLeft
@@ -868,6 +1036,8 @@ This accepts seven children and renders them
     block2BorderBottom
     block2Border
     justifyBlock2 = 'center'
+    block2smdis
+    block2mddis
     alignBlock3 = 'center'
     block3 = '1'
     block3BorderLeft
@@ -876,6 +1046,8 @@ This accepts seven children and renders them
     block3BorderBottom
     block3Border
     justifyBlock3 = 'center'
+    block3smdis
+    block3mddis
     alignBlock4 = 'center'
     block4 = '1'
     block4BorderLeft
@@ -884,6 +1056,8 @@ This accepts seven children and renders them
     block4BorderBottom
     block4Border
     justifyBlock4 = 'center'
+    block4smdis
+    block4mddis
     alignBlock5 = 'center'
     block5 = '1'
     block5BorderLeft
@@ -892,6 +1066,8 @@ This accepts seven children and renders them
     block5BorderBottom
     block5Border
     justifyBlock5 = 'center'
+    block5smdis
+    block5mddis
     alignBlock6 = 'center'
     block6 = '1'
     block6BorderLeft
@@ -900,6 +1076,8 @@ This accepts seven children and renders them
     block6BorderBottom
     block6Border
     justifyBlock6 = 'center'
+    block6smdis
+    block6mddis
     alignBlock7 = 'center'
     block7 = '1'
     block7BorderLeft
@@ -908,6 +1086,8 @@ This accepts seven children and renders them
     block7BorderBottom
     block7Border
     justifyBlock7 = 'center'
+    block7smdis
+    block7mddis
     alignBlock8 = 'center'
     block8 = '1'
     block8BorderLeft
@@ -916,10 +1096,14 @@ This accepts seven children and renders them
     block8BorderBottom
     block8Border
     justifyBlock8 = 'center'
+    block8smdis
+    block8mddis
     textColor = 'yellow'
     background ='white'
     padding = '0'
     margin = '10px 0'
+    smdis
+    mddis
     >
 ```
 This accepts eight children and renders them
@@ -949,6 +1133,8 @@ This accepts eight children and renders them
     block1BorderBottom
     block1Border
     justifyBlock1 = 'center'
+    block1smdis
+    block1mddis
     alignBlock2 = 'center'
     block2 = '1'
     block2BorderLeft
@@ -957,6 +1143,8 @@ This accepts eight children and renders them
     block2BorderBottom
     block2Border
     justifyBlock2 = 'center'
+    block2smdis
+    block2mddis
     alignBlock3 = 'center'
     block3 = '1'
     block3BorderLeft
@@ -965,6 +1153,8 @@ This accepts eight children and renders them
     block3BorderBottom
     block3Border
     justifyBlock3 = 'center'
+    block3smdis
+    block3mddis
     alignBlock4 = 'center'
     block4 = '1'
     block4BorderLeft
@@ -973,6 +1163,8 @@ This accepts eight children and renders them
     block4BorderBottom
     block4Border
     justifyBlock4 = 'center'
+    block4smdis
+    block4mddis
     alignBlock5 = 'center'
     block5 = '1'
     block5BorderLeft
@@ -981,6 +1173,8 @@ This accepts eight children and renders them
     block5BorderBottom
     block5Border
     justifyBlock5 = 'center'
+    block5smdis
+    block5mddis
     alignBlock6 = 'center'
     block6 = '1'
     block6BorderLeft
@@ -989,6 +1183,8 @@ This accepts eight children and renders them
     block6BorderBottom
     block6Border
     justifyBlock6 = 'center'
+    block6smdis
+    block6mddis
     alignBlock7 = 'center'
     block7 = '1'
     block7BorderLeft
@@ -997,6 +1193,8 @@ This accepts eight children and renders them
     block7BorderBottom
     block7Border
     justifyBlock7 = 'center'
+    block7smdis
+    block7mddis
     alignBlock8 = 'center'
     block8 = '1'
     block8BorderLeft
@@ -1005,6 +1203,8 @@ This accepts eight children and renders them
     block8BorderBottom
     block8Border
     justifyBlock8 = 'center'
+    block8smdis
+    block8mddis
     alignBlock9 = 'center'
     block9 = '1'
     block9BorderLeft
@@ -1013,10 +1213,14 @@ This accepts eight children and renders them
     block9BorderBottom
     block9Border
     justifyBlock9 = 'center'
+    block9smdis
+    block9mddis
     textColor = 'yellow'
     background ='white'
     padding = '0'
     margin = '10px 0'
+    smdis
+    mddis
     >
 ```
 This accepts nine children and renders them
@@ -1047,6 +1251,8 @@ This accepts nine children and renders them
     block1BorderBottom
     block1Border
     justifyBlock1 = 'center'
+    block1smdis
+    block1mddis
     alignBlock2 = 'center'
     block2 = '1'
     block2BorderLeft
@@ -1055,6 +1261,8 @@ This accepts nine children and renders them
     block2BorderBottom
     block2Border
     justifyBlock2 = 'center'
+    block2smdis
+    block2mddis
     alignBlock3 = 'center'
     block3 = '1'
     block3BorderLeft
@@ -1063,6 +1271,8 @@ This accepts nine children and renders them
     block3BorderBottom
     block3Border
     justifyBlock3 = 'center'
+    block3smdis
+    block3mddis
     alignBlock4 = 'center'
     block4 = '1'
     block4BorderLeft
@@ -1071,6 +1281,8 @@ This accepts nine children and renders them
     block4BorderBottom
     block4Border
     justifyBlock4 = 'center'
+    block4smdis
+    block4mddis
     alignBlock5 = 'center'
     block5 = '1'
     block5BorderLeft
@@ -1079,6 +1291,8 @@ This accepts nine children and renders them
     block5BorderBottom
     block5Border
     justifyBlock5 = 'center'
+    block5smdis
+    block5mddis
     alignBlock6 = 'center'
     block6 = '1'
     block6BorderLeft
@@ -1087,6 +1301,8 @@ This accepts nine children and renders them
     block6BorderBottom
     block6Border
     justifyBlock6 = 'center'
+    block6smdis
+    block6mddis
     alignBlock7 = 'center'
     block7 = '1'
     block7BorderLeft
@@ -1095,6 +1311,8 @@ This accepts nine children and renders them
     block7BorderBottom
     block7Border
     justifyBlock7 = 'center'
+    block7smdis
+    block7mddis
     alignBlock8 = 'center'
     block8 = '1'
     block8BorderLeft
@@ -1103,6 +1321,8 @@ This accepts nine children and renders them
     block8BorderBottom
     block8Border
     justifyBlock8 = 'center'
+    block8smdis
+    block8mddis
     alignBlock9 = 'center'
     block9 = '1'
     block9BorderLeft
@@ -1111,6 +1331,8 @@ This accepts nine children and renders them
     block9BorderBottom
     block9Border
     justifyBlock9 = 'center'
+    block9smdis
+    block9mddis
     alignBlock10 = 'center'
     block10 = '1'
     block10BorderLeft
@@ -1119,10 +1341,14 @@ This accepts nine children and renders them
     block10BorderBottom
     block10Border
     justifyBlock10 = 'center'
+    block10smdis
+    block10mddis
     textColor = 'yellow'
     background ='white'
     padding = '0'
     margin = '10px 0'
+    smdis
+    mddis
     >
 ```
 This accepts ten children and renders them
@@ -1145,7 +1371,23 @@ This accepts ten children and renders them
 ### Text Specific
 
 #### Headings (all names subject to change)
+large size:
+Each of these headings follow a specific pattern:
+* 1: Base Version - 1.333 * 1.618ish
+* 2: Smaller Version - num/1.2ish
+* 3: Larger Version - num * 1.2ish
+* 4: Light Gray Base Version
+* 5: Open (Possible outline version)
 
+medium size: (not fully calculated)
+Each of these headings follow a specific pattern:
+* 1: Base Version - 1.333 * 1.618ish
+* 2: Smaller Version - num/1.2ish
+* 3: Larger Version - num * 1.2ish
+* 4: Light Gray Base Version
+* 5: Open (Possible outline version)
+
+small size: (not fully calculated)
 Each of these headings follow a specific pattern:
 * 1: Base Version - 1.333 * 1.618ish
 * 2: Smaller Version - num/1.2ish
@@ -1181,6 +1423,8 @@ Each of these headings follow a specific pattern:
     aniTime
     aniName
     aniDur
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders one child
@@ -1215,6 +1459,8 @@ This accepts and renders one child
     aniTime
     aniName
     aniDur
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders one child
@@ -1249,6 +1495,8 @@ This accepts and renders one child
     aniTime
     aniName
     aniDur
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders one child
@@ -1283,6 +1531,8 @@ This accepts and renders one child
     aniTime
     aniName
     aniDur
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders one child
@@ -1318,6 +1568,8 @@ This accepts and renders one child
     aniTime
     aniName
     aniDur
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders one child
@@ -1353,6 +1605,8 @@ This accepts and renders one child
     aniTime
     aniName
     aniDur
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders one child
@@ -1387,6 +1641,8 @@ This accepts and renders one child
     aniTime
     aniName
     aniDur
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders one child
@@ -1421,6 +1677,8 @@ This accepts and renders one child
     aniTime
     aniName
     aniDur
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders one child
@@ -1455,6 +1713,8 @@ This accepts and renders one child
     aniTime
     aniName
     aniDur
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders one child
@@ -1490,6 +1750,8 @@ This accepts and renders one child
     aniTime
     aniName
     aniDur
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders one child
@@ -1526,6 +1788,8 @@ This accepts and renders one child
     aniTime
     aniName
     aniDur
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders one child
@@ -1560,6 +1824,8 @@ This accepts and renders one child
     aniTime
     aniName
     aniDur
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders one child
@@ -1594,6 +1860,8 @@ This accepts and renders one child
     aniTime
     aniName
     aniDur
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders one child
@@ -1628,6 +1896,8 @@ This accepts and renders one child
     aniTime
     aniName
     aniDur
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders one child
@@ -1663,6 +1933,8 @@ This accepts and renders one child
     aniTime
     aniName
     aniDur
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders one child
@@ -1699,6 +1971,8 @@ This accepts and renders one child
     aniTime
     aniName
     aniDur
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders one child
@@ -1732,6 +2006,8 @@ This accepts and renders one child
     aniTime
     aniName
     aniDur
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders one child
@@ -1766,6 +2042,8 @@ This accepts and renders one child
     aniTime
     aniName
     aniDur
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders one child
@@ -1800,6 +2078,8 @@ This accepts and renders one child
     aniTime
     aniName
     aniDur
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders one child
@@ -1835,6 +2115,8 @@ This accepts and renders one child
     aniTime
     aniName
     aniDur
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders one child
@@ -1846,6 +2128,19 @@ This accepts and renders one child
 #### Paragraphs (all names subject to change)
 
 Each of these paragraphs follow a specific pattern:
+Large size:
+* 1: Base Version - 1.333
+* 2: Smaller Version - 0.9
+* 3: Larger Version - 1.6
+* 4: Light Gray larger Version -  1.6
+* 5: Open (Possible dropcap version) - 1.333
+medium size:
+* 1: Base Version - 1.333
+* 2: Smaller Version - 0.9
+* 3: Larger Version - 1.6
+* 4: Light Gray larger Version -  1.6
+* 5: Open (Possible dropcap version) - 1.333
+small size:
 * 1: Base Version - 1.333
 * 2: Smaller Version - 0.9
 * 3: Larger Version - 1.6
@@ -1881,6 +2176,8 @@ Each of these paragraphs follow a specific pattern:
     aniTime
     aniName
     aniDur
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders one child
@@ -1916,6 +2213,8 @@ This accepts and renders one child
     aniTime
     aniName
     aniDur
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders one child
@@ -1951,6 +2250,8 @@ This accepts and renders one child
     aniTime
     aniName
     aniDur
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders one child
@@ -1986,6 +2287,8 @@ This accepts and renders one child
     aniTime
     aniName
     aniDur
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders one child
@@ -2022,6 +2325,8 @@ This accepts and renders one child
     aniTime
     aniName
     aniDur
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders one child
@@ -2039,6 +2344,57 @@ This accepts and renders one child
 ### Image Specific
 
 There are currently six predefined image sizes.
+Large Sizes:
+Non Rectangle Image sizes:
+* tn - 50px X 50px
+* exsm - 90px X 90px
+* sm - 150px X 150px
+* md - 300px X 300px
+* lg - 500px X 500px
+* exlg - 700px X 700px
+
+Rectangle Image Sizes:
+* tn - 50px X 50px (Not finished)
+* exsm - 81px X 50px
+* sm - 243px X 150px
+* md - 485px X 300px
+* lg - 809px X 500px
+* exlg - 1137px X 700px
+
+Tall Rectangle Image Sizes:
+* tn - 50px X 50px (Not finished)
+* exsm - 50px X 81px
+* sm - 150px X 243px
+* md - 300px X 485px
+* lg - 500px X 809px
+* exlg - 700px X 1137px
+
+Medium Sizes:
+Non Rectangle Image sizes:
+* tn - 50px X 50px
+* exsm - 90px X 90px
+* sm - 150px X 150px
+* md - 300px X 300px
+* lg - 500px X 500px
+* exlg - 700px X 700px
+
+Rectangle Image Sizes:
+* tn - 50px X 50px (Not finished)
+* exsm - 81px X 50px
+* sm - 243px X 150px
+* md - 485px X 300px
+* lg - 809px X 500px
+* exlg - 1137px X 700px
+
+Tall Rectangle Image Sizes:
+* tn - 50px X 50px (Not finished)
+* exsm - 50px X 81px
+* sm - 150px X 243px
+* md - 300px X 485px
+* lg - 500px X 809px
+* exlg - 700px X 1137px
+
+Small Sizes:
 Non Rectangle Image sizes:
 * tn - 50px X 50px
 * exsm - 90px X 90px
@@ -2076,6 +2432,8 @@ Tall Rectangle Image Sizes:
     aniTime
     aniName
     aniDur
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders two children: image and alt tag
@@ -2097,6 +2455,8 @@ this is the alt tag
     aniTime
     aniName
     aniDur
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders two children: image and alt tag
@@ -2118,6 +2478,8 @@ this is the alt tag
     aniTime
     aniName
     aniDur
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders two children: image and alt tag
@@ -2140,6 +2502,8 @@ this is the alt tag
     aniTime
     aniName
     aniDur
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders two children: image and alt tag
@@ -2161,6 +2525,8 @@ this is the alt tag
     aniTime
     aniName
     aniDur
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders two children: image and alt tag
@@ -2182,6 +2548,8 @@ this is the alt tag
     aniTime
     aniName
     aniDur
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders two children: image and alt tag
@@ -2203,6 +2571,8 @@ this is the alt tag
     aniTime
     aniName
     aniDur
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders two children: image and alt tag
@@ -2224,6 +2594,8 @@ this is the alt tag
     aniTime
     aniName
     aniDur
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders two children: image and alt tag
@@ -2243,6 +2615,8 @@ this is the alt tag
     figCapid
     figClassName
     figCapClassName
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders two children: first child and a caption child
@@ -2273,6 +2647,8 @@ These were made to integrate with the Carousels, but can be used where ever.
     height = 'inherit'
     id
     className
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts three children and a background
@@ -2304,7 +2680,9 @@ This accepts three children and a background
     heroid
     bottomid
     heroClassName
-    bottomClassNAme
+    bottomClassName
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts one child and a background
@@ -2327,6 +2705,8 @@ This accepts one child and a background
     backgroundSize
     width
     height
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts three children and a background
@@ -2350,6 +2730,8 @@ This accepts three children and a background
     height
     id
     className
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts three children and a background
@@ -2371,6 +2753,8 @@ This accepts three children and a background
     backgroundSize
     width 
     height
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts seven children and a background
@@ -3133,7 +3517,6 @@ This is licensed under MIT license. If used in any project, please give ackknowl
 
 ## Changelog
 **0.2.0**
-* fixed carousel componentWillUnmount - still needs testing, will probably still show error in console
 * added smdis && mddis to every container, holder, heading blocks, paragraph blocks, and image blocks
 * added media queries for max-width 481px and minwidth 482px max-wdith 1200px everything else should render above 1200px
 * adding in placeholder sizes until more responsive testing occurs

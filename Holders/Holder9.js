@@ -124,7 +124,7 @@ var Holder9 = function (_Component) {
                         flexDirection: 'column'
                     }
                 },
-                '@media screen and (min-width: 482px) and (max-width: 1200px)': {
+                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
                     holderstyles: {
                         display: this.state.mddis,
                         flexDirection: 'column'
@@ -146,12 +146,12 @@ var Holder9 = function (_Component) {
                     margin: this.state.margin,
                     justifyContent: this.state.justifyBlock2
                 },
-                '@media screen and (max-width: 481px)': {
+                '@media screen and (max-width: 440px)': {
                     block1styles: {
                         display: this.state.block1smdis
                     }
                 },
-                '@media screen and (min-width: 482px) and (max-width: 1200px)': {
+                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
                     block1styles: {
                         display: this.state.block1mddis
                     }
@@ -173,12 +173,12 @@ var Holder9 = function (_Component) {
                     margin: this.state.margin,
                     justifyContent: this.state.justifyBlock2
                 },
-                '@media screen and (max-width: 481px)': {
+                '@media screen and (max-width: 440px)': {
                     block2styles: {
                         display: this.state.block2smdis
                     }
                 },
-                '@media screen and (min-width: 482px) and (max-width: 1200px)': {
+                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
                     block2styles: {
                         display: this.state.block2mddis
                     }
@@ -200,12 +200,12 @@ var Holder9 = function (_Component) {
                     margin: this.state.margin,
                     justifyContent: this.state.justifyBlock3
                 },
-                '@media screen and (max-width: 481px)': {
+                '@media screen and (max-width: 440px)': {
                     block3styles: {
                         display: this.state.block3smdis
                     }
                 },
-                '@media screen and (min-width: 482px) and (max-width: 1200px)': {
+                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
                     block3styles: {
                         display: this.state.block3mddis
                     }
@@ -227,12 +227,12 @@ var Holder9 = function (_Component) {
                     margin: this.state.margin,
                     justifyContent: this.state.justifyBlock4
                 },
-                '@media screen and (max-width: 481px)': {
+                '@media screen and (max-width: 440px)': {
                     block4styles: {
                         display: this.state.block4smdis
                     }
                 },
-                '@media screen and (min-width: 482px) and (max-width: 1200px)': {
+                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
                     block4styles: {
                         display: this.state.block4mddis
                     }
@@ -254,12 +254,12 @@ var Holder9 = function (_Component) {
                     margin: this.state.margin,
                     justifyContent: this.state.justifyBlock5
                 },
-                '@media screen and (max-width: 481px)': {
+                '@media screen and (max-width: 440px)': {
                     block5styles: {
                         display: this.state.block5smdis
                     }
                 },
-                '@media screen and (min-width: 482px) and (max-width: 1200px)': {
+                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
                     block5styles: {
                         display: this.state.block5mddis
                     }
@@ -281,12 +281,12 @@ var Holder9 = function (_Component) {
                     margin: this.state.margin,
                     justifyContent: this.state.justifyBlock6
                 },
-                '@media screen and (max-width: 481px)': {
+                '@media screen and (max-width: 440px)': {
                     block6styles: {
                         display: this.state.block6smdis
                     }
                 },
-                '@media screen and (min-width: 482px) and (max-width: 1200px)': {
+                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
                     block6styles: {
                         display: this.state.block6mddis
                     }
