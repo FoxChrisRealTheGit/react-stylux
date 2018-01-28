@@ -1,6 +1,6 @@
 {
   "name": "react-stylux",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "A small library of pre-styled components for react",
   "main": "index.js",
   "scripts": {
@@ -12,12 +12,13 @@
     "url": "https://github.com/FoxChrisRealTheGit/react-stylux"
   },
   "author": "FoxChrisRealThe (http://foxchrisrealthe.com)",
-  "license": "ISC",
+  "license": "MIT",
   "peerDependency": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },
   "dependencies": {
+    "nestingstyles": "0.0.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "webpack": "^3.10.0"

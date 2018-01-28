@@ -3097,6 +3097,11 @@ No Contributions will be accepted outside of the project team until the project 
 ## Versioning
 for a more detailed list of changes, please refer to the changelog
 
+**0.2.0**
+* Added media queries to containers, holders, headings, and pargaraphs
+* added display ability through props
+* updated readme
+
 **0.1.0**
 * major name changes will break all prior versions, see changelog
 * Heading/Paragraph blocks have text align, height and width props available
@@ -3115,7 +3120,7 @@ for a more detailed list of changes, please refer to the changelog
 
 ## License
 
-**this will be updated with proper license**
+This is licensed under MIT license. If used in any project, please give ackknowledgments to Christoher Fox.
 
 
 ## Acknowledgments
@@ -3123,9 +3128,18 @@ for a more detailed list of changes, please refer to the changelog
 * A Giant Thank you to [Dev Mountain](https://devmountain.com/) for teaching me to code good
 * A big thank you to Morten Rand-Hendriksen for your videos on flex box and the code that allows the className socialness to work
 * Credit to http://meyerweb.com/eric/tools/css/reset/  for use of a reset file
+* Credit to the React-Styles team (used as nestingstyles) for the code to allow for media queries through style
 
 
 ## Changelog
+**0.2.0**
+* fixed carousel componentWillUnmount - still needs testing, will probably still show error in console
+* added smdis && mddis to every container, holder, heading blocks, paragraph blocks, and image blocks
+* added media queries for max-width 481px and minwidth 482px max-wdith 1200px everything else should render above 1200px
+* adding in placeholder sizes until more responsive testing occurs
+* readme updated for changes
+* new animation and responsive design sections added to readme
+
 **0.1.6**
 * added lifecycle componentWillUnmount to carousels to stop interval
 * added lifecycle componentWillRecieveProps to most blocks to allow for render updates
