@@ -3516,6 +3516,18 @@ This is licensed under MIT license. If used in any project, please give ackknowl
 
 
 ## Changelog
+**0.2.2**
+* added overflow hidden to holders and containers
+* add border, borderleft, borderright, bordertop, and borderbottom to holders and containers
+* changed default sm & md flexdirection values and added props to adjust
+* changed md max from 1200 to 760
+* Hover states added to headings and paragraphs
+* h3 default weight changed to 600
+* h4 default weight changed to 100
+* added pull quotes styles to superstylesheet
+
+* updated readme for changes
+
 **0.2.0**
 * added smdis && mddis to every container, holder, heading blocks, paragraph blocks, and image blocks
 * added media queries for max-width 481px and minwidth 482px max-wdith 1200px everything else should render above 1200px
