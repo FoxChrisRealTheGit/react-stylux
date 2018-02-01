@@ -14,6 +14,10 @@ require('../../css/reset.css');
 
 require('../../css/SuperStyleSheet.css');
 
+var _nestingstyles = require('nestingstyles');
+
+var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -76,7 +80,7 @@ var Navbar1 = function (_Component) {
     }, {
         key: 'componentDidMount',
         value: function componentDidMount() {
-            var NAVBAR_NAVBAR_LI = StyleSheet.create({
+            var NAVBAR_NAVBAR_LI = _nestingstyles2.default.create({
                 navbar_navbar_li: {
                     display: this.state.display,
                     flex: 1,
@@ -101,7 +105,7 @@ var Navbar1 = function (_Component) {
                     }
                 }
             });
-            var HAM_NAVBAR_LI = StyleSheet.create({
+            var HAM_NAVBAR_LI = _nestingstyles2.default.create({
                 ham_navbar_li: {
                     display: this.state.hamShow === true ? 'none' : 'flex',
                     flex: 1,
@@ -172,7 +176,7 @@ var Navbar1 = function (_Component) {
     }, {
         key: 'componentWillReceiveProps',
         value: function componentWillReceiveProps(newProps) {
-            var NAVBAR_NAVBAR_LI = StyleSheet.create({
+            var NAVBAR_NAVBAR_LI = _nestingstyles2.default.create({
                 navbar_navbar_li: {
                     display: this.state.display,
                     flex: 1,
@@ -197,7 +201,7 @@ var Navbar1 = function (_Component) {
                     }
                 }
             });
-            var HAM_NAVBAR_LI = StyleSheet.create({
+            var HAM_NAVBAR_LI = _nestingstyles2.default.create({
                 ham_navbar_li: {
                     display: this.state.hamShow === true ? 'none' : 'flex',
                     flex: 1,
@@ -262,7 +266,7 @@ var Navbar1 = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
-            var NAVBAR = StyleSheet.create({
+            var NAVBAR = _nestingstyles2.default.create({
                 navbar: {
                     width: this.state.totalWidth,
                     height: this.state.totalHeight,
@@ -285,7 +289,7 @@ var Navbar1 = function (_Component) {
                     }
                 }
             });
-            var NAVBAR_NAVBAR = StyleSheet.create({
+            var NAVBAR_NAVBAR = _nestingstyles2.default.create({
                 navbar_navbar: {
                     width: this.state.navBarWidth,
                     height: 'inherit',
@@ -306,7 +310,7 @@ var Navbar1 = function (_Component) {
                     }
                 }
             });
-            var HAMNAV = StyleSheet.create({
+            var HAMNAV = _nestingstyles2.default.create({
                 HAMNAV: {
                     width: '50px',
                     height: '50px',
@@ -337,7 +341,7 @@ var Navbar1 = function (_Component) {
                 backgroundColor: 'black',
                 margin: '3px 0'
             };
-            var HAMESTNAV = StyleSheet.create({
+            var HAMESTNAV = _nestingstyles2.default.create({
                 hamestnav: {
                     display: 'none',
                     width: '100%',
