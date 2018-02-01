@@ -18,8 +18,26 @@ npm install --save react-stylux
 ```
 
 ## How To Use Stylux
+### Table of Contents
+- [What's included](#whats-included)
+- Step by Step
+- Documentation
+- Animation Notes
+- Responsive Notes
+- Layout
+- - Containers
+- - Holders
+- Text
+- - Headings
+- - Paragraphs
+- Images
+- Navigation
+- Special Stuff
+- Acknowledgments
+- [Changelog](#changelog)
 
-### Included in the base version of react-stylux is:
+
+### Whats Included:
 * Containers 1-5
 * Holders 1-13
 * H1 1-5
@@ -3638,6 +3656,18 @@ This is licensed under MIT license. If used in any project, please give ackknowl
 
 
 ## Changelog
+**0.2.3**
+* Changed input so a backslash is not needed to seperate child elements, instead use {''} for anything not already wrapped in jsx or another component
+* updated pull quote 1 margin so the name is not cut off
+* updated pull quote 2 margin so it centers itself
+* updated heading 5's to be outlines, outline color is controlled through prop stroke='color'
+* dropdown nav 5 updated to have border rounding on outside borders and a shadow
+* responsive navbar1 now available - needs massive work, several issues are known and will hopefully be worked out in a few days
+
+* readme updated with table of contents linking to places
+* responsive section has slightly more detail to account for intial responsive navigation integration
+* updated readme for changes
+
 **0.2.2**
 * added overflow hidden to holders and containers
 * add border, borderleft, borderright, bordertop, and borderbottom to holders and containers

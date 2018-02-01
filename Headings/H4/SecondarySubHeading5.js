@@ -38,6 +38,7 @@ var H45 = function (_Component) {
             color: props.color,
             colorRev: props.color,
             textShadow: props.shadow,
+            stroke: props.stroke || '3px',
             fontFamily: props.font || 'sans-serif',
             fontSize: props.size || '3.489em',
             smFontSize: props.smSize || '2.5em',
@@ -90,7 +91,6 @@ var H45 = function (_Component) {
                 heading: {
                     width: this.state.width,
                     height: this.state.height,
-                    color: this.state.color,
                     textShadow: this.state.textShadow,
                     borderLeft: this.state.bLeft,
                     borderRight: this.state.bRight,
@@ -111,7 +111,10 @@ var H45 = function (_Component) {
                     animationIterationCount: this.state.animationIterationCount,
                     animationTimingFunction: this.state.animationTimingFunction,
                     animationName: this.state.animationName,
-                    animationDuration: this.state.animationDuration
+                    animationDuration: this.state.animationDuration,
+                    WebkitTextFillColor: 'transparent',
+                    WebkitTextStrokeColor: this.state.color,
+                    WebkitTextStrokeWidth: this.state.stroke
                 },
                 hoverStyle: {
                     color: this.state.hoverColor

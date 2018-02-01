@@ -49,7 +49,9 @@ var DropDownNav1 = function (_Component) {
             itemsClassName: props.itemsClassName,
             zIndex: "1000",
             childs: [],
-            first: []
+            first: [],
+            smdis: props.smDis || 'flex',
+            mddis: props.mdDis || 'flex'
             // this.enter = this.enter.bind(this);
             // this.left = this.left.bind(this);
         };return _this;

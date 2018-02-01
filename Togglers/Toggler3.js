@@ -74,7 +74,7 @@ var Toggler3 = function (_Component) {
     }, {
         key: 'componentWillReceiveProps',
         value: function componentWillReceiveProps(newProps) {
-            var CHILDS = _react2.default.Children.toArray(newProps.children.split('\\'));
+            var CHILDS = _react2.default.Children.toArray(newProps.children);
             var labels = [];
             var text = [];
             for (var i = 0; i < CHILDS.length; i += 1) {

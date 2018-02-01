@@ -56,13 +56,13 @@ var PLQ2 = function (_Component) {
     _createClass(PLQ2, [{
         key: 'componentDidMount',
         value: function componentDidMount() {
-            var CHILDS = _react2.default.Children.toArray(this.props.children.split('\\'));
+            var CHILDS = _react2.default.Children.toArray(this.props.children);
             this.setState({ childs: CHILDS });
         }
     }, {
         key: 'componentWillReceiveProps',
         value: function componentWillReceiveProps(newProps) {
-            var CHILDS = _react2.default.Children.toArray(newProps.children.split('\\'));
+            var CHILDS = _react2.default.Children.toArray(newProps.children);
             this.setState({ childs: CHILDS });
         }
     }, {

@@ -47,7 +47,7 @@ var NumberList3 = function (_Component) {
         key: 'componentDidMount',
         value: function componentDidMount() {
             var listItems = [];
-            var CHILDS = _react2.default.Children.toArray(this.props.children.split('\\'));
+            var CHILDS = _react2.default.Children.toArray(this.props.children);
             listItems = CHILDS.map(function (x) {
                 return x;
             });
@@ -57,7 +57,7 @@ var NumberList3 = function (_Component) {
         key: 'componentWillReceiveProps',
         value: function componentWillReceiveProps(newProps) {
             var listItems = [];
-            var CHILDS = _react2.default.Children.toArray(newProps.children.split('\\'));
+            var CHILDS = _react2.default.Children.toArray(newProps.children);
             listItems = CHILDS.map(function (x) {
                 return x;
             });

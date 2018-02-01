@@ -37,6 +37,7 @@ var H15 = function (_Component) {
         _this.state = {
             color: props.color || 'black',
             colorRev: props.color,
+            stroke: props.stroke || '3px',
             textShadow: props.shadow,
             fontFamily: props.font || 'sans-serif',
             fontSize: props.size || '7em',
@@ -90,7 +91,6 @@ var H15 = function (_Component) {
                 heading: {
                     width: this.state.width,
                     height: this.state.height,
-                    color: this.state.color,
                     textShadow: this.state.textShadow,
                     borderLeft: this.state.bLeft,
                     borderRight: this.state.bRight,
@@ -111,7 +111,10 @@ var H15 = function (_Component) {
                     animationIterationCount: this.state.animationIterationCount,
                     animationTimingFunction: this.state.animationTimingFunction,
                     animationName: this.state.animationName,
-                    animationDuration: this.state.animationDuration
+                    animationDuration: this.state.animationDuration,
+                    WebkitTextFillColor: 'transparent',
+                    WebkitTextStrokeColor: this.state.color,
+                    WebkitTextStrokeWidth: this.state.stroke
                 },
                 hoverStyle: {
                     color: this.state.hoverColor

@@ -84,7 +84,7 @@
 .pullQuote1{
     width: inherit;
     padding: 0px 12%;
-    margin: 20px 0;
+    margin: 20px 0 40px 0;
     position: relative;
 }
 .pullQuote1-text{
@@ -119,6 +119,7 @@
     font-size: 1.333em;
     border-top: 2px solid lightgray;
     border-bottom: 2px solid lightgray; 
+    margin: 0 auto;
 }
 .pullQuote2-text{
     font-size: 1.333em;

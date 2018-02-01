@@ -51,7 +51,7 @@ var Table2 = function (_Component) {
             var HEAD = void 0,
                 BODY = void 0;
             var BODYROW = [];
-            var CHILDS = _react2.default.Children.count(this.props.children) === 0 ? '' : _react2.default.Children.toArray(this.props.children.split('\\'));
+            var CHILDS = _react2.default.Children.count(this.props.children) === 0 ? '' : _react2.default.Children.toArray(this.props.children);
             if (CHILDS !== '') {
                 tempBody = CHILDS.map(function (x, i, arr) {
                     return x;
@@ -85,7 +85,7 @@ var Table2 = function (_Component) {
             var HEAD = void 0,
                 BODY = void 0;
             var BODYROW = [];
-            var CHILDS = _react2.default.Children.count(newProps.children) === 0 ? '' : _react2.default.Children.toArray(newProps.children.split('\\'));
+            var CHILDS = _react2.default.Children.count(newProps.children) === 0 ? '' : _react2.default.Children.toArray(newProps.children);
             if (CHILDS !== '') {
                 tempBody = CHILDS.map(function (x, i, arr) {
                     return x;

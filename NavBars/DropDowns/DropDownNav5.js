@@ -33,6 +33,8 @@ var DropDownNav5 = function (_Component) {
         _this.state = {
             display: 'none',
             background: props.background,
+            boxShadow: props.boxShadow || '1px 2px 2px black',
+            borderRadius: props.borderRadius || '0 5px 5px 0',
             offset: props.offset,
             margin: '',
             padding: props.padding,
@@ -42,7 +44,9 @@ var DropDownNav5 = function (_Component) {
             itemsid: props.itemsid,
             mainClassName: props.mainClassName,
             titleClassName: props.titleClassName,
-            itemsClassName: props.itemsClassName
+            itemsClassName: props.itemsClassName,
+            smdis: props.smDis || 'flex',
+            mddis: props.mdDis || 'flex'
         };
         return _this;
     }
@@ -54,6 +58,8 @@ var DropDownNav5 = function (_Component) {
 
             var DROPDOWN = {
                 position: 'absolute',
+                borderRadius: this.state.borderRadius,
+                boxShadow: this.state.boxShadow,
                 display: this.state.display,
                 margin: '0 0 0 ' + this.state.offset,
                 width: this.state.width,
