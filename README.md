@@ -20,20 +20,20 @@ npm install --save react-stylux
 ## How To Use Stylux
 ### Table of Contents
 - [What's included](#whats-included)
-- Step by Step
-- Documentation
-- Animation Notes
-- Responsive Notes
-- Layout
-- - Containers
-- - Holders
-- Text
-- - Headings
-- - Paragraphs
-- Images
-- Navigation
-- Special Stuff
-- Acknowledgments
+- [Step by Step](#step-by-step)
+- [Animation Notes](#animation-notes)
+- [Responsive Notes](#responsive-notes)
+- [Layout](#layout-specific)
+    - [Containers](#container1)
+    -[Holders](#holders)
+- [Text](#text-specific)
+    - [Headings](#mainheadings)
+    - [Paragraphs](#paragraphs-all-names-subject-to-change)
+- [Images](#image-specific)
+- [Navigation](#navigation-specific)
+- [Lists](#list-specific-possible-rework-expected)
+- [Special Stuff](#special-stuff)
+- [Acknowledgments](#acknowledgements)
 - [Changelog](#changelog)
 
 
@@ -1619,10 +1619,10 @@ This accepts and renders one child
 
 
 ###### MainHeading5
-**Not Finished**
 ```
 <H15
     color = 'black'
+    stroke = '3px'
     font = 'sans-serif'
     size = '7em'
     smSize =  '3.939em'
@@ -1816,10 +1816,10 @@ This accepts and renders one child
 
 
 ###### Heading5
-**Not Finished**
 ```
 <Heading5
     color = 'black'
+    stroke = '3px'
     font = 'sans-serif'
     size = '5.646em'
     smSize =  '3em'
@@ -2014,10 +2014,10 @@ This accepts and renders one child
 
 
 ###### SubHeading5
-**Not Finished**
 ```
 <H35
     color = 'black'
+    stroke = '3px'
     font = 'sans-serif'
     size = '3.489em'
     smSize =  '2.5em'
@@ -2211,10 +2211,10 @@ This accepts and renders one child
 
 
 ###### SecondarySubHeading5
-**Not Finished**
 ```
 <H45
     color = 'black'
+    stroke = '3px'
     font = 'sans-serif'
     size = '3.489em'
     smSize =  '2.5em'
@@ -2936,15 +2936,26 @@ This accepts seven children and a background
     fontSize = 1em
     fontWeight = '100'
     fontVariant = 'none'
+    count = '0'
+    smDis = 'flex' (if no count set, if count > 0 then 'none')
+    mdDis = 'flex'
+    hoverColor
+    hamSmDis = 'flex' (if no count set, then 'none')
+    hamMdDis = 'none'
     navid
     itemsid
     navClassName
     itemsClassName
     >
 ```
-This accepts unlimited? children and renders them
+This accepts unlimited? children and renders them.
+Will render anything beyond count into the ham menu.
 ```
-<Navbar1>
+<Navbar1
+    count ='3'>
+    <a href="">Home</a>
+    <a href="">About</a>
+    <a href="">Contact</a>
     <a href="">Home</a>
     <a href="">About</a>
     <a href="">Contact</a>
@@ -2972,9 +2983,9 @@ This uses two mouse events and is not optimized for tablet or mobile use.
     background
     boxShadow = '1px 2px 2px black'
     borderRadius = '0 0 5px 5px'
-    offset = '-5px'
+    offset
     color = 'black'
-    textAlign = 'center'
+    textAlign = 'left'
     margin
     padding
     width
@@ -2984,6 +2995,8 @@ This uses two mouse events and is not optimized for tablet or mobile use.
     mainClassName
     titleClassName
     itemsClassName
+    smDis = 'flex'
+    mdDis = 'flex'
     >
 ```
 This accepts unlimited? children and renders them, the first child is the title. A downward pointing arrow is rendered after title
@@ -3008,6 +3021,8 @@ This uses two mouse events and is not optimized for tablet or mobile use.
 ```
 <DropDownNav5
     background
+    boxShadow = '1px 2px 2px black'
+    borderRadius = '0 5px 5px 0'
     offset
     width
     mainid
@@ -3016,6 +3031,8 @@ This uses two mouse events and is not optimized for tablet or mobile use.
     mainClassName
     titleClassName
     itemsClassName
+    smDis = 'flex'
+    mdDis = 'flex'
     >
 ```
 This accepts unlimited? children and renders them, the first child is the title. A sideways pointing arrow is rendered after title
@@ -3066,9 +3083,9 @@ This accepts unlimited? children and renders them, the first child is the title.
 This accepts unlimited? children split with \
 ```
 <NumberList1>
-    item1\
-    item2\
-    item3\
+    {'item1'}
+    {'item2'}
+    {'item3'}
 </NumberList1>
 ```
 
@@ -3111,9 +3128,9 @@ This accepts unlimited? children split by the listAmount
 This accepts unlimited? children split with \
 ```
 <NumberList3>
-    item1\
-    item2\
-    item3\
+    {'item1'}
+    {'item2'}
+    {'item3'}
 </NumberList3>
 ```
 
@@ -3143,9 +3160,9 @@ This accepts unlimited? children split with \
 This accepts unlimited? children split with \
 ```
 <BulletList1>
-    item1\
-    item2\
-    item3\
+    {'item1'}
+    {'item2'}
+    {'item3'}
 </BulletList1>
 ```
 
@@ -3173,9 +3190,9 @@ This accepts unlimited? children split with \
 This accepts unlimited? children split with \
 ```
 <BulletList1>
-    item1\
-    item2\
-    item3\
+    {'item1'}
+    {'item2'}
+    {'item3'}
 </BulletList1>
 ```
 
@@ -3472,14 +3489,14 @@ This accepts multiple children, a holder can be placed to divide up the space
 This accepts multiple children split by \, odd children are rendered as panel names, and even children are rendered as the content of the panel.
 ```
 <Toggler3>
-    title\
-    some text\
-    another title\
-    moar text\
-    last title\
-    last text\
-    not last\
-    most last text
+    {'title'}
+    {'some text'}
+    {'another title'}
+    {'moar text'}
+    {'last title'}
+    {'last text'}
+    {'not last'}
+    {'most last text'}
 </Toggler3>
 ```
 
@@ -3556,15 +3573,15 @@ This accepts multiple children, a holder can be placed to divide up the space
 This accepts unlimited? children and renders based on column and row value split by '\'
 ```
 <Table1>
-    head1\
-    head2\
-    head3\
-    body1\
-    body2\
-    body3\
-    body4\
-    body5\
-    body6
+    {'head1'}
+    {'head2'}
+    {'head3'}
+    {'body1'}
+    {'body2'}
+    {'body3'}
+    {'body4'}
+    {'body5'}
+    {'body6'}
 </Table1>
 ```
 ##### Table2
@@ -3583,15 +3600,15 @@ This accepts unlimited? children and renders based on column and row value split
 This accepts unlimited? children and renders based on column and row value split by '\'
 ```
 <Table2>
-    head1\
-    body1\
-    body2\
-    head2\
-    body3\
-    body4\
-    head3\
-    body5\
-    body6
+    {'head1'}
+    {'body1'}
+    {'body2'}
+    {'head2'}
+    {'body3'}
+    {'body4'}
+    {'head3'}
+    {'body5'}
+    {'body6'}
 </Table2>
 ```
 
@@ -3665,7 +3682,6 @@ This is licensed under MIT license. If used in any project, please give ackknowl
 * responsive navbar1 now available - needs massive work, several issues are known and will hopefully be worked out in a few days
 
 * readme updated with table of contents linking to places
-* responsive section has slightly more detail to account for intial responsive navigation integration
 * updated readme for changes
 
 **0.2.2**
