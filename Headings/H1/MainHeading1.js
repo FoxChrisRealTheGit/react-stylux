@@ -35,10 +35,14 @@ var H11 = function (_Component) {
         var _this = _possibleConstructorReturn(this, (H11.__proto__ || Object.getPrototypeOf(H11)).call(this, props));
 
         _this.state = {
-            color: props.color || 'black',
-            fontFamily: props.font || 'sans-serif',
-            fontSize: props.size || '8em',
-            fontWeight: props.weight || '900',
+            color: props.color,
+            colorRev: props.color,
+            textShadow: props.shadow,
+            fontFamily: props.font || 'inherit',
+            fontSize: props.size || '7em',
+            smFontSize: props.smSize || '3.939em',
+            mdFontSize: props.mdSize || '5.25em',
+            fontWeight: props.fontWeight || '900',
             display: props.display || 'flex',
             align: props.align || 'center',
             textAlign: props.textAlign || 'center',
@@ -46,12 +50,11 @@ var H11 = function (_Component) {
             margin: props.margin || '0',
             width: props.width || 'inherit',
             height: props.height,
-            textShadow: props.shadow,
-            border: props.border,
             bLeft: props.bLeft,
             bRight: props.bRight,
             bTop: props.bTop,
             bBottom: props.bBottom,
+            border: props.border,
             id: props.id,
             className: props.className,
             childs: '',
@@ -59,17 +62,21 @@ var H11 = function (_Component) {
             animationTimingFunction: props.aniTime,
             animationName: props.aniName,
             animationDuration: props.aniDur,
+            //theme: props.theme || 'inherit',   
             smdis: props.smDis || 'flex',
-            mddis: props.mdDis || 'flex'
+            mddis: props.mdDis || 'flex',
+            hoverColor: props.hovColor
         };
         return _this;
     }
 
     _createClass(H11, [{
         key: 'componentDidMount',
-        value: function componentDidMount() {
+        value: function componentDidMount(nextProps) {
             var CHILDS = _react2.default.Children.toArray(this.props.children);
-            this.setState({ childs: CHILDS });
+            this.setState({
+                childs: CHILDS
+            });
         }
     }, {
         key: 'componentWillReceiveProps',
@@ -80,6 +87,8 @@ var H11 = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
+            var _this2 = this;
+
             var HEADING = _nestingstyles2.default.create({
                 heading: {
                     width: this.state.width,
@@ -107,24 +116,33 @@ var H11 = function (_Component) {
                     animationName: this.state.animationName,
                     animationDuration: this.state.animationDuration
                 },
+                hoverStyle: {
+                    color: this.state.hoverColor
+                },
                 '@media screen and (max-width: 440px)': {
                     heading: {
                         display: this.state.smDis,
                         color: this.state.color,
-                        fontSize: '6em'
+                        fontSize: this.state.smFontSize
                     }
                 },
-                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
+                '@media screen and (min-width: 441px) and (max-width: 760px)': {
                     heading: {
                         display: this.state.mdDis,
                         color: this.state.color,
-                        fontSize: '4em'
+                        fontSize: this.state.mdFontSize
                     }
                 }
             });
             return _react2.default.createElement(
                 'h1',
-                { style: HEADING.heading, id: this.state.id, className: this.state.className },
+                { style: HEADING.heading, id: this.state.id, className: this.state.className,
+                    onMouseEnter: function onMouseEnter() {
+                        return _this2.setState({ color: HEADING.hoverStyle.color });
+                    },
+                    onMouseLeave: function onMouseLeave() {
+                        return _this2.setState({ color: _this2.state.colorRev });
+                    } },
                 this.state.childs[0]
             );
         }

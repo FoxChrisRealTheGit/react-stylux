@@ -86,7 +86,7 @@ var RectangleImage = function (_Component) {
                     }
                 }
             });
-            return _react2.default.createElement('img', { style: IMAGE, id: this.state.id, className: 'recimg-' + this.state.size + ' ' + this.state.className, src: this.state.childs[0], alt: this.state.childs[1] });
+            return _react2.default.createElement('img', { style: IMAGE.rectangleimg, id: this.state.id, className: 'recimg-' + this.state.size + ' ' + this.state.className, src: this.state.childs[0], alt: this.state.childs[1] });
         }
     }]);
 

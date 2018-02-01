@@ -43,6 +43,10 @@ var PLQ2 = function (_Component) {
             textclassName: props.textClassName,
             citeclassName: props.citeClassName,
             childs: '',
+            animationIterationCount: props.aniCount,
+            animationTimingFunction: props.aniTime,
+            animationName: props.aniName,
+            animationDuration: props.aniDur,
             smdis: props.smDis || 'flex',
             mddis: props.mdDis || 'flex'
         };

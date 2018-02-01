@@ -35,7 +35,6 @@ var PLQ1 = function (_Component) {
         var _this = _possibleConstructorReturn(this, (PLQ1.__proto__ || Object.getPrototypeOf(PLQ1)).call(this, props));
 
         _this.state = {
-
             blockid: props.blockid,
             textid: props.textid,
             citeid: props.citeid,
@@ -43,6 +42,10 @@ var PLQ1 = function (_Component) {
             textClassName: props.textClassName,
             citeClassName: props.citeClassName,
             childs: '',
+            animationIterationCount: props.aniCount,
+            animationTimingFunction: props.aniTime,
+            animationName: props.aniName,
+            animationDuration: props.aniDur,
             smdis: props.smDis || 'flex',
             mddis: props.mdDis || 'flex'
         };

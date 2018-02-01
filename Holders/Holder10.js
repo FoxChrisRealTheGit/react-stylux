@@ -36,6 +36,11 @@ var Holder10 = function (_Component) {
         _this.state = {
             display: props.display || 'flex',
             direction: props.direction || 'column',
+            borderLeft: props.bLeft,
+            borderRight: props.bRight,
+            borderTop: props.bTop,
+            borderBottom: props.bBottom,
+            border: props.border,
             block1: props.block1 || '1',
             block1BorderLeft: props.b1BLeft,
             block1BorderRight: props.b1BRight,
@@ -106,12 +111,14 @@ var Holder10 = function (_Component) {
             justifyBlock7: props.justifyBlock7 || 'center',
             block7smdis: props.block7smdis || 'flex',
             block7mddis: props.block7mddis || 'flex',
-            textColor: props.textColor || 'black',
-            background: props.background || 'white',
+            background: props.background,
             padding: props.padding || '0',
             margin: props.margin || '10px',
             smdis: props.smDis || 'flex',
-            mddis: props.mdDis || 'flex'
+            mddis: props.mdDis || 'flex',
+            smflexDir: props.smflexDir || 'column',
+            mdflexDir: props.mdflexDir || 'column'
+
         };
         return _this;
     }
@@ -126,18 +133,24 @@ var Holder10 = function (_Component) {
                     flexDirection: this.state.direction,
                     flexWrap: 'wrap',
                     background: this.state.text,
-                    justifyContent: this.state.alignBlocks
+                    justifyContent: this.state.alignBlocks,
+                    overflow: 'hidden',
+                    borderLeft: this.state.borderLeft,
+                    borderRight: this.state.borderRight,
+                    borderTop: this.state.borderTop,
+                    borderBottom: this.state.borderBottom,
+                    border: this.state.border
                 },
                 '@media (max-width: 440px)': {
                     holderstyles: {
                         display: this.state.smdis,
-                        flexDirection: 'column'
+                        flexDirection: this.state.smflexDir
                     }
                 },
-                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
+                '@media screen and (min-width: 441px) and (max-width: 760px)': {
                     holderstyles: {
                         display: this.state.mddis,
-                        flexDirection: 'column'
+                        flexDirection: this.state.mdflexDir
                     }
                 }
             });
@@ -161,7 +174,7 @@ var Holder10 = function (_Component) {
                         display: this.state.block1smdis
                     }
                 },
-                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
+                '@media screen and (min-width: 441px) and (max-width: 760px)': {
                     block1styles: {
                         display: this.state.block1mddis
                     }
@@ -188,7 +201,7 @@ var Holder10 = function (_Component) {
                         display: this.state.block2smdis
                     }
                 },
-                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
+                '@media screen and (min-width: 441px) and (max-width: 760px)': {
                     block2styles: {
                         display: this.state.block2mddis
                     }
@@ -215,7 +228,7 @@ var Holder10 = function (_Component) {
                         display: this.state.block3smdis
                     }
                 },
-                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
+                '@media screen and (min-width: 441px) and (max-width: 760px)': {
                     block3styles: {
                         display: this.state.block3mddis
                     }
@@ -242,7 +255,7 @@ var Holder10 = function (_Component) {
                         display: this.state.block4smdis
                     }
                 },
-                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
+                '@media screen and (min-width: 441px) and (max-width: 760px)': {
                     block4styles: {
                         display: this.state.block4mddis
                     }
@@ -269,7 +282,7 @@ var Holder10 = function (_Component) {
                         display: this.state.block5smdis
                     }
                 },
-                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
+                '@media screen and (min-width: 441px) and (max-width: 760px)': {
                     block5styles: {
                         display: this.state.block5mddis
                     }
@@ -296,7 +309,7 @@ var Holder10 = function (_Component) {
                         display: this.state.block6smdis
                     }
                 },
-                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
+                '@media screen and (min-width: 441px) and (max-width: 760px)': {
                     block6styles: {
                         display: this.state.block6mddis
                     }
@@ -323,7 +336,7 @@ var Holder10 = function (_Component) {
                         display: this.state.block7smdis
                     }
                 },
-                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
+                '@media screen and (min-width: 441px) and (max-width: 760px)': {
                     block7styles: {
                         display: this.state.block7mddis
                     }
@@ -375,7 +388,5 @@ var Holder10 = function (_Component) {
 
     return Holder10;
 }(_react.Component);
-/* End of Holder 10 Component */
-
 
 exports.default = Holder10;

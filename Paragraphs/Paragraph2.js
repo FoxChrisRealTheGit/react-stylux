@@ -35,9 +35,13 @@ var P2 = function (_Component) {
         var _this = _possibleConstructorReturn(this, (P2.__proto__ || Object.getPrototypeOf(P2)).call(this, props));
 
         _this.state = {
-            color: props.color || 'black',
+            color: props.color,
+            colorRev: props.color,
+            textShadow: props.shadow,
             fontFamily: props.font || 'serif',
-            fontSize: props.size || '0.9em',
+            fontSize: props.size || '0.95em',
+            smFontSize: props.smSize || '0.95em',
+            mdFontSize: props.mdSize || '0.95em',
             lineHeight: props.lineHeight || '1.22em',
             fontWeight: props.weight || '400',
             display: props.display || 'flex',
@@ -45,11 +49,10 @@ var P2 = function (_Component) {
             textAlign: props.textAlign || 'center',
             padding: props.padding || '10px 10%',
             margin: props.margin || '0',
-            width: props.width || 'inehrit',
+            width: props.width || 'inherit',
             height: props.height,
-            textShadow: props.shadow,
             border: props.border,
-            bLEft: props.bLeft,
+            bLeft: props.bLeft,
             bRight: props.bRight,
             bTop: props.bTop,
             bBottom: props.bBottom,
@@ -61,7 +64,8 @@ var P2 = function (_Component) {
             animationName: props.aniName,
             animationDuration: props.aniDur,
             smdis: props.smDis || 'flex',
-            mddis: props.mdDis || 'flex'
+            mddis: props.mdDis || 'flex',
+            hoverColor: props.hovColor
         };
         return _this;
     }
@@ -81,6 +85,8 @@ var P2 = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
+            var _this2 = this;
+
             var PARAGRAPH = _nestingstyles2.default.create({
                 paragraph: {
                     width: this.state.width,
@@ -107,24 +113,33 @@ var P2 = function (_Component) {
                     animationName: this.state.animationName,
                     animationDuration: this.state.animationDuration
                 },
+                hoverStyle: {
+                    color: this.state.hoverColor
+                },
                 '@media screen and (max-width: 440px)': {
                     paragraph: {
                         display: this.state.smDis,
                         color: this.state.color,
-                        fontSize: '0.9em'
+                        fontSize: this.state.smFontSize
                     }
                 },
-                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
+                '@media screen and (min-width: 441px) and (max-width: 760px)': {
                     paragraph: {
                         display: this.state.mdDis,
                         color: this.state.color,
-                        fontSize: '1.1em'
+                        fontSize: this.state.mdFontSize
                     }
                 }
             });
             return _react2.default.createElement(
                 'p',
-                { style: PARAGRAPH.paragraph, id: this.state.id, className: this.state.className },
+                { style: PARAGRAPH.paragraph, id: this.state.id, className: this.state.className,
+                    onMouseEnter: function onMouseEnter() {
+                        return _this2.setState({ color: PARAGRAPH.hoverStyle.color });
+                    },
+                    onMouseLeave: function onMouseLeave() {
+                        return _this2.setState({ color: _this2.state.colorRev });
+                    } },
                 this.state.childs[0]
             );
         }

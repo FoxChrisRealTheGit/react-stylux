@@ -34,18 +34,24 @@ var Container1 = function (_Component) {
 
         _this.state = {
             display: props.display || 'flex',
-            direction: props.direction || 'row',
+            direction: props.direction || 'column',
+            borderLeft: props.bLeft,
+            borderRight: props.bRight,
+            borderTop: props.bTop,
+            borderBottom: props.bBottom,
+            border: props.border,
             alignBlock1: props.alignBlock1 || 'center',
             block1: props.block1 || '1',
             justifyBlock1: props.justifyBlock1 || 'center',
             block1smdis: props.block1smdis || 'flex',
             block1mddis: props.block1mddis || 'flex',
-            textColor: props.textColor || 'yellow',
-            background: props.background || 'white',
+            background: props.background,
             padding: props.padding || '0',
             margin: props.margin || '0',
             smdis: props.smDis || 'flex',
-            mddis: props.mdDis || 'flex'
+            mddis: props.mdDis || 'flex',
+            smflexDir: props.smflexDir || 'column',
+            mdflexDir: props.mdflexDir || 'column'
         };
         return _this;
     }
@@ -56,18 +62,23 @@ var Container1 = function (_Component) {
             var containerStyle = _nestingstyles2.default.create({
                 containerstyles: {
                     display: this.state.display.display,
-                    flexDirection: this.state.direction
+                    flexDirection: this.state.direction,
+                    borderLeft: this.state.borderLeft,
+                    borderRight: this.state.borderRight,
+                    borderTop: this.state.borderTop,
+                    borderBottom: this.state.borderBottom,
+                    border: this.state.border
                 },
                 '@media (max-width: 440px)': {
                     containerstyles: {
                         display: this.state.smdis,
-                        flexDirection: 'column'
+                        flexDirection: this.state.smflexDir
                     }
                 },
-                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
+                '@media screen and (min-width: 441px) and (max-width: 760px)': {
                     containerstyles: {
                         display: this.state.mddis,
-                        flexDirection: 'column'
+                        flexDirection: this.state.mdflexDir
                     }
                 }
             });
@@ -86,7 +97,7 @@ var Container1 = function (_Component) {
                         display: this.state.block1smdis
                     }
                 },
-                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
+                '@media screen and (min-width: 441px) and (max-width: 760px)': {
                     block1styles: {
                         display: this.state.block1mddis
                     }

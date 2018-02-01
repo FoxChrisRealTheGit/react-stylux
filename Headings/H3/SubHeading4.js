@@ -36,9 +36,13 @@ var H34 = function (_Component) {
 
         _this.state = {
             color: props.color || 'lightgray',
+            colorRev: props.color || 'lightgray',
+            textShadow: props.shadow,
             fontFamily: props.font || 'sans-serif',
             fontSize: props.size || '3.489em',
-            fontWeight: props.weight || '400',
+            smFontSize: props.smSize || '2.5em',
+            mdFontSize: props.mdSize || '3em',
+            fontWeight: props.weight || '600',
             display: props.display || 'flex',
             align: props.align || 'center',
             textAlign: props.textAlign || 'center',
@@ -46,7 +50,6 @@ var H34 = function (_Component) {
             margin: props.margin || '0',
             width: props.width || 'inherit',
             height: props.height,
-            textShadow: props.shadow,
             border: props.border,
             bLeft: props.bLeft,
             bRight: props.bRight,
@@ -60,7 +63,8 @@ var H34 = function (_Component) {
             animationName: props.aniName,
             animationDuration: props.aniDur,
             smdis: props.smDis || 'flex',
-            mddis: props.mdDis || 'flex'
+            mddis: props.mdDis || 'flex',
+            hoverColor: props.hovColor || 'lightgray'
         };
         return _this;
     }
@@ -80,6 +84,8 @@ var H34 = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
+            var _this2 = this;
+
             var HEADING = _nestingstyles2.default.create({
                 heading: {
                     width: this.state.width,
@@ -107,24 +113,33 @@ var H34 = function (_Component) {
                     animationName: this.state.animationName,
                     animationDuration: this.state.animationDuration
                 },
+                hoverStyle: {
+                    color: this.state.hoverColor
+                },
                 '@media screen and (max-width: 440px)': {
                     heading: {
                         display: this.state.smDis,
                         color: this.state.color,
-                        fontSize: '3em'
+                        fontSize: this.state.smFontSize
                     }
                 },
-                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
+                '@media screen and (min-width: 441px) and (max-width: 760px)': {
                     heading: {
                         display: this.state.mdDis,
                         color: this.state.color,
-                        fontSize: '2em'
+                        fontSize: this.state.mdFontSize
                     }
                 }
             });
             return _react2.default.createElement(
                 'h3',
-                { style: HEADING.heading, id: this.state.id, className: this.state.className },
+                { style: HEADING.heading, id: this.state.id, className: this.state.className,
+                    onMouseEnter: function onMouseEnter() {
+                        return _this2.setState({ color: HEADING.hoverStyle.color });
+                    },
+                    onMouseLeave: function onMouseLeave() {
+                        return _this2.setState({ color: _this2.state.colorRev });
+                    } },
                 this.state.childs[0]
             );
         }
