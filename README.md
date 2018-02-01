@@ -24,8 +24,8 @@ npm install --save react-stylux
 - [Animation Notes](#animation-notes)
 - [Responsive Notes](#responsive-notes)
 - [Layout](#layout-specific)
-    - [Containers](#container1)
-    -[Holders](#holders)
+    - [Containers](#containers-possible-name-change-expected)
+    - [Holders](#holders)
 - [Text](#text-specific)
     - [Headings](#mainheadings)
     - [Paragraphs](#paragraphs-all-names-subject-to-change)
@@ -33,7 +33,7 @@ npm install --save react-stylux
 - [Navigation](#navigation-specific)
 - [Lists](#list-specific-possible-rework-expected)
 - [Special Stuff](#special-stuff)
-- [Acknowledgments](#acknowledgements)
+- [Acknowledgments](#acknowledgments)
 - [Changelog](#changelog)
 
 
