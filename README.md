@@ -3,8 +3,8 @@
 
 This is currently a very alpha stage project, documentation will be lack luster for a few weeks.
 
-**responsive testing ongoing, no sizes are set as of right now**
-**most changes are to help with a personal project at Dev Mountain, I am still a bootcamp student and learning. I appreciate the downloads, and will endeavor to make this project better**
+- **responsive testing ongoing, no sizes are set as of right now**
+- **most changes are to help with a personal project at Dev Mountain, I am still a bootcamp student and learning. I appreciate the downloads, and will endeavor to make this project better**
 
 Utilizing three simple component types, this project simplifies layout and front-end considerations for react projects. The three component types are: containers (subject to change), holders, and blocks. Containers (subject to change) define the horizonal space and act as a wrapper for all blocks. Holders then go inside of the container to define the space for the blocks. Holders can go inside of Holders to further define space. Each holder has a pre determinded child length and will render children placed into the holder.
 
