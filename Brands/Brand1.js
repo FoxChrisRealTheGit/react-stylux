@@ -36,16 +36,26 @@ var Brand1 = function (_Component) {
 
         _this.state = {
             display: props.display || 'flex',
+            size: props.size || 'tn',
             direction: props.direction || 'row',
             animationIterationCount: props.aniCount,
             animationTimingFunction: props.aniTime,
             animationName: props.aniName,
-            animationDuration: props.aniDur
+            animationDuration: props.aniDur,
+            smdis: props.smDis || 'flex',
+            mddis: props.mdDis || 'flex',
+            childs: []
         };
         return _this;
     }
 
     _createClass(Brand1, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var CHILDS = _react2.default.Children.toArray(this.props.children);
+            return this.setState({ childs: CHILDS });
+        }
+    }, {
         key: 'componentWillReceiveProps',
         value: function componentWillReceiveProps(newProps) {
             var CHILDS = _react2.default.Children.toArray(newProps.children);
@@ -72,21 +82,20 @@ var Brand1 = function (_Component) {
                 animationName: this.state.animationName,
                 animationDuration: this.state.animationDuration
             };
-            var CHILDS = _react2.default.Children.toArray(this.props.children);
             return _react2.default.createElement(
                 'div',
                 { style: BRAND },
                 _react2.default.createElement(
                     _SquareImage2.default,
                     {
-                        size: 'tn' },
-                    CHILDS[0],
+                        size: this.state.size },
+                    this.state.childs[0],
                     'logo'
                 ),
                 _react2.default.createElement(
                     'p',
                     { style: BRAND_NAME },
-                    CHILDS[1]
+                    this.state.childs[1]
                 )
             );
         }

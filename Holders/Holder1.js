@@ -68,12 +68,25 @@ var Holder1 = function (_Component) {
             smdis: props.smDis || 'flex',
             mddis: props.mdDis || 'flex',
             smflexDir: props.smflexDir,
-            mdflexDir: props.mdflexDir
+            mdflexDir: props.mdflexDir,
+            childs: []
         };
         return _this;
     }
 
     _createClass(Holder1, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var CHILDS = _react2.default.Children.toArray(this.props.children);
+            return this.setState({ childs: CHILDS });
+        }
+    }, {
+        key: 'componentWillReceiveProps',
+        value: function componentWillReceiveProps(newProps) {
+            var CHILDS = _react2.default.Children.toArray(newProps.children);
+            return this.setState({ childs: CHILDS });
+        }
+    }, {
         key: 'render',
         value: function render() {
             var holderstyles = _nestingstyles2.default.create({
@@ -158,19 +171,18 @@ var Holder1 = function (_Component) {
                 }
 
             });
-            var childs = _react2.default.Children.toArray(this.props.children);
             return _react2.default.createElement(
                 'section',
                 { style: holderstyles.holderstyles },
                 _react2.default.createElement(
                     'div',
                     { style: block1styles.block1styles },
-                    childs[0] || _react2.default.createElement('div', null)
+                    this.state.childs[0] || _react2.default.createElement('div', null)
                 ),
                 _react2.default.createElement(
                     'div',
                     { style: block2styles.block2styles },
-                    childs[1] || _react2.default.createElement('div', null)
+                    this.state.childs[1] || _react2.default.createElement('div', null)
                 )
             );
         }

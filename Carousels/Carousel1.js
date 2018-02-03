@@ -80,7 +80,7 @@ var Carousel1 = function (_Component) {
     }, {
         key: 'componentWillUnmount',
         value: function componentWillUnmount() {
-            clearInterval(this.state.intervalTime);
+            return clearInterval(this.state.intervalTime);
         }
     }, {
         key: 'slideLeft',

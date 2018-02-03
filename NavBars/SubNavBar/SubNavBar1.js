@@ -31,7 +31,6 @@ var SubNavbar1 = function (_Component) {
         var _this = _possibleConstructorReturn(this, (SubNavbar1.__proto__ || Object.getPrototypeOf(SubNavbar1)).call(this, props));
 
         _this.state = {
-            zIndex: "200",
             fontFamily: props.font || 'serif',
             totalWidth: props.totalWidth || '100%',
             navBarWidth: props.navbarWidth || '50%',
@@ -55,7 +54,9 @@ var SubNavbar1 = function (_Component) {
             navClassName: props.navClassName,
             listClassName: props.listClassName,
             itemsClassName: props.itemsClassName,
-            childs: ''
+            childs: '',
+            smdis: props.smDis || 'none',
+            mddis: props.mdDis || 'flex'
         };
         return _this;
     }
@@ -65,21 +66,33 @@ var SubNavbar1 = function (_Component) {
         value: function componentDidMount() {
             var _this2 = this;
 
-            var SUBNAVBAR_NAVBAR_LI = {
-                display: 'flex',
-                flex: 1,
-                fontSize: this.state.fontSize,
-                fontWeight: this.state.fontWeight,
-                justifyContent: 'center',
-                margin: this.state.itemSpaceing,
-                background: this.state.itemBackground,
-                fontVariant: this.state.fontVariant
-            };
+            var SUBNAVBAR_NAVBAR_LI = StyleSheet.create({
+                subnavbar_navbar_li: {
+                    display: 'flex',
+                    flex: 1,
+                    fontSize: this.state.fontSize,
+                    fontWeight: this.state.fontWeight,
+                    justifyContent: 'center',
+                    margin: this.state.itemSpaceing,
+                    background: this.state.itemBackground,
+                    fontVariant: this.state.fontVariant
+                },
+                '@media screen and (max-width: 440px)': {
+                    subnavbar_navbar_li: {
+                        display: this.state.smdis
+                    }
+                },
+                '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    subnavbar_navbar_li: {
+                        display: this.state.mddis
+                    }
+                }
+            });
             var CHILDS = _react2.default.Children.toArray(this.props.children);
             var NAVBAR = CHILDS.map(function (x, i) {
                 return _react2.default.createElement(
                     'li',
-                    { key: i, style: SUBNAVBAR_NAVBAR_LI, id: _this2.state.itemsid, className: _this2.state.itemsClassName },
+                    { key: i, style: SUBNAVBAR_NAVBAR_LI.subnavbar_navbar_li, id: _this2.state.itemsid, className: _this2.state.itemsClassName },
                     x
                 );
             });
@@ -90,21 +103,33 @@ var SubNavbar1 = function (_Component) {
         value: function componentWillReceiveProps(newProps) {
             var _this3 = this;
 
-            var SUBNAVBAR_NAVBAR_LI = {
-                display: 'flex',
-                flex: 1,
-                fontSize: this.state.fontSize,
-                fontWeight: this.state.fontWeight,
-                justifyContent: 'center',
-                margin: this.state.itemSpaceing,
-                background: this.state.itemBackground,
-                fontVariant: this.state.fontVariant
-            };
+            var SUBNAVBAR_NAVBAR_LI = StyleSheet.create({
+                subnavbar_navbar_li: {
+                    display: 'flex',
+                    flex: 1,
+                    fontSize: this.state.fontSize,
+                    fontWeight: this.state.fontWeight,
+                    justifyContent: 'center',
+                    margin: this.state.itemSpaceing,
+                    background: this.state.itemBackground,
+                    fontVariant: this.state.fontVariant
+                },
+                '@media screen and (max-width: 440px)': {
+                    subnavbar_navbar_li: {
+                        display: this.state.smdis
+                    }
+                },
+                '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    subnavbar_navbar_li: {
+                        display: this.state.mddis
+                    }
+                }
+            });
             var CHILDS = _react2.default.Children.toArray(newProps.children);
             var NAVBAR = CHILDS.map(function (x, i) {
                 return _react2.default.createElement(
                     'li',
-                    { key: i, style: SUBNAVBAR_NAVBAR_LI, id: _this3.state.itemsid, className: _this3.state.itemsClassName },
+                    { key: i, style: SUBNAVBAR_NAVBAR_LI.subnavbar_navbar_li, id: _this3.state.itemsid, className: _this3.state.itemsClassName },
                     x
                 );
             });
@@ -113,36 +138,63 @@ var SubNavbar1 = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
-            var SUBNAVBAR = {
-                width: this.state.totalWidth,
-                height: this.state.totalHeight,
-                display: this.state.display,
-                flexDirection: 'column',
-                alignItems: this.state.alignItems,
-                margin: '0',
-                padding: this.state.padding,
-                background: this.state.mainBackground,
-                color: this.state.color,
-                position: 'sticky',
-                top: '-1px',
-                zIndex: this.state.zIndex
-            };
-            var SUBNAVBAR_NAVBAR = {
-                width: this.state.navBarWidth,
-                height: 'inherit',
-                display: 'flex',
-                flexWrap: 'wrap',
-                flex: 1,
-                alignItems: this.state.columnAlign,
-                fontFamily: this.state.fontFamily,
-                flexDirection: this.state.direction
-            };
+            var SUBNAVBAR = StyleSheet.create({
+                subnavbar: {
+                    width: this.state.totalWidth,
+                    height: this.state.totalHeight,
+                    display: this.state.display,
+                    flexDirection: 'column',
+                    alignItems: this.state.alignItems,
+                    margin: '0',
+                    padding: this.state.padding,
+                    background: this.state.mainBackground,
+                    color: this.state.color,
+                    top: '-1px',
+                    position: "sticky",
+                    zIndex: "200"
+                },
+                '@media screen and (max-width: 440px)': {
+                    subnavbar: {
+                        display: this.state.smdis
+                    }
+                },
+                '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    subnavbar: {
+                        display: this.state.mddis,
+                        alignItems: 'center'
+                    }
+                }
+            });
+            var SUBNAVBAR_NAVBAR = StyleSheet.create({
+                subnavbar_navbar: {
+                    width: this.state.navBarWidth,
+                    height: 'inherit',
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    flex: 1,
+                    alignItems: this.state.columnAlign,
+                    fontFamily: this.state.fontFamily,
+                    flexDirection: this.state.direction
+                },
+                '@media screen and (max-width: 440px)': {
+                    subnavbar_navbar: {
+                        display: this.state.smdis
+                    }
+                },
+                '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                    subnavbar_navbar: {
+                        display: this.state.mddis,
+                        width: '90%'
+                    }
+                }
+            });
+
             return _react2.default.createElement(
                 'nav',
-                { style: SUBNAVBAR, id: this.state.navid, className: 'subnavbar1 socialness ' + this.state.navClassName },
+                { style: SUBNAVBAR.subnavbar, id: this.state.navid, className: 'subnavbar1 socialness ' + this.state.navClassName },
                 _react2.default.createElement(
                     'ul',
-                    { style: SUBNAVBAR_NAVBAR, id: this.state.listid, className: 'subnavbar1-navbar ' + this.state.listClassName },
+                    { style: SUBNAVBAR_NAVBAR.subnavbar_navbar, id: this.state.listid, className: 'subnavbar1-navbar ' + this.state.listClassName },
                     this.state.childs
                 )
             );

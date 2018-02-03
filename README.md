@@ -4,6 +4,7 @@
 This is currently a very alpha stage project, documentation will be lack luster for a few weeks.
 
 **responsive testing ongoing, no sizes are set as of right now**
+**most changes are to help with a personal project at Dev Mountain, I am still a bootcamp student and learning. I appreciate the downloads, and will endeavor to make this project better**
 
 Utilizing three simple component types, this project simplifies layout and front-end considerations for react projects. The three component types are: containers (subject to change), holders, and blocks. Containers (subject to change) define the horizonal space and act as a wrapper for all blocks. Holders then go inside of the container to define the space for the blocks. Holders can go inside of Holders to further define space. Each holder has a pre determinded child length and will render children placed into the holder.
 
@@ -29,10 +30,39 @@ npm install --save react-stylux
 - [Text](#text-specific)
     - [Headings](#mainheadings)
     - [Paragraphs](#paragraphs-all-names-subject-to-change)
+    - [Pull Quotes](#pull-quotes)
 - [Images](#image-specific)
+    - [Circle Image](#circleimage)
+    - [Rounded Image](#roundedimage)
+    - [Square Image](#squareimage)
+    - [Oval Image](#ovalimage)
+    - [Rectangle Image](#rectangleimage)
+    - [Rounded Ractangle Image](#roundedrectangleimage)
+    - [Tall Rectangle Image](#tallrectangleimage)
+    - [Tall Rounded Rectangle Image](#tallroundedrectangleimage)
+    - [Figure](#figure)
+    - [Heroes](#heroes)
+        - [Hero1](#hero1)
+        - [Hero2](#hero2)
+        - [Hero3](#hero3)
+        - [Hero4](#hero4)
+        - [Hero5](#hero5)
 - [Navigation](#navigation-specific)
+    - [Navbars](#navbars)
+    - [SubNavbars](#subnavbars)
+    - [Dropdowns](#dropdownnavs-there-needs-to-be-an-accesibility-rework)
+    - [Brand](#brand)
 - [Lists](#list-specific-possible-rework-expected)
+    - [Number Lists](#number-list)
+    - [Bullet Lists](#bullet-List)
 - [Special Stuff](#special-stuff)
+    - [Carousels](#carousels)
+    - [Togglers](#togglers)
+    - [Moduls](#moduls)
+    - [Buttons](#buttons)
+    - [Tables](#tables)
+- [Known Bugs](#known-bugs)
+- [Feature Wish List](#feature-wish-list)
 - [Acknowledgments](#acknowledgments)
 - [Changelog](#changelog)
 
@@ -2474,7 +2504,7 @@ This accepts and renders one child
 <P5>This is a Heading</P5>
 ```
 
-##### Pull Quotes <blockquote />
+##### Pull Quotes
 **Not Finished**
 ###### Pullquote1
 
@@ -3551,7 +3581,10 @@ This accepts multiple children, a holder can be placed to divide up the space
 </Modul1>
 ```
 ##### Modul2
+**Started**
 
+#### Buttons
+**Will be added after more testing**
 
 #### Tables
 
@@ -3673,6 +3706,18 @@ This is licensed under MIT license. If used in any project, please give ackknowl
 
 
 ## Changelog
+**0.2.5**
+* Added FlatButton1 for intial button testing and integration
+* Added componentDidMount && componentWillRecieveProps to Holders and Containers
+* Slight hack on navbar1 to work for current personal project with DevMountain. Needs more work to function correctly.
+* SubNavbar1 now in first stages of being responsive
+* Brand blocks are starting to get worked on, added size prop and outline for responsive behavior, but not responsive yet.
+* Added return to Carousel blocks to see if it fixes unmounting error, will most likely need a lot more work.
+* adjusted setting for toggler 2 to function better with absolute positioning. These changes are not currently usable through props and are hard coded, this will change soon.
+* Started on Modul2, not implemented yet
+* improved table of contents
+* updated readme for changes
+
 **0.2.3**
 * Changed input so a backslash is not needed to seperate child elements, instead use {''} for anything not already wrapped in jsx or another component
 * updated pull quote 1 margin so the name is not cut off

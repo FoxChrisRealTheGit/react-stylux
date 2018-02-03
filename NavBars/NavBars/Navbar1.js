@@ -74,7 +74,6 @@ var Navbar1 = function (_Component) {
     _createClass(Navbar1, [{
         key: 'toggle',
         value: function toggle() {
-            console.log(this.state.hamShow);
             return this.setState({ hamShow: !this.state.hamShow });
         }
     }, {
@@ -354,7 +353,7 @@ var Navbar1 = function (_Component) {
                 },
                 '@media screen and (min-width: 441px) and (max-width: 760px)': {
                     hamestnav: {
-                        display: this.state.hamShow === true ? 'none' : 'flex'
+                        display: this.state.hamMdDis
                     }
                 }
             });

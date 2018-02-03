@@ -16,6 +16,8 @@ require('../css/animations.css');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -36,7 +38,7 @@ var Toggler2 = function (_Component) {
             height: props.height,
             background: props.background || 'white',
             border: props.border,
-            bLEft: props.bLeft,
+            bLeft: props.bLeft,
             bRight: props.bRight,
             bTop: props.bTop,
             bBottom: props.bBottom,
@@ -53,7 +55,7 @@ var Toggler2 = function (_Component) {
             bBorderRight: props.bBorderRight,
             bBorderTop: props.bBorderTop,
             bBorderBottom: props.bBorderBottom,
-            position: props.position,
+            position: props.position || 'absolute',
             togglePlace: props.togglePlace || 'column',
             padding: props.padding,
             offset: props.offset + '%',
@@ -64,7 +66,9 @@ var Toggler2 = function (_Component) {
             titleClassName: props.titleClassName,
             mainClassName: props.mainClassName,
             toggleClassName: props.toggleClassName,
-            childs: []
+            childs: [],
+            smdis: props.smDis || 'flex',
+            mddis: props.mdDis || 'flex'
         };
         _this.toggle = _this.toggle.bind(_this);
         return _this;
@@ -94,7 +98,8 @@ var Toggler2 = function (_Component) {
         value: function render() {
             var FULLELEMENT = {
                 display: 'flex',
-                flexDirection: this.state.togglePlace
+                flexDirection: this.state.togglePlace,
+                margin: '20px 0 10px 0'
             };
             var TOGGLERBOX = {
                 display: this.state.show ? 'flex' : 'none',
@@ -113,7 +118,7 @@ var Toggler2 = function (_Component) {
                 overflow: 'hidden',
                 zIndex: 2000
             };
-            var CLICKBOX = {
+            var CLICKBOX = _defineProperty({
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -131,7 +136,7 @@ var Toggler2 = function (_Component) {
                 borderTop: this.state.bBorderTop,
                 borderBottom: this.state.bBorderBottom,
                 border: this.state.bBorder
-            };
+            }, 'margin', '-30px 0 0 0');
             return _react2.default.createElement(
                 'div',
                 { id: this.state.mainid, style: FULLELEMENT, className: this.state.mainClassName },

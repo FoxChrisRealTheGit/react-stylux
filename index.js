@@ -176,6 +176,10 @@ var _Paragraph9 = require('./Paragraphs/Paragraph5');
 
 var _Paragraph10 = _interopRequireDefault(_Paragraph9);
 
+var _FlatButton = require('./Buttons/FlatButton1');
+
+var _FlatButton2 = _interopRequireDefault(_FlatButton);
+
 var _CircleImage = require('./Images/CircleImage');
 
 var _CircleImage2 = _interopRequireDefault(_CircleImage);
@@ -387,6 +391,7 @@ module.exports = {
     P3: _Paragraph6.default,
     P4: _Paragraph8.default,
     P5: _Paragraph10.default,
+    FlatButton1: _FlatButton2.default,
     CircleImage: _CircleImage2.default,
     Figure: _Figure2.default,
     OvalImage: _OvalImage2.default,

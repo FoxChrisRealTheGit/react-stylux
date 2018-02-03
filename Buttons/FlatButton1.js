@@ -14,10 +14,6 @@ require('../css/reset.css');
 
 require('../css/animations.css');
 
-var _SquareImage = require('../Images/SquareImage');
-
-var _SquareImage2 = _interopRequireDefault(_SquareImage);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -26,33 +22,47 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Brand3 = function (_Component) {
-    _inherits(Brand3, _Component);
+var FlatButton1 = function (_Component) {
+    _inherits(FlatButton1, _Component);
 
-    function Brand3(props) {
-        _classCallCheck(this, Brand3);
+    function FlatButton1(props) {
+        _classCallCheck(this, FlatButton1);
 
-        var _this = _possibleConstructorReturn(this, (Brand3.__proto__ || Object.getPrototypeOf(Brand3)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (FlatButton1.__proto__ || Object.getPrototypeOf(FlatButton1)).call(this, props));
 
         _this.state = {
-            display: props.display || 'flex',
-            size: props.size || 'sm',
+            onClick: props.onClick,
+            id: props.id,
+            className: props.className,
+            childs: '',
+            fontSize: props.fontSize || '20px',
+            color: props.color || '#000000',
+            hoverColor: props.hover || 'white',
+            hoverBackground: props.hoverBackground || '#000000',
+            revColor: props.color || '#000000',
+            background: props.background || '#ffffff',
+            revBackground: props.background || '#ffffff',
+            borderRadius: props.borderRadius || '28px',
+            border: props.border || 'solid #000000 2px',
+            padding: props.padding || '10px 20px 10px 20px',
+            margin: props.margin,
             animationIterationCount: props.aniCount,
             animationTimingFunction: props.aniTime,
             animationName: props.aniName,
             animationDuration: props.aniDur,
             smdis: props.smDis || 'flex',
-            mddis: props.mdDis || 'flex',
-            childs: []
+            mddis: props.mdDis || 'flex'
         };
+        _this.changeHover = _this.changeHover.bind(_this);
+        _this.changeHoverBack = _this.changeHoverBack.bind(_this);
         return _this;
     }
 
-    _createClass(Brand3, [{
+    _createClass(FlatButton1, [{
         key: 'componentDidMount',
         value: function componentDidMount() {
             var CHILDS = _react2.default.Children.toArray(this.props.children);
-            return this.setState({ childs: CHILDS });
+            this.setState({ childs: CHILDS });
         }
     }, {
         key: 'componentWillReceiveProps',
@@ -61,31 +71,44 @@ var Brand3 = function (_Component) {
             return this.setState({ childs: CHILDS });
         }
     }, {
+        key: 'changeHover',
+        value: function changeHover() {
+            var background = this.state.hoverBackground;
+            var color = this.state.hoverColor;
+            this.setState({ color: color, background: background });
+        }
+    }, {
+        key: 'changeHoverBack',
+        value: function changeHoverBack() {
+            var revbackground = this.state.revBackground;
+            var revcolor = this.state.revColor;
+            this.setState({ color: revcolor, background: revbackground });
+        }
+    }, {
         key: 'render',
         value: function render() {
-            var BRAND = {
-                display: 'flex',
-                alignItems: 'center',
-                animationIterationCount: this.state.animationIterationCount,
-                animationTimingFunction: this.state.animationTimingFunction,
-                animationName: this.state.animationName,
-                animationDuration: this.state.animationDuration
+            var BUTTONSTYLE = {
+                borderRadius: this.state.borderRadius,
+                color: this.state.color,
+                fontSize: this.state.fontSize,
+                background: this.state.background,
+                padding: this.state.padding,
+                border: this.state.border
             };
+
             return _react2.default.createElement(
-                'section',
-                { style: BRAND },
-                _react2.default.createElement(
-                    _SquareImage2.default,
-                    {
-                        size: this.state.size },
-                    this.state.childs[0],
-                    'logo'
-                )
+                'button',
+                { style: BUTTONSTYLE, id: this.state.id, className: this.state.className,
+                    onClick: this.state.onClick,
+                    onMouseEnter: this.changeHover,
+                    onMouseLeave: this.changeHoverBack
+                },
+                this.state.childs[0]
             );
         }
     }]);
 
-    return Brand3;
+    return FlatButton1;
 }(_react.Component);
 
-exports.default = Brand3;
+exports.default = FlatButton1;

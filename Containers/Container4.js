@@ -66,12 +66,25 @@ var Container4 = function (_Component) {
             smdis: props.smDis || 'flex',
             mddis: props.mdDis || 'flex',
             smflexDir: props.smflexDir || 'column',
-            mdflexDir: props.mdflexDir || 'column'
+            mdflexDir: props.mdflexDir || 'column',
+            childs: []
         };
         return _this;
     }
 
     _createClass(Container4, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var CHILDS = _react2.default.Children.toArray(this.props.children);
+            return this.setState({ childs: CHILDS });
+        }
+    }, {
+        key: 'componentWillReceiveProps',
+        value: function componentWillReceiveProps(newProps) {
+            var CHILDS = _react2.default.Children.toArray(newProps.children);
+            return this.setState({ childs: CHILDS });
+        }
+    }, {
         key: 'render',
         value: function render() {
             var containerStyle = _nestingstyles2.default.create({
@@ -117,7 +130,6 @@ var Container4 = function (_Component) {
                         display: this.state.block1mddis
                     }
                 }
-
             });
             var block2style = _nestingstyles2.default.create({
                 block2styles: {
@@ -139,7 +151,6 @@ var Container4 = function (_Component) {
                         display: this.state.block2mddis
                     }
                 }
-
             });
             var block3style = _nestingstyles2.default.create({
                 block3styles: {
@@ -161,7 +172,6 @@ var Container4 = function (_Component) {
                         display: this.state.block3mddis
                     }
                 }
-
             });
             var block4style = _nestingstyles2.default.create({
                 block4styles: {
@@ -183,31 +193,29 @@ var Container4 = function (_Component) {
                         display: this.state.block4mddis
                     }
                 }
-
             });
-            var childs = _react2.default.Children.toArray(this.props.children);
             return _react2.default.createElement(
                 'section',
                 { style: containerStyle.containerstyles },
                 _react2.default.createElement(
                     'div',
                     { style: block1style.block1styles },
-                    childs[0] || _react2.default.createElement('div', null)
+                    this.state.childs[0] || _react2.default.createElement('div', null)
                 ),
                 _react2.default.createElement(
                     'div',
                     { style: block2style.block2styles },
-                    childs[1] || _react2.default.createElement('div', null)
+                    this.state.childs[1] || _react2.default.createElement('div', null)
                 ),
                 _react2.default.createElement(
                     'div',
                     { style: block3style.block3styles },
-                    childs[2] || _react2.default.createElement('div', null)
+                    this.state.childs[2] || _react2.default.createElement('div', null)
                 ),
                 _react2.default.createElement(
                     'div',
                     { style: block4style.block4styles },
-                    childs[3] || _react2.default.createElement('div', null)
+                    this.state.childs[3] || _react2.default.createElement('div', null)
                 )
             );
         }

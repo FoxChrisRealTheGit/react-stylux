@@ -36,15 +36,25 @@ var Brand4 = function (_Component) {
 
         _this.state = {
             display: props.display || 'flex',
+            size: props.size || 'lg',
             animationIterationCount: props.aniCount,
             animationTimingFunction: props.aniTime,
             animationName: props.aniName,
-            animationDuration: props.aniDur
+            animationDuration: props.aniDur,
+            smdis: props.smDis || 'flex',
+            mddis: props.mdDis || 'flex',
+            childs: []
         };
         return _this;
     }
 
     _createClass(Brand4, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var CHILDS = _react2.default.Children.toArray(this.props.children);
+            return this.setState({ childs: CHILDS });
+        }
+    }, {
         key: 'componentWillReceiveProps',
         value: function componentWillReceiveProps(newProps) {
             var CHILDS = _react2.default.Children.toArray(newProps.children);
@@ -61,14 +71,14 @@ var Brand4 = function (_Component) {
                 animationName: this.state.animationName,
                 animationDuration: this.state.animationDuration
             };
-            var CHILDS = _react2.default.Children.toArray(this.props.children);
             return _react2.default.createElement(
                 'section',
                 { style: BRAND },
                 _react2.default.createElement(
                     _RectangleImage2.default,
-                    null,
-                    CHILDS[0],
+                    {
+                        size: this.state.size },
+                    this.state.childs[0],
                     'logo'
                 )
             );

@@ -35,12 +35,21 @@ var Brand5 = function (_Component) {
             animationIterationCount: props.aniCount,
             animationTimingFunction: props.aniTime,
             animationName: props.aniName,
-            animationDuration: props.aniDur
+            animationDuration: props.aniDur,
+            smdis: props.smDis || 'flex',
+            mddis: props.mdDis || 'flex',
+            childs: []
         };
         return _this;
     }
 
     _createClass(Brand5, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var CHILDS = _react2.default.Children.toArray(this.props.children);
+            return this.setState({ childs: CHILDS });
+        }
+    }, {
         key: 'componentWillReceiveProps',
         value: function componentWillReceiveProps(newProps) {
             var CHILDS = _react2.default.Children.toArray(newProps.children);
@@ -57,7 +66,6 @@ var Brand5 = function (_Component) {
                 animationName: this.state.animationName,
                 animationDuration: this.state.animationDuration
             };
-            var CHILDS = _react2.default.Children.toArray(this.props.children);
             return _react2.default.createElement('section', { style: BRAND });
         }
     }]);
