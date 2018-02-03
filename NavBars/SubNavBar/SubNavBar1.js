@@ -14,6 +14,10 @@ require('../../css/reset.css');
 
 require('../../css/SuperStyleSheet.css');
 
+var _nestingstyles = require('nestingstyles');
+
+var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -66,7 +70,7 @@ var SubNavbar1 = function (_Component) {
         value: function componentDidMount() {
             var _this2 = this;
 
-            var SUBNAVBAR_NAVBAR_LI = StyleSheet.create({
+            var SUBNAVBAR_NAVBAR_LI = _nestingstyles2.default.create({
                 subnavbar_navbar_li: {
                     display: 'flex',
                     flex: 1,
@@ -103,7 +107,7 @@ var SubNavbar1 = function (_Component) {
         value: function componentWillReceiveProps(newProps) {
             var _this3 = this;
 
-            var SUBNAVBAR_NAVBAR_LI = StyleSheet.create({
+            var SUBNAVBAR_NAVBAR_LI = _nestingstyles2.default.create({
                 subnavbar_navbar_li: {
                     display: 'flex',
                     flex: 1,
@@ -138,7 +142,7 @@ var SubNavbar1 = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
-            var SUBNAVBAR = StyleSheet.create({
+            var SUBNAVBAR = _nestingstyles2.default.create({
                 subnavbar: {
                     width: this.state.totalWidth,
                     height: this.state.totalHeight,
@@ -165,7 +169,7 @@ var SubNavbar1 = function (_Component) {
                     }
                 }
             });
-            var SUBNAVBAR_NAVBAR = StyleSheet.create({
+            var SUBNAVBAR_NAVBAR = _nestingstyles2.default.create({
                 subnavbar_navbar: {
                     width: this.state.navBarWidth,
                     height: 'inherit',
