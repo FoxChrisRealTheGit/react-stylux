@@ -46,6 +46,8 @@ var RectangleImage = function (_Component) {
             animationTimingFunction: props.aniTime,
             animationName: props.aniName,
             animationDuration: props.aniDur,
+            transformOrigin: props.transformOrigin,
+            animationFillMode: props.aniFillMode,
             smdis: props.smDis || 'flex',
             mddis: props.mdDis || 'flex'
         };
@@ -73,7 +75,9 @@ var RectangleImage = function (_Component) {
                     animationIterationCount: this.state.animationIterationCount,
                     animationTimingFunction: this.state.animationTimingFunction,
                     animationName: this.state.animationName,
-                    animationDuration: this.state.animationDuration
+                    animationDuration: this.state.animationDuration,
+                    transformOrigin: this.state.transformOrigin,
+                    animationFillMode: this.state.animationFillMode
                 },
                 '@media screen and (max-width: 440px)': {
                     rectangleimg: {

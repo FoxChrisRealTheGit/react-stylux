@@ -46,7 +46,13 @@ var DropDownNav3 = function (_Component) {
             itemsid: props.itemsid,
             mainClassName: props.mainClassName,
             titleClassName: props.titleClassName,
-            itemsClassName: props.itemsClassName
+            itemsClassName: props.itemsClassName,
+            animationIterationCount: props.aniCount,
+            animationTimingFunction: props.aniTime,
+            animationName: props.aniName,
+            animationDuration: props.aniDur,
+            transformOrigin: props.transformOrigin,
+            animationFillMode: props.aniFillMode
         };
         return _this;
     }
@@ -64,7 +70,13 @@ var DropDownNav3 = function (_Component) {
                 padding: '5px',
                 textAlign: 'center',
                 flex: 1,
-                background: this.state.background
+                background: this.state.background,
+                animationIterationCount: this.state.animationIterationCount,
+                animationTimingFunction: this.state.animationTimingFunction,
+                animationName: this.state.animationName,
+                animationDuration: this.state.animationDuration,
+                transformOrigin: this.state.transformOrigin,
+                animationFillMode: this.state.animationFillMode
             };
             var DropDown_NavBar_Li = {};
             var HASCHILDS = {

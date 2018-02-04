@@ -50,6 +50,8 @@ var FlatButton1 = function (_Component) {
             animationTimingFunction: props.aniTime,
             animationName: props.aniName,
             animationDuration: props.aniDur,
+            transformOrigin: props.transformOrigin,
+            animationFillMode: props.aniFillMode,
             smdis: props.smDis || 'flex',
             mddis: props.mdDis || 'flex'
         };
@@ -93,7 +95,14 @@ var FlatButton1 = function (_Component) {
                 fontSize: this.state.fontSize,
                 background: this.state.background,
                 padding: this.state.padding,
-                border: this.state.border
+                border: this.state.border,
+                cursor: 'pointer',
+                animationIterationCount: this.state.animationIterationCount,
+                animationTimingFunction: this.state.animationTimingFunction,
+                animationName: this.state.animationName,
+                animationDuration: this.state.animationDuration,
+                transformOrigin: this.state.transformOrigin,
+                animationFillMode: this.state.animationFillMode
             };
 
             return _react2.default.createElement(

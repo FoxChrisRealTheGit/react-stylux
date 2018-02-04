@@ -63,7 +63,15 @@ var Modul1 = function (_Component) {
             titleClassName: props.titleClassName,
             boxClassName: props.boxClassName,
             backClassName: props.backClassName,
-            childs: []
+            animationIterationCount: props.aniCount,
+            animationTimingFunction: props.aniTime,
+            animationName: props.aniName,
+            animationDuration: props.aniDur,
+            transformOrigin: props.transformOrigin,
+            animationFillMode: props.aniFillMode,
+            childs: [],
+            smdis: props.smDis || 'flex',
+            mddis: props.mdDis || 'flex'
         };
         _this.toggle = _this.toggle.bind(_this);
         return _this;
@@ -104,7 +112,13 @@ var Modul1 = function (_Component) {
                 alignItems: this.state.boxAlign,
                 justifyContent: this.state.boxJustify,
                 boxShadow: this.state.boxShadow,
-                zIndex: '2000'
+                zIndex: '2000',
+                animationIterationCount: this.state.animationIterationCount,
+                animationTimingFunction: this.state.animationTimingFunction,
+                animationName: this.state.animationName,
+                animationDuration: this.state.animationDuration,
+                transformOrigin: this.state.transformOrigin,
+                animationFillMode: this.state.animationFillMode
             };
             var CLICKBOX = {
                 display: 'flex',

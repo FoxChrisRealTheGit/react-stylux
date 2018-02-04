@@ -42,6 +42,8 @@ var Brand1 = function (_Component) {
             animationTimingFunction: props.aniTime,
             animationName: props.aniName,
             animationDuration: props.aniDur,
+            transformOrigin: props.transformOrigin,
+            animationFillMode: props.aniFillMode,
             smdis: props.smDis || 'flex',
             mddis: props.mdDis || 'flex',
             childs: []
@@ -72,7 +74,9 @@ var Brand1 = function (_Component) {
                 animationIterationCount: this.state.animationIterationCount,
                 animationTimingFunction: this.state.animationTimingFunction,
                 animationName: this.state.animationName,
-                animationDuration: this.state.animationDuration
+                animationDuration: this.state.animationDuration,
+                transformOrigin: this.state.transformOrigin,
+                animationFillMode: this.state.animationFillMode
             };
             var BRAND_NAME = {
                 display: 'flex',
@@ -80,7 +84,9 @@ var Brand1 = function (_Component) {
                 animationIterationCount: this.state.animationIterationCount,
                 animationTimingFunction: this.state.animationTimingFunction,
                 animationName: this.state.animationName,
-                animationDuration: this.state.animationDuration
+                animationDuration: this.state.animationDuration,
+                transformOrigin: this.state.transformOrigin,
+                animationFillMode: this.state.animationFillMode
             };
             return _react2.default.createElement(
                 'div',

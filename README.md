@@ -190,7 +190,59 @@ Each elements will then be shown is an example of children accepted.
 
 ### Animation Notes:
 
-**the animation library is not currently built**
+**The animation library is currently mostly from: animate.css, please see [Acknowledgments](#acknowledgments) for full acknowledgment.**
+
+#### defaults
+
+all blocks have access to:
+- animationIterationCount in the form of: props.aniCount,
+- animationTimingFunction in the form of: props.aniTime,
+- animationName in the form of: props.aniName,
+- animationDuration in the form of: props.aniDur,
+- transformOrigin in the form of: props.transformOrigin,
+
+animate.css recommends the following defaults:
+aniDur ='1s'
+aniFillMode = 'both'
+
+if wanting an infinite animation:
+aniCount = 'infinite'
+
+
+#### Animation Names
+
+to see what these do, please refer to animation [Acknowledgments](#acknowledgments) or go to http://daneden.me/animate
+each animation will be associated with suggested defaults, these will be improved as more testing is accomplished.
+
+- bounce
+    - transform-origin: center bottom
+- pulse
+- handShake
+    - animation-timing-function: ease-in-out
+- jello
+    - transform-origin: center
+- bounceIn
+    - animation-duration: 0.75s
+- bounceInDown
+- bounceInLeft
+- bounceInRight
+- bounceInUp
+- bounceOut
+- bounceOutLeft
+- bounceOutRight
+- bounceOutUp
+- fadeIn
+- fadeOut
+- flipInX (needs better integration)
+- flipInY (needs better integration)
+- flipOutX (needs better integration)
+- flipOutY (needs better integration)
+- hinge
+    - animation-duration: 2s
+- slideInLeft
+- slideInRight
+- slideOutLeft
+- slideOutRight
 
 ### Responsive Notes:
 There are two breakpoints on the follow elements:
@@ -3694,7 +3746,7 @@ for a more detailed list of changes, please refer to the changelog
 
 ## License
 
-This is licensed under MIT license. If used in any project, please give ackknowledgments to Christoher Fox.
+This is licensed under MIT license. If used in any project, please give acknowledgments to Christoher Fox.
 
 
 ## Acknowledgments
@@ -3702,10 +3754,16 @@ This is licensed under MIT license. If used in any project, please give ackknowl
 * A Giant Thank you to [Dev Mountain](https://devmountain.com/) for teaching me to code good
 * A big thank you to Morten Rand-Hendriksen for your videos on flex box and the code that allows the className socialness to work
 * Credit to http://meyerweb.com/eric/tools/css/reset/  for use of a reset file
-* Credit to the React-Styles team (used as nestingstyles) for the code to allow for media queries through style
-
+* Credit to the React-Styles team (used as nestingstyles) for the code to allow for media queries through style object
+* Massive credit for the animations to Daniel Eden - animate.css - http://daneden.me/animate
 
 ## Changelog
+**0.2.7**
+* Added animation file, selected animations from animation.css
+* Added animation placeholders to allow for easy animation
+* readme updated for notes on use
+* updated horizontal ticker to work with new animation library
+
 **0.2.5**
 * Added FlatButton1 for intial button testing and integration
 * Added componentDidMount && componentWillRecieveProps to Holders and Containers

@@ -32,8 +32,15 @@ var NumberList2 = function (_Component) {
             listAmount: props.listAmount || '1',
             listItem: [],
             id: props.id,
-            className: props.className
-
+            className: props.className,
+            smdis: props.smDis || 'flex',
+            mddis: props.mdDis || 'flex',
+            animationIterationCount: props.aniCount,
+            animationTimingFunction: props.aniTime,
+            animationName: props.aniName,
+            animationDuration: props.aniDur,
+            transformOrigin: props.transformOrigin,
+            animationFillMode: props.aniFillMode
         };
         return _this;
     }

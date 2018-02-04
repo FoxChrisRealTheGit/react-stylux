@@ -47,7 +47,13 @@ var Carousel1 = function (_Component) {
             mainClassName: props.mainClassName,
             leftArrowClassName: props.leftArrowClassName,
             rightArrowClassName: props.rightArrowClassName,
-            sliderClassName: props.sliderClassName
+            sliderClassName: props.sliderClassName,
+            animationIterationCount: props.aniCount,
+            animationTimingFunction: props.aniTime,
+            animationName: props.aniName,
+            animationDuration: props.aniDur,
+            transformOrigin: props.transformOrigin,
+            animationFillMode: props.aniFillMode
 
         };
         _this.slideLeft = _this.slideLeft.bind(_this);

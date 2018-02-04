@@ -47,6 +47,8 @@ var CircleImage = function (_Component) {
             animationTimingFunction: props.aniTime,
             animationName: props.aniName,
             animationDuration: props.aniDur,
+            transformOrigin: props.transformOrigin,
+            animationFillMode: props.aniFillMode,
             smdis: props.smDis || 'flex',
             mddis: props.mdDis || 'flex'
         };
@@ -75,7 +77,7 @@ var CircleImage = function (_Component) {
                     borderRadius: "100%",
                     overflowX: 'hidden',
                     overflowY: 'hidden'
-                }, _defineProperty(_circleimg, 'borderRadius', "100%"), _defineProperty(_circleimg, 'animationIterationCount', this.state.animationIterationCount), _defineProperty(_circleimg, 'animationTimingFunction', this.state.animationTimingFunction), _defineProperty(_circleimg, 'animationName', this.state.animationName), _defineProperty(_circleimg, 'animationDuration', this.state.animationDuration), _circleimg),
+                }, _defineProperty(_circleimg, 'borderRadius', "100%"), _defineProperty(_circleimg, 'animationIterationCount', this.state.animationIterationCount), _defineProperty(_circleimg, 'animationTimingFunction', this.state.animationTimingFunction), _defineProperty(_circleimg, 'animationName', this.state.animationName), _defineProperty(_circleimg, 'animationDuration', this.state.animationDuration), _defineProperty(_circleimg, 'transformOrigin', this.state.transformOrigin), _defineProperty(_circleimg, 'animationFillMode', this.state.animationFillMode), _circleimg),
                 '@media screen and (max-width: 440px)': {
                     circleimg: {
                         display: this.state.smDis

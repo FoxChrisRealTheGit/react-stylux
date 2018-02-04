@@ -32,7 +32,17 @@ var SeeSawTicker = function (_Component) {
 
         var _this = _possibleConstructorReturn(this, (SeeSawTicker.__proto__ || Object.getPrototypeOf(SeeSawTicker)).call(this, props));
 
-        _this.state = {};
+        _this.state = {
+            slide1: [],
+            smdis: props.smDis,
+            mddis: props.mdDis,
+            animationIterationCount: props.aniCount,
+            animationTimingFunction: props.aniTime,
+            animationName: props.aniName,
+            animationDuration: props.aniDur,
+            transformOrigin: props.transformOrigin,
+            animationFillMode: props.aniFillMode
+        };
         return _this;
     }
 

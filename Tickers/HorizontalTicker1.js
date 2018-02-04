@@ -33,7 +33,14 @@ var HorizontalTicker = function (_Component) {
         var _this = _possibleConstructorReturn(this, (HorizontalTicker.__proto__ || Object.getPrototypeOf(HorizontalTicker)).call(this, props));
 
         _this.state = {
-            slide1: []
+            slide1: [],
+            animationIterationCount: props.aniCount || 'infinite',
+            animationTimingFunction: props.aniTime || 'linear',
+            animationName: props.aniName || 'horizontal-ticker',
+            animationDuration: props.aniDur || '25s',
+            transformOrigin: props.transformOrigin,
+            smdis: props.smDis,
+            mddis: props.mdDis
         };
         return _this;
     }
@@ -42,12 +49,24 @@ var HorizontalTicker = function (_Component) {
         key: 'componentDidMount',
         value: function componentDidMount() {
             var t_item = [];
+            var TICKER_ITEM = {
+                display: 'inline',
+                padding: '0 2em'
+
+            };
             var CHILDS = _react2.default.Children.toArray(this.props.children);
             for (var g = 0; g < CHILDS.length; g += 1) {
                 t_item.push(CHILDS[g]);
             }
+            var TICKERITEM = t_item.map(function (x, i) {
+                return _react2.default.createElement(
+                    'div',
+                    { key: i, style: TICKER_ITEM },
+                    x
+                );
+            });
             this.setState({
-                slide1: t_item
+                slide1: TICKERITEM
             });
         }
     }, {
@@ -59,29 +78,24 @@ var HorizontalTicker = function (_Component) {
                 paddingLeft: '100%',
                 display: 'flex'
             };
-            var TICKER_ITEM = {
-                display: 'flex',
-                padding: '0 2em'
-
+            var horizontal_ticker = {
+                Display: 'relative',
+                lineHeight: '4rem',
+                whiteSpace: 'nowrap',
+                paddingRight: '100%',
+                animationIterationCount: this.state.animationIterationCount,
+                animationTimingFunction: this.state.animationTimingFunction,
+                animationName: this.state.animationName,
+                animationDuration: this.state.animationDuration,
+                transformOrigin: this.state.transformOrigin
             };
-            var HORIZONTALTICKER2 = {
-                paddingLeft: '50%'
-            };
-            var CHILDS = _react2.default.Children.toArray(this.props.children);
-            var TICKERITEM = this.state.slide1.map(function (x, i) {
-                return _react2.default.createElement(
-                    'div',
-                    { key: i, style: TICKER_ITEM },
-                    x
-                );
-            });
             return _react2.default.createElement(
                 'div',
                 { style: TICKERWRAPPER },
                 _react2.default.createElement(
                     'div',
-                    { className: 'horizontal-ticker' },
-                    TICKERITEM
+                    { style: horizontal_ticker },
+                    this.state.slide1
                 )
             );
         }

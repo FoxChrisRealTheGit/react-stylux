@@ -16,8 +16,6 @@ require('../css/animations.css');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -28,13 +26,11 @@ var Toggler1 = function (_Component) {
     _inherits(Toggler1, _Component);
 
     function Toggler1(props) {
-        var _this$state;
-
         _classCallCheck(this, Toggler1);
 
         var _this = _possibleConstructorReturn(this, (Toggler1.__proto__ || Object.getPrototypeOf(Toggler1)).call(this, props));
 
-        _this.state = (_this$state = {
+        _this.state = {
             show: false,
             position: props.position || 'fixed',
             width: props.width || '100px',
@@ -54,8 +50,31 @@ var Toggler1 = function (_Component) {
             bBorderRight: props.bBorderRight,
             bBorderTop: props.bBorderTop,
             bBorderBottom: props.bBorderBottom,
-            border: props.bBorder
-        }, _defineProperty(_this$state, 'border', props.border), _defineProperty(_this$state, 'bLEft', props.bLeft), _defineProperty(_this$state, 'bRight', props.bRight), _defineProperty(_this$state, 'bTop', props.bTop), _defineProperty(_this$state, 'bBottom', props.bBottom), _defineProperty(_this$state, 'left', props.left), _defineProperty(_this$state, 'right', props.right), _defineProperty(_this$state, 'mainid', props.mainid), _defineProperty(_this$state, 'toggleid', props.toggleid), _defineProperty(_this$state, 'titleid', props.titleid), _defineProperty(_this$state, 'titleClassName', props.titleClassName), _defineProperty(_this$state, 'mainClassName', props.mainClassName), _defineProperty(_this$state, 'toggleClassName', props.toggleClassName), _defineProperty(_this$state, 'childs', []), _this$state);
+            bBorder: props.bBorder,
+            border: props.border,
+            bLEft: props.bLeft,
+            bRight: props.bRight,
+            bTop: props.bTop,
+            bBottom: props.bBottom,
+            left: props.left,
+            right: props.right,
+            mainid: props.mainid,
+            toggleid: props.toggleid,
+            titleid: props.titleid,
+            titleClassName: props.titleClassName,
+            mainClassName: props.mainClassName,
+            toggleClassName: props.toggleClassName,
+            boxShadow: props.shadow || '1px 2px 2px black',
+            animationIterationCount: props.aniCount,
+            animationTimingFunction: props.aniTime,
+            animationName: props.aniName,
+            animationDuration: props.aniDur,
+            transformOrigin: props.transformOrigin,
+            animationFillMode: props.aniFillMode,
+            childs: [],
+            smdis: props.smDis || 'flex',
+            mddis: props.mdDis || 'flex'
+        };
         _this.toggle = _this.toggle.bind(_this);
         return _this;
     }
@@ -96,7 +115,13 @@ var Toggler1 = function (_Component) {
                 right: this.state.right,
                 left: this.state.left,
                 top: this.state.top,
-                zIndex: 2000
+                zIndex: 2000,
+                animationIterationCount: this.state.animationIterationCount,
+                animationTimingFunction: this.state.animationTimingFunction,
+                animationName: this.state.animationName,
+                animationDuration: this.state.animationDuration,
+                transformOrigin: this.state.transformOrigin,
+                animationFillMode: this.state.animationFillMode
             };
             var CLICKBOX = {
                 cursor: 'pointer',

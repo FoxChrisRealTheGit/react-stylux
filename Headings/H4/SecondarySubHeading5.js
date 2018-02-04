@@ -63,6 +63,8 @@ var H45 = function (_Component) {
             animationTimingFunction: props.aniTime,
             animationName: props.aniName,
             animationDuration: props.aniDur,
+            transformOrigin: props.transformOrigin,
+            animationFillMode: props.aniFillMode,
             smdis: props.smDis || 'flex',
             mddis: props.mdDis || 'flex',
             hoverColor: props.hovColor
@@ -112,6 +114,8 @@ var H45 = function (_Component) {
                     animationTimingFunction: this.state.animationTimingFunction,
                     animationName: this.state.animationName,
                     animationDuration: this.state.animationDuration,
+                    transformOrigin: this.state.transformOrigin,
+                    animationFillMode: this.state.animationFillMode,
                     WebkitTextFillColor: 'transparent',
                     WebkitTextStrokeColor: this.state.color,
                     WebkitTextStrokeWidth: this.state.stroke

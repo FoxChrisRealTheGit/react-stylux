@@ -35,9 +35,8 @@ var Toggler3 = function (_Component) {
             width: props.width || '400px',
             height: props.height,
             background: props.background || 'white',
-            buttonText: props.buttonText || 'toggler3',
+            buttonText: props.buttonText || 'toggler2',
             position: props.position,
-
             textvertical: props.textVertical || 'center',
             texthorizontal: props.textHorizontal || 'center',
             textheight: props.textHeight || '200px',
@@ -48,7 +47,15 @@ var Toggler3 = function (_Component) {
             toggleid: props.toggleid,
             panelClassName: props.panelClassName,
             mainClassName: props.mainClassName,
-            toggleClassName: props.toggleClassName
+            toggleClassName: props.toggleClassName,
+            animationIterationCount: props.aniCount,
+            animationTimingFunction: props.aniTime,
+            animationName: props.aniName,
+            animationDuration: props.aniDur,
+            transformOrigin: props.transformOrigin,
+            animationFillMode: props.aniFillMode,
+            smdis: props.smDis || 'flex',
+            mddis: props.mdDis || 'flex'
         };
         return _this;
     }

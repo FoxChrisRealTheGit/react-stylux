@@ -38,7 +38,15 @@ var Table1 = function (_Component) {
             tableid: props.tableId,
             mainid: props.mainId,
             mainClassName: props.mainClassName,
-            tableClassName: props.tableClassName
+            tableClassName: props.tableClassName,
+            smdis: props.smDis || 'flex',
+            mddis: props.mdDis || 'flex',
+            animationIterationCount: props.aniCount,
+            animationTimingFunction: props.aniTime,
+            animationName: props.aniName,
+            animationDuration: props.aniDur,
+            transformOrigin: props.transformOrigin,
+            animationFillMode: props.aniFillMode
         };
         return _this;
     }

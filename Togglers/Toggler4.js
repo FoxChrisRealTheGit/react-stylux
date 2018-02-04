@@ -30,7 +30,16 @@ var Toggler4 = function (_Component) {
 
         var _this = _possibleConstructorReturn(this, (Toggler4.__proto__ || Object.getPrototypeOf(Toggler4)).call(this, props));
 
-        _this.state = {};
+        _this.state = {
+            smdis: props.smDis || 'flex',
+            mddis: props.mdDis || 'flex',
+            animationIterationCount: props.aniCount,
+            animationTimingFunction: props.aniTime,
+            animationName: props.aniName,
+            animationDuration: props.aniDur,
+            transformOrigin: props.transformOrigin,
+            animationFillMode: props.aniFillMode
+        };
         return _this;
     }
 

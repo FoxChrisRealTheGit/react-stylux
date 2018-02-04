@@ -38,7 +38,15 @@ var NumberList1 = function (_Component) {
             listStyleImage: props.listStyleImage || 'none',
             listStylePosition: props.listStylePosition || 'inside',
             id: props.id,
-            className: props.className
+            className: props.className,
+            smdis: props.smDis || 'flex',
+            mddis: props.mdDis || 'flex',
+            animationIterationCount: props.aniCount,
+            animationTimingFunction: props.aniTime,
+            animationName: props.aniName,
+            animationDuration: props.aniDur,
+            transformOrigin: props.transformOrigin,
+            animationFillMode: props.aniFillMode
         };
         return _this;
     }

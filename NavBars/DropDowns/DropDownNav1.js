@@ -47,6 +47,12 @@ var DropDownNav1 = function (_Component) {
             mainClassName: props.mainClassName,
             titleClassName: props.titleClassName,
             itemsClassName: props.itemsClassName,
+            animationIterationCount: props.aniCount,
+            animationTimingFunction: props.aniTime,
+            animationName: props.aniName,
+            animationDuration: props.aniDur,
+            transformOrigin: props.transformOrigin,
+            animationFillMode: props.aniFillMode,
             zIndex: "1000",
             childs: [],
             first: [],
@@ -119,7 +125,13 @@ var DropDownNav1 = function (_Component) {
                 flex: 1,
                 background: this.state.background,
                 zIndex: this.state.zIndex,
-                color: this.state.color
+                color: this.state.color,
+                animationIterationCount: this.state.animationIterationCount,
+                animationTimingFunction: this.state.animationTimingFunction,
+                animationName: this.state.animationName,
+                animationDuration: this.state.animationDuration,
+                transformOrigin: this.state.transformOrigin,
+                animationFillMode: this.state.animationFillMode
             };
             var HASCHILDS = {
                 fontSize: '1em',

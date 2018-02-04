@@ -49,7 +49,7 @@ var Toggler2 = function (_Component) {
             bFontVariant: props.bFontVariant,
             bFontWeight: props.bFontWeight,
             bTextShadow: props.bTextShadow,
-            bMargin: props.bMargin,
+            bMargin: props.bMargin || '-30px 0 0 0',
             bPadding: props.bPadding,
             bBorderLeft: props.bBorderLeft,
             bBorderRight: props.bBorderRight,
@@ -66,6 +66,12 @@ var Toggler2 = function (_Component) {
             titleClassName: props.titleClassName,
             mainClassName: props.mainClassName,
             toggleClassName: props.toggleClassName,
+            animationIterationCount: props.aniCount,
+            animationTimingFunction: props.aniTime,
+            animationName: props.aniName,
+            animationDuration: props.aniDur,
+            transformOrigin: props.transformOrigin,
+            animationFillMode: props.aniFillMode,
             childs: [],
             smdis: props.smDis || 'flex',
             mddis: props.mdDis || 'flex'
@@ -116,7 +122,13 @@ var Toggler2 = function (_Component) {
                 border: this.state.border,
                 boxShadow: this.state.boxShadow,
                 overflow: 'hidden',
-                zIndex: 2000
+                zIndex: 2000,
+                animationIterationCount: this.state.animationIterationCount,
+                animationTimingFunction: this.state.animationTimingFunction,
+                animationName: this.state.animationName,
+                animationDuration: this.state.animationDuration,
+                transformOrigin: this.state.transformOrigin,
+                animationFillMode: this.state.animationFillMode
             };
             var CLICKBOX = _defineProperty({
                 display: 'flex',

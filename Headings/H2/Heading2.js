@@ -62,6 +62,8 @@ var H22 = function (_Component) {
             animationTimingFunction: props.aniTime,
             animationName: props.aniName,
             animationDuration: props.aniDur,
+            transformOrigin: props.transformOrigin,
+            animationFillMode: props.aniFillMode,
             smdis: props.smDis || 'flex',
             mddis: props.mdDis || 'flex',
             hoverColor: props.hovColor
@@ -111,7 +113,9 @@ var H22 = function (_Component) {
                     animationIterationCount: this.state.animationIterationCount,
                     animationTimingFunction: this.state.animationTimingFunction,
                     animationName: this.state.animationName,
-                    animationDuration: this.state.animationDuration
+                    animationDuration: this.state.animationDuration,
+                    transformOrigin: this.state.transformOrigin,
+                    animationFillMode: this.state.animationFillMode
                 },
                 hoverStyle: {
                     color: this.state.hoverColor
