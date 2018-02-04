@@ -225,42 +225,6 @@
 }
 
 /* End of Image SLider */
-/* Start of ticker styles */
-/* Start of horizontal ticker styles */
-
-  
-@keyframes horizontal-ticker {
-    0% {
-      -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0);
-      visibility: visible;
-    }
-  
-    100% {
-      -webkit-transform: translate3d(-2000px, 0, 0);
-      transform: translate3d(-2000px, 0, 0);
-    }
-  }
-  .horizontal-ticker {
-
-    display: flex;
-    line-height: 4rem;  
-    white-space: nowrap; 
-    padding-right: 100%;
-    
-    -webkit-animation-iteration-count: infinite; 
-            animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-   -webkit-animation-name: horizontal-ticker;
-           animation-name: horizontal-ticker;
-    -webkit-animation-duration: 30s;
-            animation-duration: 30s;
-  }
-
-
-/* End of horizontal ticker styles
-/* End of ticker styles */
 /* Toggler 3 */
 
 /* hides paragraphs */

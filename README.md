@@ -3763,6 +3763,12 @@ This is licensed under MIT license. If used in any project, please give acknowle
 * Added animation placeholders to allow for easy animation
 * readme updated for notes on use
 * updated horizontal ticker to work with new animation library
+* cursor: pointer added to flat button
+* minor update to toggler 2
+* dropdown child intake now with lifecycle
+* minor animations added to dropdowns and carousel 1 & 5
+* iteration count will stop on mouse over of carousel1 and will not start back up
+
 
 **0.2.5**
 * Added FlatButton1 for intial button testing and integration
