@@ -66,7 +66,8 @@ var Navbar1 = function (_Component) {
             hoverColor: props.hoverColor,
             hamMenuDis: 'none',
             hamShow: false,
-            hamTop: props.hamTop || '7%',
+            hamTop: props.hamTop || '75px',
+            hamLeft: props.hamLeft || '0',
             hamSmDis: props.hamSmDis || 'flex',
             hamMdDis: props.hamMdDis || 'none',
             hamShadow: props.hamShadow || '1px 2px 2px black',
@@ -355,6 +356,7 @@ var Navbar1 = function (_Component) {
                     flexDirection: 'column',
                     position: this.state.hamPosition,
                     top: this.state.hamTop,
+                    left: this.state.hamLeft,
                     background: this.state.hamBackground,
                     display: 'flex'
                 }, _defineProperty(_hamestnav, 'flexDirection', 'column'), _defineProperty(_hamestnav, 'alignItems', 'center'), _defineProperty(_hamestnav, 'boxShadow', this.state.hamShadow), _hamestnav),

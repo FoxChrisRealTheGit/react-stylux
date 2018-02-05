@@ -3834,6 +3834,9 @@ This is licensed under MIT license. If used in any project, please give acknowle
 * Massive credit for the animations to Daniel Eden - animate.css - http://daneden.me/animate
 
 ## Changelog
+**0.2.9**
+* added left prop to ham navbar1 to try and fix issue
+
 **0.2.8**
 * fixed ham navigation menu and added ham props
 * animation not currently working with ham menu on navbar1
