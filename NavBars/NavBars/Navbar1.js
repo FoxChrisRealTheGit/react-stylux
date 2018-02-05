@@ -20,6 +20,8 @@ var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -64,8 +66,12 @@ var Navbar1 = function (_Component) {
             hoverColor: props.hoverColor,
             hamMenuDis: 'none',
             hamShow: false,
+            hamTop: props.hamTop || '7%',
             hamSmDis: props.hamSmDis || 'flex',
-            hamMdDis: props.hamMdDis || 'none'
+            hamMdDis: props.hamMdDis || 'none',
+            hamShadow: props.hamShadow || '1px 2px 2px black',
+            hamBackground: props.hamBackground || 'white',
+            hamPosition: props.hamPosition || 'absolute'
         };
         _this.toggle = _this.toggle.bind(_this);
         return _this;
@@ -74,7 +80,7 @@ var Navbar1 = function (_Component) {
     _createClass(Navbar1, [{
         key: 'toggle',
         value: function toggle() {
-            return this.setState({ hamShow: !this.state.hamShow });
+            this.setState({ hamShow: !this.state.hamShow });
         }
     }, {
         key: 'componentDidMount',
@@ -106,7 +112,7 @@ var Navbar1 = function (_Component) {
             });
             var HAM_NAVBAR_LI = _nestingstyles2.default.create({
                 ham_navbar_li: {
-                    display: this.state.hamShow === true ? 'none' : 'flex',
+                    visibility: this.state.hamShow ? 'visible' : 'collaspe',
                     flex: 1,
                     fontSize: this.state.fontSize,
                     fontWeight: this.state.fontWeight,
@@ -120,12 +126,12 @@ var Navbar1 = function (_Component) {
                 },
                 '@media screen and (max-width: 440px)': {
                     ham_navbar_li: {
-                        display: this.state.hamShow === true ? 'none' : 'flex'
+                        visibility: this.state.hamShow ? 'visible' : 'collaspe'
                     }
                 },
                 '@media screen and (min-width: 441px) and (max-width: 760px)': {
                     ham_navbar_li: {
-                        display: this.state.hamShow === true ? 'none' : 'flex'
+                        visibility: this.state.hamShow ? 'visible' : 'collaspe'
                     }
                 }
             });
@@ -202,7 +208,7 @@ var Navbar1 = function (_Component) {
             });
             var HAM_NAVBAR_LI = _nestingstyles2.default.create({
                 ham_navbar_li: {
-                    display: this.state.hamShow === true ? 'none' : 'flex',
+                    visibility: this.state.hamShow ? 'visible' : 'collaspe',
                     flex: 1,
                     fontSize: this.state.fontSize,
                     fontWeight: this.state.fontWeight,
@@ -216,12 +222,12 @@ var Navbar1 = function (_Component) {
                 },
                 '@media screen and (max-width: 440px)': {
                     ham_navbar_li: {
-                        display: this.state.hamShow === true ? 'none' : 'flex'
+                        visibility: this.state.hamShow ? 'visible' : 'collaspe'
                     }
                 },
                 '@media screen and (min-width: 441px) and (max-width: 760px)': {
                     ham_navbar_li: {
-                        display: this.state.hamShow === true ? 'none' : 'flex'
+                        visibility: this.state.hamShow ? 'visible' : 'collaspe'
                     }
                 }
             });
@@ -265,6 +271,8 @@ var Navbar1 = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
+            var _hamestnav;
+
             var NAVBAR = _nestingstyles2.default.create({
                 navbar: {
                     width: this.state.totalWidth,
@@ -341,19 +349,23 @@ var Navbar1 = function (_Component) {
                 margin: '3px 0'
             };
             var HAMESTNAV = _nestingstyles2.default.create({
-                hamestnav: {
-                    display: 'none',
+                hamestnav: (_hamestnav = {
+                    visibility: 'hidden',
                     width: '100%',
-                    flexDirection: 'column'
-                },
+                    flexDirection: 'column',
+                    position: this.state.hamPosition,
+                    top: this.state.hamTop,
+                    background: this.state.hamBackground,
+                    display: 'flex'
+                }, _defineProperty(_hamestnav, 'flexDirection', 'column'), _defineProperty(_hamestnav, 'alignItems', 'center'), _defineProperty(_hamestnav, 'boxShadow', this.state.hamShadow), _hamestnav),
                 '@media screen and (max-width: 440px)': {
                     hamestnav: {
-                        display: this.state.hamShow === true ? 'none' : 'flex'
+                        visibility: this.state.hamShow ? 'visible' : 'hidden'
                     }
                 },
                 '@media screen and (min-width: 441px) and (max-width: 760px)': {
                     hamestnav: {
-                        display: this.state.hamMdDis
+                        visibility: this.state.hamShow ? 'visible' : 'hidden'
                     }
                 }
             });

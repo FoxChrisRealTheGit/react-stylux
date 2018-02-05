@@ -3024,6 +3024,12 @@ This accepts seven children and a background
     hoverColor
     hamSmDis = 'flex' (if no count set, then 'none')
     hamMdDis = 'none'
+    hamTop = '7%'
+    hamSmDis = 'flex'
+    hamMdDis = 'none'
+    hamShadow = '1px 2px 2px black'
+    hamBackground = 'white'
+    hamPosition = 'absolute'
     navid
     itemsid
     navClassName
@@ -3048,8 +3054,45 @@ Will render anything beyond count into the ham menu.
 #### SubNavBars
 
 ##### SubNavBar1
-**will be added soon**
-
+**Still working on**
+```
+<SubNavbar2
+font = 'serif'
+    totalWidth = '100%'
+    navbarWidth = '100%'
+    height
+    display = 'flex'
+    direction = 'row'
+    align = 'center'
+    columnAlign = 'center'
+    margin = '0'
+    padding = '0'
+    itemSpacing = '10px 0'
+    mainBackground = 'black'
+    itemBackground = 'inherit'
+    color = 'whitesmoke'
+    fontSize = 0.9em
+    fontWeight = '100'
+    fontVariant = 'none'
+    navid
+    itemsid
+    navClassName
+    listClassName
+    itemsClassName
+    smDis = 'none'
+    mdDis ='flex'
+    >
+```
+This accepts unlimited? children and renders them.
+```
+<SubNavbar1
+    navbarWidth='70%'>
+    <a href=''>Item1</a>
+    <a href=''>Item2</a>
+    <a href=''>Item3</a>
+    <a href=''>Item4</a>
+</SubNavbar1>
+```
 ##### SubNavBar2
 **will be added soon**
 
@@ -3636,7 +3679,40 @@ This accepts multiple children, a holder can be placed to divide up the space
 **Started**
 
 #### Buttons
-**Will be added after more testing**
+**Still working on**
+```
+<FlatButton1
+    onClick
+    id
+    className
+    width
+    height
+    fontSize = '20px'
+    color = 'black'
+    hoverColor = 'white'
+    hoverBackground = 'black'
+    background = 'white'
+    borderRadius = '28px'
+    border = 'solid #000000 2px'
+    padding = '10px 20px 10px 20px'
+    margin
+    aniCount,
+    aniTime,
+    aniName,
+    aniDur,
+    transformOrigin,
+    aniFillMode,
+    smDis = 'flex'
+    mdDis = 'flex'
+    >
+```
+This accepts and renders one child
+```
+<FlatButton1
+    onClick={this.somethingToDo}>
+    this is a button
+</FlatButton1>
+```
 
 #### Tables
 
@@ -3758,6 +3834,12 @@ This is licensed under MIT license. If used in any project, please give acknowle
 * Massive credit for the animations to Daniel Eden - animate.css - http://daneden.me/animate
 
 ## Changelog
+**0.2.8**
+* fixed ham navigation menu and added ham props
+* animation not currently working with ham menu on navbar1
+* added width and height props on button
+* readme updated with subnav, button, and hamnav
+
 **0.2.7**
 * Added animation file, selected animations from animation.css
 * Added animation placeholders to allow for easy animation

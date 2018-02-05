@@ -49,7 +49,7 @@ var SubNavbar1 = function (_Component) {
             mainBackground: props.mainBackground || 'black',
             itemBackground: props.itemBackground || 'inherit',
             color: props.color || 'whitesmoke',
-            fontSize: props.fontSize || '0.8em',
+            fontSize: props.fontSize || '0.9em',
             fontWeight: props.fontWeight || '100',
             fontVariant: props.fontVariant || 'none',
             navid: props.navid,

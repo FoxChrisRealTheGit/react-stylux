@@ -34,6 +34,8 @@ var FlatButton1 = function (_Component) {
             onClick: props.onClick,
             id: props.id,
             className: props.className,
+            width: props.width,
+            height: props.height,
             childs: '',
             fontSize: props.fontSize || '20px',
             color: props.color || '#000000',
@@ -102,7 +104,9 @@ var FlatButton1 = function (_Component) {
                 animationName: this.state.animationName,
                 animationDuration: this.state.animationDuration,
                 transformOrigin: this.state.transformOrigin,
-                animationFillMode: this.state.animationFillMode
+                animationFillMode: this.state.animationFillMode,
+                width: this.state.width,
+                height: this.state.height
             };
 
             return _react2.default.createElement(
