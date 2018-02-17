@@ -4,7 +4,7 @@
 This is currently an alpha stage project, documentation will be lack luster for a few weeks, website being working on.
 
 - **responsive testing ongoing, no sizes are set as of right now**
-- **videos being worked on to explain elements and choices**
+- **videos being worked on to explain blocks and design choices**
 - **beta will be released soon and this project will be open for collaboration**
 
 
@@ -315,8 +315,8 @@ the breakpoint for this is currently set at min-width: 441px and max-width: 760p
     borderTop
     borderBottom
     border
-    block1direction = 'row'
-    alignBlock1 = 'center'
+    block{x}direction = 'row'
+    alignBlock{x} = 'center'
     block{x} = '1'
     block{x}BorderLeft
     block{x}BorderRight
@@ -336,7 +336,8 @@ the breakpoint for this is currently set at min-width: 441px and max-width: 760p
     mdflexDir
     >
 ```
-This accepts up to twenty children and renders them. This is the current backbone for layout. Can be placed inside of itself to create very dynamic and responsive layouts.
+- x = number of block, for example block1 = '2'
+- This accepts up to twenty children and renders them. This is the current backbone for layout. Can be placed inside of itself to create very dynamic and responsive layouts.
 ```
 <Holder>
     <Block2 />
