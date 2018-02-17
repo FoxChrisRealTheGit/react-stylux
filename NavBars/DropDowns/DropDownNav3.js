@@ -14,6 +14,8 @@ require('../../css/reset.css');
 
 require('../../css/SuperStyleSheet.css');
 
+require('../../css/animations.css');
+
 var _Holder = require('../../Holders/Holder2');
 
 var _Holder2 = _interopRequireDefault(_Holder);

@@ -137,8 +137,8 @@ Stylux utilizes three main components and flex-box to handle layouts effectively
 
 ```
 import {
-    Container1,
-    Holder1,
+    Container,
+    Holder,
     NavBar1,
 } from 'react-stylux';
 ```
@@ -146,20 +146,20 @@ import {
 Now you can use these components like any other component!
 
 ```
-<Container1>
-    <Holder1>
+<Container>
+    <Holder>
         <NavBar1>
-            <Link to="">Item1</Link>
-            <Link to="">Item2</Link>
-            <Link to="">Item3</Link>
+            <a href="">Item1</a>
+            <a href="">Item2</a>
+            <a href="">Item3</a>
         </NavBar1>
         <NavBar1>
-            <Link to="facebook.com"></Link>
-            <Link to="twitter.com"></Link>
-            <Link to="instagram.com"></Link>
+            <a href="facebook.com"></a>
+            <a href="twitter.com"></a>
+            <a href="instagram.com"></a>
         </NavBar1>
-    </Holder1>
-</Container1>
+    </Holder>
+</Container>
 ```
 Children are passed into the block level component to render based on type. In the example above, NavBar1 is used in conjunction with Holder1. This will create two spaces, and create two navbars center aligned. As a special note, every navbar block is hooked up with a className to psuedo render a logo based on href/to address info using the font awesome library.
 
@@ -2668,6 +2668,7 @@ This is licensed under MIT license. If used in any project, please give acknowle
 * Removed Containers 1-5 for a dynamic Container
 * Removed Holders 1-13 for a dynamic Holder
 * full implementation for Container still not available, but the Holder is close to being done, it still needs optimization. Will Test current implemtation against other ways until best results are achieved.
+* updated readme for changes
 
 **0.2.9**
 * added left prop to ham navbar1 to try and fix issue
