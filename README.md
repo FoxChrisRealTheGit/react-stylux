@@ -133,7 +133,7 @@ npm install --save react-stylux
 
 ### Step by step:
 
-Stylux utilizes three main components and flex-box to handle layouts effectively. As an example, import Container1, Holder1, and Navbar1:
+Stylux utilizes three main components and flex-box to handle layouts effectively. As an example, import Container, Holder, and Navbar1:
 
 ```
 import {
