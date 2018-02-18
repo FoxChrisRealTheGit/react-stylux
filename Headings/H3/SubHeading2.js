@@ -43,6 +43,7 @@ var H32 = function (_Component) {
             smFontSize: props.smSize || '2em',
             mdFontSize: props.mdSize || '2.5em',
             fontWeight: props.weight || '600',
+            fontVariant: props.variant,
             display: props.display || 'flex',
             align: props.align || 'center',
             textAlign: props.textAlign || 'center',
@@ -102,6 +103,7 @@ var H32 = function (_Component) {
                     fontFamily: this.state.fontFamily,
                     fontSize: this.state.fontSize,
                     fontWeight: this.state.fontWeight,
+                    fontVariant: this.state.fontVariant,
                     display: this.state.display,
                     flexDirection: 'column',
                     alignItems: this.state.align,
@@ -115,7 +117,8 @@ var H32 = function (_Component) {
                     animationName: this.state.animationName,
                     animationDuration: this.state.animationDuration,
                     transformOrigin: this.state.transformOrigin,
-                    animationFillMode: this.state.animationFillMode
+                    animationFillMode: this.state.animationFillMode,
+                    flex: 1
                 },
                 hoverStyle: {
                     color: this.state.hoverColor
@@ -136,15 +139,19 @@ var H32 = function (_Component) {
                 }
             });
             return _react2.default.createElement(
-                'h3',
-                { style: HEADING.heading, id: this.state.id, className: this.state.className,
-                    onMouseEnter: function onMouseEnter() {
-                        return _this2.setState({ color: HEADING.hoverStyle.color });
-                    },
-                    onMouseLeave: function onMouseLeave() {
-                        return _this2.setState({ color: _this2.state.colorRev });
-                    } },
-                this.state.childs[0]
+                _react2.default.Fragment,
+                null,
+                _react2.default.createElement(
+                    'h3',
+                    { style: HEADING.heading, id: this.state.id, className: this.state.className,
+                        onMouseEnter: function onMouseEnter() {
+                            return _this2.setState({ color: HEADING.hoverStyle.color });
+                        },
+                        onMouseLeave: function onMouseLeave() {
+                            return _this2.setState({ color: _this2.state.colorRev });
+                        } },
+                    this.state.childs[0]
+                )
             );
         }
     }]);

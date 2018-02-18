@@ -44,8 +44,8 @@ var Holder = function (_Component) {
             margin: props.margin || '10px 0',
             smdis: props.smDis || 'flex',
             mddis: props.mdDis || 'flex',
-            smflexDir: props.smflexDir,
-            mdflexDir: props.mdflexDir,
+            smflexDir: props.smflexDir || props.direction,
+            mdflexDir: props.mdflexDir || props.direction,
             childs: []
         };
         return _this;
@@ -127,7 +127,8 @@ var Holder = function (_Component) {
                         borderRight: this.state.borderRight,
                         borderTop: this.state.borderTop,
                         borderBottom: this.state.borderBottom,
-                        border: this.state.border
+                        border: this.state.border,
+                        flex: 1
                     },
                     '@media (max-width: 440px)': {
                         holderstyles: {
@@ -217,7 +218,8 @@ var Holder = function (_Component) {
                         borderRight: this.state.borderRight,
                         borderTop: this.state.borderTop,
                         borderBottom: this.state.borderBottom,
-                        border: this.state.border
+                        border: this.state.border,
+                        flex: 1
                     },
                     '@media (max-width: 440px)': {
                         holderstyles: {
@@ -350,7 +352,8 @@ var Holder = function (_Component) {
                         borderRight: this.state.borderRight,
                         borderTop: this.state.borderTop,
                         borderBottom: this.state.borderBottom,
-                        border: this.state.border
+                        border: this.state.border,
+                        flex: 1
                     },
                     '@media (max-width: 440px)': {
                         holderstyles: {
@@ -9835,207 +9838,239 @@ var Holder = function (_Component) {
                     styledChilds19,
                     styledChilds20
                 )];
+            } else {
+                styledHolder = '';
             }
             return this.setState({ childs: styledHolder, blocks: blocks });
         }
         //below is not done and will most likely not render correctly
-        // componentWillReceiveProps(newProps) {
-        //     const props = this.props;
-        //     let blocks, holderstyles, block1styles, block2styles = '';
-        //     let styledHolder, styledChilds1, styledChilds2 = ''
-        //     const CHILDS = React.Children.toArray(this.props.children)
-        //     const num = CHILDS.length;
-        //     if (num === 1) {
-        //         blocks = {
-        //             block1Direction: props.block1direction || 'row',
-        //             block1: props.block1 || '1',
-        //             block1BorderLeft: props.b1BLeft,
-        //             block1BorderRight: props.b1BRight,
-        //             block1BorderTop: props.b1BTop,
-        //             block1BorderBottom: props.b1BBottom,
-        //             block1Border: props.b1Border,
-        //             alignBlock1: props.alignBlock1 || 'center',
-        //             justifyBlock1: props.justifyBlock1 || 'center',
-        //             block1smdis: props.block1smdis || 'flex',
-        //             block1mddis: props.block1mddis || 'flex',
-        //         }
-        //         holderstyles = StyleSheet.create({
-        //             holderstyles: {
-        //                 width: '100%',
-        //                 display: this.state.display,
-        //                 flexDirection: this.state.direction,
-        //                 flexWrap: 'wrap',
-        //                 background: this.state.text,
-        //                 justifyContent: this.state.alignBlocks,
-        //                 overflow: 'hidden',
-        //                 borderLeft: this.state.borderLeft,
-        //                 borderRight: this.state.borderRight,
-        //                 borderTop: this.state.borderTop,
-        //                 borderBottom: this.state.borderBottom,
-        //                 border: this.state.border,
-        //             },
-        //             '@media (max-width: 440px)': {
-        //                 holderstyles: {
-        //                     display: this.state.smdis,
-        //                     flexDirection: this.state.smflexDir
-        //                 }
-        //             },
-        //             '@media screen and (min-width: 441px) and (max-width: 760px)': {
-        //                 holderstyles: {
-        //                     display: this.state.mddis,
-        //                     flexDirection: this.state.mdflexDir
-        //                 }
-        //             }
-        //         });
-        //             block1styles = StyleSheet.create({
-        //                 block1styles: {
-        //                     display: 'flex',
-        //                     flex: blocks.block1 || this.state.block1,
-        //                     flexDirection: 'column',
-        //                     flexWrap: 'wrap',
-        //                     alignItems: blocks.alignBlock1,
-        //                     borderLeft: blocks.block1BorderLeft,
-        //                     borderRight: blocks.block1BorderRight,
-        //                     borderTop: blocks.block1BorderTop,
-        //                     borderBottom: blocks.block1BorderBottom,
-        //                     border: blocks.b1Border,
-        //                     margin: blocks.margin,
-        //                     justifyContent: blocks.justifyBlock1,
-        //                 },
-        //                 '@media screen and (max-width: 440px)': {
-        //                     block1styles: {
-        //                         display: blocks.block1smdis,
-        //                     }
-        //                 },
-        //                 '@media screen and (min-width: 441px) and (max-width: 760px)': {
-        //                     block1styles: {
-        //                         display: blocks.block1mddis,
-        //                     }
-        //                 }
-        //             });
-        //         styledChilds1 = <div key={Math.random()} style={block1styles.block1styles}>{CHILDS[0]}</div>
-        //         styledHolder = [
-        //             <section key={Math.random()} style={holderstyles.holderstyles}>{styledChilds1}{styledChilds2}</section>
-        //         ]
-        //     } else if (num === 2) {
-        //         blocks = {
-        //             block1Direction: props.block1direction || 'row',
-        //             block1: props.block1 || '1',
-        //             block1BorderLeft: props.b1BLeft,
-        //             block1BorderRight: props.b1BRight,
-        //             block1BorderTop: props.b1BTop,
-        //             block1BorderBottom: props.b1BBottom,
-        //             block1Border: props.b1Border,
-        //             alignBlock1: props.alignBlock1 || 'center',
-        //             justifyBlock1: props.justifyBlock1 || 'center',
-        //             block1smdis: props.block1smdis || 'flex',
-        //             block1mddis: props.block1mddis || 'flex',
-        //             block2: props.block2 || '1',
-        //             block2BorderLeft: props.b2BLeft,
-        //             block2BorderRight: props.b2BRight,
-        //             block2BorderTop: props.b2BTop,
-        //             block2BorderBottom: props.b2BBottom,
-        //             block2Border: props.b2Border,
-        //             alignBlock2: props.alignBlock2 || 'center',
-        //             justifyBlock2: props.justifyBlock2 || 'center',
-        //             block2smdis: props.block2smdis || 'flex',
-        //             block2mddis: props.block2mddis || 'flex',
-        //         };
-        //         holderstyles = StyleSheet.create({
-        //             holderstyles: {
-        //                 width: '100%',
-        //                 display: this.state.display,
-        //                 flexDirection: this.state.direction,
-        //                 flexWrap: 'wrap',
-        //                 background: this.state.text,
-        //                 justifyContent: this.state.alignBlocks,
-        //                 overflow: 'hidden',
-        //                 borderLeft: this.state.borderLeft,
-        //                 borderRight: this.state.borderRight,
-        //                 borderTop: this.state.borderTop,
-        //                 borderBottom: this.state.borderBottom,
-        //                 border: this.state.border,
-        //             },
-        //             '@media (max-width: 440px)': {
-        //                 holderstyles: {
-        //                     display: this.state.smdis,
-        //                     flexDirection: this.state.smflexDir
-        //                 }
-        //             },
-        //             '@media screen and (min-width: 441px) and (max-width: 760px)': {
-        //                 holderstyles: {
-        //                     display: this.state.mddis,
-        //                     flexDirection: this.state.mdflexDir
-        //                 }
-        //             }
-        //         });
-        //             block1styles = StyleSheet.create({
-        //                 block1styles: {
-        //                     display: 'flex',
-        //                     flex: blocks.block1 || this.state.block1,
-        //                     flexDirection: 'column',
-        //                     flexWrap: 'wrap',
-        //                     alignItems: blocks.alignBlock1,
-        //                     borderLeft: blocks.block1BorderLeft,
-        //                     borderRight: blocks.block1BorderRight,
-        //                     borderTop: blocks.block1BorderTop,
-        //                     borderBottom: blocks.block1BorderBottom,
-        //                     border: blocks.b1Border,
-        //                     margin: blocks.margin,
-        //                     justifyContent: blocks.justifyBlock1,
-        //                 },
-        //                 '@media screen and (max-width: 440px)': {
-        //                     block1styles: {
-        //                         display: blocks.block1smdis,
-        //                     }
-        //                 },
-        //                 '@media screen and (min-width: 441px) and (max-width: 760px)': {
-        //                     block1styles: {
-        //                         display: blocks.block1mddis,
-        //                     }
-        //                 }
-        //             });
-        //         block2styles = StyleSheet.create({
-        //             block2styles: {
-        //                 display: 'flex',
-        //                 flex: blocks.block2,
-        //                 flexDirection: 'column',
-        //                 flexWrap: 'wrap',
-        //                 alignItems: blocks.alignBlock2,
-        //                 borderLeft: blocks.block2BorderLeft,
-        //                 borderRight: blocks.block2BorderRight,
-        //                 borderTop: blocks.block2BorderTop,
-        //                 borderBottom: blocks.block2BorderBottom,
-        //                 border: blocks.b2Border,
-        //                 margin: blocks.margin,
-        //                 justifyContent: blocks.justifyBlock2,
-        //             },
-        //             '@media screen and (max-width: 440px)': {
-        //                 block2styles: {
-        //                     display: blocks.block2smdis,
-        //                 }
-        //             },
-        //             '@media screen and (min-width: 441px) and (max-width: 760px)': {
-        //                 block2styles: {
-        //                     display: blocks.block2mddis,
-        //                 }
-        //             }
 
-        //         });
+    }, {
+        key: 'componentWillReceiveProps',
+        value: function componentWillReceiveProps(newProps) {
+            var props = this.props;
+            var blocks = void 0,
+                holderstyles = void 0,
+                block1styles = void 0,
+                block2styles = '';
+            var styledHolder = void 0,
+                styledChilds1 = void 0,
+                styledChilds2 = '';
+            var CHILDS = _react2.default.Children.toArray(this.props.children);
+            var num = CHILDS.length;
+            if (num === 1) {
+                blocks = {
+                    block1Direction: props.block1direction || 'row',
+                    block1: props.block1 || '1',
+                    block1BorderLeft: props.b1BLeft,
+                    block1BorderRight: props.b1BRight,
+                    block1BorderTop: props.b1BTop,
+                    block1BorderBottom: props.b1BBottom,
+                    block1Border: props.b1Border,
+                    alignBlock1: props.alignBlock1 || 'center',
+                    justifyBlock1: props.justifyBlock1 || 'center',
+                    block1smdis: props.block1smdis || 'flex',
+                    block1mddis: props.block1mddis || 'flex'
+                };
+                holderstyles = _nestingstyles2.default.create({
+                    holderstyles: {
+                        width: '100%',
+                        display: this.state.display,
+                        flexDirection: this.state.direction,
+                        flexWrap: 'wrap',
+                        background: this.state.text,
+                        justifyContent: this.state.alignBlocks,
+                        overflow: 'hidden',
+                        borderLeft: this.state.borderLeft,
+                        borderRight: this.state.borderRight,
+                        borderTop: this.state.borderTop,
+                        borderBottom: this.state.borderBottom,
+                        border: this.state.border
+                    },
+                    '@media (max-width: 440px)': {
+                        holderstyles: {
+                            display: this.state.smdis,
+                            flexDirection: this.state.smflexDir
+                        }
+                    },
+                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                        holderstyles: {
+                            display: this.state.mddis,
+                            flexDirection: this.state.mdflexDir
+                        }
+                    }
+                });
+                block1styles = _nestingstyles2.default.create({
+                    block1styles: {
+                        display: 'flex',
+                        flex: blocks.block1 || this.state.block1,
+                        flexDirection: 'column',
+                        flexWrap: 'wrap',
+                        alignItems: blocks.alignBlock1,
+                        borderLeft: blocks.block1BorderLeft,
+                        borderRight: blocks.block1BorderRight,
+                        borderTop: blocks.block1BorderTop,
+                        borderBottom: blocks.block1BorderBottom,
+                        border: blocks.b1Border,
+                        margin: blocks.margin,
+                        justifyContent: blocks.justifyBlock1
+                    },
+                    '@media screen and (max-width: 440px)': {
+                        block1styles: {
+                            display: blocks.block1smdis
+                        }
+                    },
+                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                        block1styles: {
+                            display: blocks.block1mddis
+                        }
+                    }
+                });
+                styledChilds1 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: block1styles.block1styles },
+                    CHILDS[0]
+                );
+                styledHolder = [_react2.default.createElement(
+                    'section',
+                    { key: Math.random(), style: holderstyles.holderstyles },
+                    styledChilds1,
+                    styledChilds2
+                )];
+            } else if (num === 2) {
+                blocks = {
+                    block1Direction: props.block1direction || 'row',
+                    block1: props.block1 || '1',
+                    block1BorderLeft: props.b1BLeft,
+                    block1BorderRight: props.b1BRight,
+                    block1BorderTop: props.b1BTop,
+                    block1BorderBottom: props.b1BBottom,
+                    block1Border: props.b1Border,
+                    alignBlock1: props.alignBlock1 || 'center',
+                    justifyBlock1: props.justifyBlock1 || 'center',
+                    block1smdis: props.block1smdis || 'flex',
+                    block1mddis: props.block1mddis || 'flex',
+                    block2: props.block2 || '1',
+                    block2BorderLeft: props.b2BLeft,
+                    block2BorderRight: props.b2BRight,
+                    block2BorderTop: props.b2BTop,
+                    block2BorderBottom: props.b2BBottom,
+                    block2Border: props.b2Border,
+                    alignBlock2: props.alignBlock2 || 'center',
+                    justifyBlock2: props.justifyBlock2 || 'center',
+                    block2smdis: props.block2smdis || 'flex',
+                    block2mddis: props.block2mddis || 'flex'
+                };
+                holderstyles = _nestingstyles2.default.create({
+                    holderstyles: {
+                        width: '100%',
+                        display: this.state.display,
+                        flexDirection: this.state.direction,
+                        flexWrap: 'wrap',
+                        background: this.state.text,
+                        justifyContent: this.state.alignBlocks,
+                        overflow: 'hidden',
+                        borderLeft: this.state.borderLeft,
+                        borderRight: this.state.borderRight,
+                        borderTop: this.state.borderTop,
+                        borderBottom: this.state.borderBottom,
+                        border: this.state.border
+                    },
+                    '@media (max-width: 440px)': {
+                        holderstyles: {
+                            display: this.state.smdis,
+                            flexDirection: this.state.smflexDir
+                        }
+                    },
+                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                        holderstyles: {
+                            display: this.state.mddis,
+                            flexDirection: this.state.mdflexDir
+                        }
+                    }
+                });
+                block1styles = _nestingstyles2.default.create({
+                    block1styles: {
+                        display: 'flex',
+                        flex: blocks.block1 || this.state.block1,
+                        flexDirection: 'column',
+                        flexWrap: 'wrap',
+                        alignItems: blocks.alignBlock1,
+                        borderLeft: blocks.block1BorderLeft,
+                        borderRight: blocks.block1BorderRight,
+                        borderTop: blocks.block1BorderTop,
+                        borderBottom: blocks.block1BorderBottom,
+                        border: blocks.b1Border,
+                        margin: blocks.margin,
+                        justifyContent: blocks.justifyBlock1
+                    },
+                    '@media screen and (max-width: 440px)': {
+                        block1styles: {
+                            display: blocks.block1smdis
+                        }
+                    },
+                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                        block1styles: {
+                            display: blocks.block1mddis
+                        }
+                    }
+                });
+                block2styles = _nestingstyles2.default.create({
+                    block2styles: {
+                        display: 'flex',
+                        flex: blocks.block2,
+                        flexDirection: 'column',
+                        flexWrap: 'wrap',
+                        alignItems: blocks.alignBlock2,
+                        borderLeft: blocks.block2BorderLeft,
+                        borderRight: blocks.block2BorderRight,
+                        borderTop: blocks.block2BorderTop,
+                        borderBottom: blocks.block2BorderBottom,
+                        border: blocks.b2Border,
+                        margin: blocks.margin,
+                        justifyContent: blocks.justifyBlock2
+                    },
+                    '@media screen and (max-width: 440px)': {
+                        block2styles: {
+                            display: blocks.block2smdis
+                        }
+                    },
+                    '@media screen and (min-width: 441px) and (max-width: 760px)': {
+                        block2styles: {
+                            display: blocks.block2mddis
+                        }
+                    }
 
-        //         styledChilds1 = <div key={Math.random()} style={block1styles.block1styles}>{CHILDS[0]}</div>
-        //         styledChilds2 = <div key={Math.random()} style={block2styles.block2styles}>{CHILDS[1]}</div>
-        //         styledHolder = [
-        //             <section key={Math.random()} style={holderstyles.holderstyles}>{styledChilds1}{styledChilds2}</section>
-        //         ]
-        //     }
+                });
 
-        //     return this.setState({ childs: styledHolder, blocks })
-        // }
+                styledChilds1 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: block1styles.block1styles },
+                    CHILDS[0]
+                );
+                styledChilds2 = _react2.default.createElement(
+                    'div',
+                    { key: Math.random(), style: block2styles.block2styles },
+                    CHILDS[1]
+                );
+                styledHolder = [_react2.default.createElement(
+                    'section',
+                    { key: Math.random(), style: holderstyles.holderstyles },
+                    styledChilds1,
+                    styledChilds2
+                )];
+            } else {
+                styledHolder = '';
+            }
 
+            return this.setState({ childs: styledHolder, blocks: blocks });
+        }
     }, {
         key: 'render',
         value: function render() {
+            var HOLDING = {
+                width: '100%'
+            };
             return _react2.default.createElement(
                 _react2.default.Fragment,
                 null,

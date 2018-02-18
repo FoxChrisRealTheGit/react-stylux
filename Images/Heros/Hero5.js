@@ -88,7 +88,8 @@ var Hero5 = exports.Hero5 = function (_Component) {
                 { style: HEROSTYLE, id: this.state.id, className: this.state.className },
                 _react2.default.createElement(
                     _Holder2.default,
-                    null,
+                    {
+                        direction: 'column' },
                     this.state.childs[0],
                     _react2.default.createElement(
                         _Holder2.default,

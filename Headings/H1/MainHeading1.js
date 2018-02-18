@@ -43,11 +43,12 @@ var H11 = function (_Component) {
             smFontSize: props.smSize || '3.939em',
             mdFontSize: props.mdSize || '5.25em',
             fontWeight: props.fontWeight || '900',
+            fontVariant: props.variant,
             display: props.display || 'flex',
             align: props.align || 'center',
             textAlign: props.textAlign || 'center',
             padding: props.padding || '0 0 15px 0',
-            margin: props.margin || '0',
+            margin: props.margin || '1px',
             width: props.width || 'inherit',
             height: props.height,
             bLeft: props.bLeft,
@@ -76,8 +77,11 @@ var H11 = function (_Component) {
         key: 'componentDidMount',
         value: function componentDidMount(nextProps) {
             var CHILDS = _react2.default.Children.toArray(this.props.children);
+            //const theme = Themes(this.state.theme)
             this.setState({
                 childs: CHILDS
+                //color: theme.color,
+                //background: theme.background,
             });
         }
     }, {
@@ -105,6 +109,7 @@ var H11 = function (_Component) {
                     fontFamily: this.state.fontFamily,
                     fontSize: this.state.fontSize,
                     fontWeight: this.state.fontWeight,
+                    fontVariant: this.state.fontVariant,
                     display: this.state.display,
                     flexDirection: 'column',
                     alignItems: this.state.align,
@@ -118,7 +123,8 @@ var H11 = function (_Component) {
                     animationName: this.state.animationName,
                     animationDuration: this.state.animationDuration,
                     transformOrigin: this.state.transformOrigin,
-                    animationFillMode: this.state.animationFillMode
+                    animationFillMode: this.state.animationFillMode,
+                    flex: 1
                 },
                 hoverStyle: {
                     color: this.state.hoverColor
@@ -139,15 +145,19 @@ var H11 = function (_Component) {
                 }
             });
             return _react2.default.createElement(
-                'h1',
-                { style: HEADING.heading, id: this.state.id, className: this.state.className,
-                    onMouseEnter: function onMouseEnter() {
-                        return _this2.setState({ color: HEADING.hoverStyle.color });
-                    },
-                    onMouseLeave: function onMouseLeave() {
-                        return _this2.setState({ color: _this2.state.colorRev });
-                    } },
-                this.state.childs[0]
+                _react2.default.Fragment,
+                null,
+                _react2.default.createElement(
+                    'h1',
+                    { style: HEADING.heading, id: this.state.id, className: this.state.className,
+                        onMouseEnter: function onMouseEnter() {
+                            return _this2.setState({ color: HEADING.hoverStyle.color });
+                        },
+                        onMouseLeave: function onMouseLeave() {
+                            return _this2.setState({ color: _this2.state.colorRev });
+                        } },
+                    this.state.childs[0]
+                )
             );
         }
     }]);

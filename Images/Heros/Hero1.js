@@ -81,14 +81,14 @@ var Hero1 = function (_Component) {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center'
-
             };
             return _react2.default.createElement(
                 'div',
                 { style: HEROSTYLE, id: this.state.id, className: this.state.className },
                 _react2.default.createElement(
                     _Holder2.default,
-                    null,
+                    {
+                        direction: 'column' },
                     this.state.childs[0],
                     this.state.childs[2],
                     this.state.childs[1]

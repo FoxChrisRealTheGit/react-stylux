@@ -94,7 +94,6 @@ var Hero2 = function (_Component) {
                 height: this.state.bottomBoxHeight,
                 padding: this.state.bottomBoxPadding,
                 overflow: 'hidden'
-
             };
             return _react2.default.createElement(
                 'div',
@@ -104,7 +103,8 @@ var Hero2 = function (_Component) {
                     { style: BOTTOMBACKGROUND, id: this.state.bottomid, className: this.state.bottomClassName },
                     _react2.default.createElement(
                         _Holder2.default,
-                        null,
+                        {
+                            direction: 'column' },
                         this.state.childs[0]
                     )
                 )

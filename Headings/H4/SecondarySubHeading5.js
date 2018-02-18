@@ -44,11 +44,12 @@ var H45 = function (_Component) {
             smFontSize: props.smSize || '2.5em',
             mdFontSize: props.mdSize || '3em',
             fontWeight: props.weight || '100',
+            fontVariant: props.variant,
             display: props.display || 'flex',
             align: props.align || 'center',
             textAlign: props.textAlign || 'center',
             padding: props.padding || '0 0 3px 0',
-            margin: props.margin || '0',
+            margin: props.margin || '1px',
             width: props.width || 'inherit',
             height: props.height,
             border: props.border,
@@ -102,6 +103,7 @@ var H45 = function (_Component) {
                     fontFamily: this.state.fontFamily,
                     fontSize: this.state.fontSize,
                     fontWeight: this.state.fontWeight,
+                    fontVariant: this.state.fontVariant,
                     display: this.state.display,
                     flexDirection: 'column',
                     alignItems: this.state.align,
@@ -118,7 +120,8 @@ var H45 = function (_Component) {
                     animationFillMode: this.state.animationFillMode,
                     WebkitTextFillColor: 'transparent',
                     WebkitTextStrokeColor: this.state.color,
-                    WebkitTextStrokeWidth: this.state.stroke
+                    WebkitTextStrokeWidth: this.state.stroke,
+                    flex: 1
                 },
                 hoverStyle: {
                     color: this.state.hoverColor
@@ -139,15 +142,19 @@ var H45 = function (_Component) {
                 }
             });
             return _react2.default.createElement(
-                'h4',
-                { style: HEADING.heading, id: this.state.id, className: this.state.className,
-                    onMouseEnter: function onMouseEnter() {
-                        return _this2.setState({ color: HEADING.hoverStyle.color });
-                    },
-                    onMouseLeave: function onMouseLeave() {
-                        return _this2.setState({ color: _this2.state.colorRev });
-                    } },
-                this.state.childs[0]
+                _react2.default.Fragment,
+                null,
+                _react2.default.createElement(
+                    'h4',
+                    { style: HEADING.heading, id: this.state.id, className: this.state.className,
+                        onMouseEnter: function onMouseEnter() {
+                            return _this2.setState({ color: HEADING.hoverStyle.color });
+                        },
+                        onMouseLeave: function onMouseLeave() {
+                            return _this2.setState({ color: _this2.state.colorRev });
+                        } },
+                    this.state.childs[0]
+                )
             );
         }
     }]);

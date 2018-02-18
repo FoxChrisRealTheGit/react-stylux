@@ -44,11 +44,12 @@ var P2 = function (_Component) {
             mdFontSize: props.mdSize || '0.95em',
             lineHeight: props.lineHeight || '1.22em',
             fontWeight: props.weight || '400',
+            fontVariant: props.variant,
             display: props.display || 'flex',
             align: props.align || 'center',
             textAlign: props.textAlign || 'center',
-            padding: props.padding || '10px 10%',
-            margin: props.margin || '0',
+            padding: props.padding || '5px',
+            margin: props.margin || '1px',
             width: props.width || 'inherit',
             height: props.height,
             border: props.border,
@@ -104,6 +105,7 @@ var P2 = function (_Component) {
                     fontSize: this.state.fontSize,
                     lineHeight: this.state.lineHeight,
                     fontWeight: this.state.fontWeight,
+                    fontVariant: this.state.fontVariant,
                     display: this.state.display,
                     flexDirection: 'column',
                     alignItems: this.state.align,
@@ -113,7 +115,10 @@ var P2 = function (_Component) {
                     animationIterationCount: this.state.animationIterationCount,
                     animationTimingFunction: this.state.animationTimingFunction,
                     animationName: this.state.animationName,
-                    animationDuration: this.state.animationDuration
+                    animationDuration: this.state.animationDuration,
+                    transformOrigin: this.state.transformOrigin,
+                    animationFillMode: this.state.animationFillMode,
+                    flex: 1
                 },
                 hoverStyle: {
                     color: this.state.hoverColor
@@ -134,15 +139,19 @@ var P2 = function (_Component) {
                 }
             });
             return _react2.default.createElement(
-                'p',
-                { style: PARAGRAPH.paragraph, id: this.state.id, className: this.state.className,
-                    onMouseEnter: function onMouseEnter() {
-                        return _this2.setState({ color: PARAGRAPH.hoverStyle.color });
-                    },
-                    onMouseLeave: function onMouseLeave() {
-                        return _this2.setState({ color: _this2.state.colorRev });
-                    } },
-                this.state.childs[0]
+                _react2.default.Fragment,
+                null,
+                _react2.default.createElement(
+                    'p',
+                    { style: PARAGRAPH.paragraph, id: this.state.id, className: this.state.className,
+                        onMouseEnter: function onMouseEnter() {
+                            return _this2.setState({ color: PARAGRAPH.hoverStyle.color });
+                        },
+                        onMouseLeave: function onMouseLeave() {
+                            return _this2.setState({ color: _this2.state.colorRev });
+                        } },
+                    this.state.childs[0]
+                )
             );
         }
     }]);
