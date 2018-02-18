@@ -15,13 +15,9 @@ require('../../css/reset.css');
 
 require('../../css/animations.css');
 
-var _Holder = require('../../Holders/Holder7');
+var _Holder = require('../../Holders/Holder');
 
 var _Holder2 = _interopRequireDefault(_Holder);
-
-var _Holder3 = require('../../Holders/Holder2');
-
-var _Holder4 = _interopRequireDefault(_Holder3);
 
 var _nestingstyles = require('nestingstyles');
 
@@ -95,14 +91,14 @@ var Hero5 = exports.Hero5 = function (_Component) {
                     null,
                     this.state.childs[0],
                     _react2.default.createElement(
-                        _Holder4.default,
+                        _Holder2.default,
                         null,
                         this.state.childs[1],
                         this.state.childs[2],
                         this.state.childs[3]
                     ),
                     _react2.default.createElement(
-                        _Holder4.default,
+                        _Holder2.default,
                         null,
                         this.state.childs[4],
                         this.state.childs[5],

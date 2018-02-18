@@ -14,7 +14,7 @@ require('../../css/reset.css');
 
 require('../../css/animations.css');
 
-var _Holder = require('../../Holders/Holder1');
+var _Holder = require('../../Holders/Holder');
 
 var _Holder2 = _interopRequireDefault(_Holder);
 
