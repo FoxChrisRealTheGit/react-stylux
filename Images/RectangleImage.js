@@ -49,7 +49,8 @@ var RectangleImage = function (_Component) {
             transformOrigin: props.transformOrigin,
             animationFillMode: props.aniFillMode,
             smdis: props.smDis || 'flex',
-            mddis: props.mdDis || 'flex'
+            mddis: props.mdDis || 'flex',
+            hoverShadow: props.hovShadow
         };
         return _this;
     }
@@ -69,6 +70,8 @@ var RectangleImage = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
+            var _this2 = this;
+
             var IMAGE = _nestingstyles2.default.create({
                 rectangleimg: {
                     margin: '0 auto',
@@ -79,25 +82,35 @@ var RectangleImage = function (_Component) {
                     transformOrigin: this.state.transformOrigin,
                     animationFillMode: this.state.animationFillMode
                 },
+                hoverStyle: {
+                    color: this.state.hoverShadow
+                },
                 '@media screen and (max-width: 440px)': {
                     rectangleimg: {
                         display: this.state.smDis
                     }
                 },
-                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
+                '@media screen and (min-width: 441px) and (max-width: 760px)': {
                     rectangleimg: {
                         display: this.state.mdDis
                     }
                 }
             });
-            return _react2.default.createElement('img', { style: IMAGE.rectangleimg, id: this.state.id, className: 'recimg-' + this.state.size + ' ' + this.state.className, src: this.state.childs[0], alt: this.state.childs[1] });
+            return _react2.default.createElement(
+                Fragment,
+                null,
+                _react2.default.createElement('img', { style: IMAGE.rectangleimg, id: this.state.id, className: 'recimg-' + this.state.size + ' ' + this.state.className, src: this.state.childs[0], alt: this.state.childs[1],
+                    onMouseEnter: function onMouseEnter() {
+                        return _this2.setState({ color: IMAGE.hoverStyle.color });
+                    },
+                    onMouseLeave: function onMouseLeave() {
+                        return _this2.setState({ color: _this2.state.color });
+                    } })
+            );
         }
     }]);
 
     return RectangleImage;
 }(_react.Component);
-
-/* End of Regular Rectangle Image */
-
 
 exports.default = RectangleImage;

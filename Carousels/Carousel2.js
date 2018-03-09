@@ -49,7 +49,9 @@ var Carousel2 = function (_Component) {
             animationName: props.aniName,
             animationDuration: props.aniDur,
             transformOrigin: props.transformOrigin,
-            animationFillMode: props.aniFillMode
+            animationFillMode: props.aniFillMode,
+            smdis: props.smDis || 'flex',
+            mddis: props.mdDis || 'flex'
         };
         _this.slideLeft = _this.slideLeft.bind(_this);
         _this.slideRight = _this.slideRight.bind(_this);
@@ -102,8 +104,15 @@ var Carousel2 = function (_Component) {
             }
         }
     }, {
+        key: 'currentSlide',
+        value: function currentSlide(x) {
+            this.setState({ cur: x });
+        }
+    }, {
         key: 'render',
         value: function render() {
+            var _this2 = this;
+
             var WRAP = {
                 width: '100%',
                 height: this.state.height,
@@ -132,8 +141,30 @@ var Carousel2 = function (_Component) {
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
+                textAlign: 'center',
+                animationIterationCount: this.state.animationIterationCount,
+                animationTimingFunction: this.state.animationTimingFunction,
+                animationName: this.state.animationName,
+                animationDuration: this.state.animationDuration,
+                transformOrigin: this.state.transformOrigin,
+                animationFillMode: this.state.animationFillMode
+            };
+            var CIRCLES = {
+                cursor: 'pointer',
+                height: '15px',
+                width: '15px',
+                margin: '2px 2px',
+                backgroundColor: '#bbb',
+                borderRadius: '50%',
+                display: 'inline-block',
                 textAlign: 'center'
             };
+            var CIRCLESDIV = {
+                textAlign: 'center',
+                width: '100%',
+                position: 'relative'
+            };
+
             var RENDERSLIDES = this.state.sliderImages.map(function (x, i) {
                 return _react2.default.createElement(
                     'div',
@@ -145,13 +176,27 @@ var Carousel2 = function (_Component) {
                     )
                 );
             });
+            var DOTS = this.state.sliderImages.map(function (x, i) {
+                return _react2.default.createElement('span', { key: i, style: CIRCLES, onClick: function onClick() {
+                        return _this2.currentSlide(i);
+                    } });
+            });
             return _react2.default.createElement(
-                'div',
-                { style: WRAP, id: this.state.mainid, className: this.state.mainClassName },
+                Fragment,
+                null,
                 _react2.default.createElement(
                     'div',
-                    { style: SLIDER, id: this.state.sliderid, className: this.state.sliderClassName },
-                    RENDERSLIDES[this.state.cur]
+                    { style: WRAP, id: this.state.mainid, className: this.state.mainClassName },
+                    _react2.default.createElement(
+                        'div',
+                        { style: SLIDER, id: this.state.sliderid, className: this.state.sliderClassName },
+                        RENDERSLIDES[this.state.cur]
+                    )
+                ),
+                _react2.default.createElement(
+                    'div',
+                    { style: CIRCLESDIV },
+                    DOTS
                 )
             );
         }

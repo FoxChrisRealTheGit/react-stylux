@@ -49,7 +49,8 @@ var TallRectangleImage = function (_Component) {
             transformOrigin: props.transformOrigin,
             animationFillMode: props.aniFillMode,
             smdis: props.smDis || 'flex',
-            mddis: props.mdDis || 'flex'
+            mddis: props.mdDis || 'flex',
+            hoverShadow: props.hovShadow
         };
         return _this;
     }
@@ -69,6 +70,8 @@ var TallRectangleImage = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
+            var _this2 = this;
+
             var IMAGE = _nestingstyles2.default.create({
                 tallrectangleimg: {
                     margin: '0 auto',
@@ -79,24 +82,35 @@ var TallRectangleImage = function (_Component) {
                     transformOrigin: this.state.transformOrigin,
                     animationFillMode: this.state.animationFillMode
                 },
+                hoverStyle: {
+                    color: this.state.hoverShadow
+                },
                 '@media screen and (max-width: 440px)': {
                     tallrectangleimg: {
                         display: this.state.smDis
                     }
                 },
-                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
+                '@media screen and (min-width: 441px) and (max-width: 760px)': {
                     tallrectangleimg: {
                         display: this.state.mdDis
                     }
                 }
             });
-            return _react2.default.createElement('img', { style: IMAGE.tallrectangleimg, id: this.state.id, className: 'tallrecimg-' + this.state.size + ' ' + this.state.className, src: this.state.childs[0], alt: this.state.childs[1] });
+            return _react2.default.createElement(
+                Fragment,
+                null,
+                _react2.default.createElement('img', { style: IMAGE.tallrectangleimg, id: this.state.id, className: 'tallrecimg-' + this.state.size + ' ' + this.state.className, src: this.state.childs[0], alt: this.state.childs[1],
+                    onMouseEnter: function onMouseEnter() {
+                        return _this2.setState({ color: IMAGE.hoverStyle.color });
+                    },
+                    onMouseLeave: function onMouseLeave() {
+                        return _this2.setState({ color: _this2.state.color });
+                    } })
+            );
         }
     }]);
 
     return TallRectangleImage;
 }(_react.Component);
-/* End of Tall Rectangle Image */
-
 
 exports.default = TallRectangleImage;

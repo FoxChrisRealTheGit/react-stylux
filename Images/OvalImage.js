@@ -49,7 +49,8 @@ var OvalImage = function (_Component) {
             transformOrigin: props.transformOrigin,
             animationFillMode: props.aniFillMode,
             smdis: props.smDis || 'flex',
-            mddis: props.mdDis || 'flex'
+            mddis: props.mdDis || 'flex',
+            hoverShadow: props.hovShadow
         };
         return _this;
     }
@@ -69,6 +70,8 @@ var OvalImage = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
+            var _this2 = this;
+
             var OVALIMG = _nestingstyles2.default.create({
                 ovalimg: {
                     borderRadius: '30%',
@@ -79,24 +82,35 @@ var OvalImage = function (_Component) {
                     transformOrigin: this.state.transformOrigin,
                     animationFillMode: this.state.animationFillMode
                 },
+                hoverStyle: {
+                    color: this.state.hoverShadow
+                },
                 '@media screen and (max-width: 440px)': {
                     ovalimg: {
                         display: this.state.smDis
                     }
                 },
-                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
+                '@media screen and (min-width: 441px) and (max-width: 760px)': {
                     ovalimg: {
                         display: this.state.mdDis
                     }
                 }
             });
-            return _react2.default.createElement('img', { style: OVALIMG.ovalimg, id: this.state.id, className: 'img-' + this.state.size + ' ' + this.state.className, src: this.state.childs[0], alt: this.state.childs[1] });
+            return _react2.default.createElement(
+                Fragment,
+                null,
+                _react2.default.createElement('img', { style: OVALIMG.ovalimg, id: this.state.id, className: 'img-' + this.state.size + ' ' + this.state.className, src: this.state.childs[0], alt: this.state.childs[1],
+                    onMouseEnter: function onMouseEnter() {
+                        return _this2.setState({ color: OVALIMG.hoverStyle.color });
+                    },
+                    onMouseLeave: function onMouseLeave() {
+                        return _this2.setState({ color: _this2.state.color });
+                    } })
+            );
         }
     }]);
 
     return OvalImage;
 }(_react.Component);
-/* End of Oval Images */
-
 
 exports.default = OvalImage;

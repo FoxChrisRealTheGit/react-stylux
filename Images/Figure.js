@@ -77,7 +77,7 @@ var Figure = function (_Component) {
                         fontSize: '6em'
                     }
                 },
-                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
+                '@media screen and (min-width: 441px) and (max-width: 760px)': {
                     caption: {
                         display: this.state.mdDis,
                         fontSize: '6em'
@@ -85,13 +85,17 @@ var Figure = function (_Component) {
                 }
             });
             return _react2.default.createElement(
-                'figure',
-                { id: this.state.figid, className: this.state.figClassName },
-                this.state.childs[0],
+                Fragment,
+                null,
                 _react2.default.createElement(
-                    'figcaption',
-                    { style: CAPTION.caption, id: this.state.figCapid, className: this.state.figCapClassName },
-                    this.state.childs[1]
+                    'figure',
+                    { id: this.state.figid, className: this.state.figClassName },
+                    this.state.childs[0],
+                    _react2.default.createElement(
+                        'figcaption',
+                        { style: CAPTION.caption, id: this.state.figCapid, className: this.state.figCapClassName },
+                        this.state.childs[1]
+                    )
                 )
             );
         }
