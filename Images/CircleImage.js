@@ -22,8 +22,6 @@ var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -50,7 +48,8 @@ var CircleImage = function (_Component) {
             transformOrigin: props.transformOrigin,
             animationFillMode: props.aniFillMode,
             smdis: props.smDis || 'flex',
-            mddis: props.mdDis || 'flex'
+            mddis: props.mdDis || 'flex',
+            hoverShadow: props.hovShadow
         };
         return _this;
     }
@@ -70,26 +69,46 @@ var CircleImage = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
-            var _circleimg;
+            var _this2 = this;
 
             var CIRCLEIMG = _nestingstyles2.default.create({
-                circleimg: (_circleimg = {
+                circleimg: {
                     borderRadius: "100%",
                     overflowX: 'hidden',
-                    overflowY: 'hidden'
-                }, _defineProperty(_circleimg, 'borderRadius', "100%"), _defineProperty(_circleimg, 'animationIterationCount', this.state.animationIterationCount), _defineProperty(_circleimg, 'animationTimingFunction', this.state.animationTimingFunction), _defineProperty(_circleimg, 'animationName', this.state.animationName), _defineProperty(_circleimg, 'animationDuration', this.state.animationDuration), _defineProperty(_circleimg, 'transformOrigin', this.state.transformOrigin), _defineProperty(_circleimg, 'animationFillMode', this.state.animationFillMode), _circleimg),
+                    overflowY: 'hidden',
+                    animationIterationCount: this.state.animationIterationCount,
+                    animationTimingFunction: this.state.animationTimingFunction,
+                    animationName: this.state.animationName,
+                    animationDuration: this.state.animationDuration,
+                    transformOrigin: this.state.transformOrigin,
+                    animationFillMode: this.state.animationFillMode
+                },
+                hoverStyle: {
+                    color: this.state.hoverShadow
+                },
                 '@media screen and (max-width: 440px)': {
                     circleimg: {
                         display: this.state.smDis
                     }
                 },
-                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
+                '@media screen and (min-width: 441px) and (max-width: 760px)': {
                     circleimg: {
                         display: this.state.mdDis
                     }
                 }
             });
-            return _react2.default.createElement('img', { style: CIRCLEIMG.circleimg, id: this.state.id, className: 'img-' + this.state.size + ' ' + this.state.className, src: this.state.childs[0], alt: this.state.childs[1] });
+
+            return _react2.default.createElement(
+                Fragment,
+                null,
+                _react2.default.createElement('img', { style: CIRCLEIMG.circleimg, id: this.state.id, className: 'img-' + this.state.size + ' ' + this.state.className, src: this.state.childs[0], alt: this.state.childs[1],
+                    onMouseEnter: function onMouseEnter() {
+                        return _this2.setState({ color: CIRCLEIMG.hoverStyle.color });
+                    },
+                    onMouseLeave: function onMouseLeave() {
+                        return _this2.setState({ color: _this2.state.color });
+                    } })
+            );
         }
     }]);
 

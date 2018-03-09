@@ -49,7 +49,9 @@ var Carousel4 = function (_Component) {
             animationName: props.aniName,
             animationDuration: props.aniDur,
             transformOrigin: props.transformOrigin,
-            animationFillMode: props.aniFillMode
+            animationFillMode: props.aniFillMode,
+            smdis: props.smDis || 'flex',
+            mddis: props.mdDis || 'flex'
         };
         _this.slideLeft = _this.slideLeft.bind(_this);
         _this.slideRight = _this.slideRight.bind(_this);
@@ -64,8 +66,7 @@ var Carousel4 = function (_Component) {
             for (var g = 0; g < CHILDS.length; g += 1) {
                 slides.push(CHILDS[g]);
             }
-            var intervalTime = setInterval(this.slideRight, this.state.slideTimer);
-            this.setState({ sliderImages: slides, intervalTime: intervalTime });
+            this.setState({ sliderImages: slides });
         }
     }, {
         key: 'componentWillReceiveProps',
@@ -75,35 +76,67 @@ var Carousel4 = function (_Component) {
             for (var g = 0; g < CHILDS.length; g += 1) {
                 slides.push(CHILDS[g]);
             }
-            var intervalTime = setInterval(this.slideRight, this.state.slideTimer);
-            this.setState({ sliderImages: slides, intervalTime: intervalTime });
-        }
-    }, {
-        key: 'componentWillUnmount',
-        value: function componentWillUnmount() {
-            return clearInterval(this.state.intervalTime);
+            this.setState({ sliderImages: slides });
         }
     }, {
         key: 'slideLeft',
         value: function slideLeft() {
             if (this.state.cur === 0) {
-                return this.setState({ cur: this.state.sliderImages.length - 1 });
+                return this.setState({
+                    cur: this.state.sliderImages.length - 1,
+                    animationIterationCount: '1',
+                    animationTimingFunction: 'ease-in',
+                    animationName: 'slideInRight',
+                    animationDuration: '0.75s'
+                });
             } else {
-                return this.setState({ cur: this.state.cur - 1 });
+                return this.setState({
+                    cur: this.state.cur - 1,
+                    animationIterationCount: '1',
+                    animationTimingFunction: 'ease-in',
+                    animationName: 'slideInRight',
+                    animationDuration: '0.75s'
+                });
             }
         }
     }, {
         key: 'slideRight',
         value: function slideRight() {
             if (this.state.cur >= this.state.sliderImages.length - 1) {
-                return this.setState({ cur: 0 });
+                return this.setState({
+                    cur: 0,
+                    animationIterationCount: '1',
+                    animationTimingFunction: 'ease',
+                    animationName: 'slideInLeft',
+                    animationDuration: '0.75s'
+                });
             } else {
-                return this.setState({ cur: this.state.cur + 1 });
+                return this.setState({
+                    cur: this.state.cur + 1,
+                    animationIterationCount: '1',
+                    animationTimingFunction: 'ease',
+                    animationName: 'slideInLeft',
+                    animationDuration: '0.75s'
+                });
             }
         }
     }, {
         key: 'render',
         value: function render() {
+            var _this2 = this;
+
+            var LEFT_ARROW = {
+                borderWidth: '30px 40px 30px 0',
+                borderColor: 'transparent ' + this.state.arrowColor + ' transparent transparent',
+                left: '0',
+                marginLeft: '30px'
+            };
+            var RIGHT_ARROW = {
+                borderWidth: '30px 0 30px 40px',
+                borderColor: 'transparent transparent transparent ' + this.state.arrowColor,
+                right: '0',
+                marginRight: '30px'
+            };
             var WRAP = {
                 width: '100%',
                 height: this.state.height,
@@ -129,30 +162,44 @@ var Carousel4 = function (_Component) {
                 height: this.state.height,
                 overflowX: 'hidden',
                 display: 'flex',
-                flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
-                textAlign: 'center'
+                textAlign: 'center',
+                animationIterationCount: this.state.animationIterationCount,
+                animationTimingFunction: this.state.animationTimingFunction,
+                animationName: this.state.animationName,
+                animationDuration: this.state.animationDuration,
+                transformOrigin: this.state.transformOrigin,
+                animationFillMode: this.state.animationFillMode
             };
-            var RENDERSLIDES = this.state.sliderImages.map(function (x, i) {
+            var RENDERSLIDES = this.state.sliderImages.map(function (x, i, arr) {
                 return _react2.default.createElement(
                     'div',
                     { key: i, style: SLIDE },
                     _react2.default.createElement(
                         'div',
                         { style: SLIDE_CONTENT },
-                        x
+                        arr[i],
+                        arr[i + 1],
+                        arr[i + 2],
+                        arr[i + 3]
                     )
                 );
             });
             return _react2.default.createElement(
                 'div',
                 { style: WRAP, id: this.state.mainid, className: this.state.mainClassName },
+                _react2.default.createElement('div', { style: LEFT_ARROW, id: this.state.leftArrowid, className: 'arrow ' + this.state.leftArrowClassName, onClick: function onClick() {
+                        return _this2.slideLeft();
+                    } }),
                 _react2.default.createElement(
                     'div',
                     { style: SLIDER, id: this.state.sliderid, className: this.state.sliderClassName },
                     RENDERSLIDES[this.state.cur]
-                )
+                ),
+                _react2.default.createElement('div', { style: RIGHT_ARROW, id: this.state.rightArrowid, className: 'arrow ' + this.state.rightArrowClassName, onClick: function onClick() {
+                        return _this2.slideRight();
+                    } })
             );
         }
     }]);

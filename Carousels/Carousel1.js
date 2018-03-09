@@ -177,11 +177,7 @@ var Carousel1 = function (_Component) {
                 height: this.state.height
             };
             var SLIDE = {
-                // backgroundSize: 'cover',
-                // backgroundPosition: 'center',
                 height: this.state.height
-
-                // display:'block'
 
             };
             var SLIDE_CONTENT = {
@@ -200,12 +196,6 @@ var Carousel1 = function (_Component) {
                 transformOrigin: this.state.transformOrigin,
                 animationFillMode: this.state.animationFillMode
             };
-            // const SLIDE_TEXT = {
-            //     fontSize: '5em',
-            //     color: 'white',
-            //     posistion:'relative',
-            //     top: '-50px',
-            // };
             var RENDERSLIDES = this.state.sliderImages.map(function (x, i) {
                 return _react2.default.createElement(
                     'div',
